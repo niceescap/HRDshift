@@ -1,0 +1,25 @@
+# Sécurité — ne jamais publier
+.env
+
+# Base de données locale
+data/registry.db
+data/*.db
+
+# Données intermédiaires — régénérées à chaque run
+data/rss_output.json
+data/gnews_output.json
+data/collected.json
+data/seen.json
+data/hai_scores.json
+data/bloom_feed.json
+
+# Archives — trop lourdes et privées
+data/archives/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Système
+.DS_Store

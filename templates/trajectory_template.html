@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajectoire — HRDshift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --bg: #070707;
+            --panel: #0d0d0d;
+            --border: #1e1e1e;
+            --text: #e3ddd5;
+            --dim: #6e675f;
+            --muted: #3c3834;
+            --gold: #c8a84b;
+            --green: #42b883;
+            --red: #d14a3f;
+            --blue: #4a6fa5;
+            --orange: #d97732;
+            --mono: 'IBM Plex Mono', monospace;
+            --ui: 'Inter', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--ui);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        h1 {
+            font-family: var(--mono);
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .chart-wrapper {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        canvas { width: 100%; height: auto; max-height: 450px; }
+        .legend {
+            display: flex; justify-content: center; gap: 2rem;
+            margin-top: 1.5rem; font-size: 0.9rem; color: var(--dim);
+        }
+        .legend span::before { content: "●"; margin-right: 0.4rem; font-size: 1.2rem; vertical-align: middle; }
+        .legend .hai::before { color: var(--green); }
+        .legend .price::before { color: #000; }
+        .back-link {
+            display: inline-block; margin-top: 2rem;
+            font-family: var(--mono); font-size: 0.9rem; color: var(--gold);
+            text-decoration: none; border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .back-link:hover { border-bottom-color: var(--gold); }
+        .popup-hint { margin-top: 1rem; font-size: 0.85rem; color: var(--dim); }
+
+        /* Popup */
+        .popup-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.75); z-index: 1000;
+            align-items: center; justify-content: center;
+        }
+        .popup-overlay.open { display: flex; }
+        .popup {
+            background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+            max-width: 600px; width: 90%; padding: 1.5rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4); position: relative;
+            color: var(--text);
+        }
+        .popup-close {
+            position: absolute; top: 10px; right: 14px;
+            background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--dim);
+        }
+        .popup-date { font-family: var(--mono); font-size: 0.9rem; color: var(--dim); margin-bottom: 0.5rem; }
+        .popup-hai { font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem; color: var(--gold); }
+        .popup-text { font-family: var(--ui); line-height: 1.7; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trajectoire · HAI & Prix</h1>
+        <div class="chart-wrapper">
+            <canvas id="trajectoryChart"></canvas>
+        </div>
+        <div class="legend">
+            <span class="hai">Indice HAI (0–100)</span>
+            <span class="price">Prix estimé (USD)</span>
+        </div>
+        <p class="popup-hint">Cliquez sur un point pour afficher l'édito du jour.</p>
+        <a href="index.html" class="back-link">← Retour au tableau de bord</a>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup" id="popupContent">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div class="popup-date" id="popupDate"></div>
+            <div class="popup-hai" id="popupHai"></div>
+            <div class="popup-text" id="popupText"></div>
+        </div>
+    </div>
+
+    <script>
+        const haiData = {{ HAI_SERIE_JSON }};
+        const priceData = {{ PRICE_SERIE_JSON }};
+        const editoByDate = {{ EDITO_BY_DATE_JSON }};
+
+        const allDates = [...new Set([
+            ...haiData.map(d => d.date),
+            ...priceData.map(d => d.date)
+        ])].sort();
+
+        function getHaiColor(value) {
+            if (value <= 25) return '#4a6fa5';
+            if (value <= 50) return '#42b883';
+            if (value <= 74) return '#c8a84b';
+            if (value <= 90) return '#d97732';
+            return '#d14a3f';
+        }
+
+        const haiPoints = allDates.map(date => {
+            const found = haiData.find(d => d.date === date);
+            return found ? found.valeur : null;
+        });
+        const pricePoints = allDates.map(date => {
+            const found = priceData.find(d => d.date === date);
+            return found ? found.valeur : null;
+        });
+        const haiPointColors = haiPoints.map(v => v !== null ? getHaiColor(v) : 'transparent');
+
+        const ctx = document.getElementById('trajectoryChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: allDates,
+                datasets: [
+                    {
+                        label: 'HAI',
+                        data: haiPoints,
+                        borderColor: '#999999',
+                        backgroundColor: 'transparent',
+                        pointBackgroundColor: haiPointColors,
+                        pointBorderColor: haiPointColors,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                        borderWidth: 1.5,
+                        tension: 0.3,
+                        yAxisID: 'y',
+                    },
+                    {
+                        label: 'Prix (USD)',
+                        data: pricePoints,
+                        borderColor: '#000000',
+                        backgroundColor: 'transparent',
+                        pointBackgroundColor: '#000000',
+                        pointRadius: 3,
+                        pointHoverRadius: 5,
+                        borderWidth: 1.5,
+                        tension: 0.3,
+                        yAxisID: 'y1',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                onClick: (event, elements, chart) => {
+                    if (elements.length > 0) {
+                        const index = elements[0].index;
+                        const date = allDates[index];
+                        const edito = editoByDate[date];
+                        if (edito) {
+                            showPopup(edito);
+                        } else {
+                            alert('Aucun édito pour cette date.');
+                        }
+                    }
+                },
+                interaction: { mode: 'index', intersect: false },
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Date', color: '#555' },
+                        grid: { color: '#f0f0f0' },
+                        ticks: { color: '#555', maxTicksLimit: 8 }
+                    },
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        title: { display: true, text: 'HAI (0–100)', color: '#555' },
+                        grid: { color: '#f0f0f0' },
+                        ticks: { color: '#555', stepSize: 10 },
+                        min: 0, max: 100,
+                    },
+                    y1: {
+                        type: 'linear',
+                        position: 'right',
+                        title: { display: true, text: 'Prix (USD)', color: '#555' },
+                        grid: { drawOnChartArea: false },
+                        ticks: {
+                            color: '#555',
+                            callback: v => v >= 1000 ? v.toLocaleString() + ' $' : v + ' $'
+                        }
+                    }
+                }
+            }
+        });
+
+        function showPopup(edito) {
+            document.getElementById('popupDate').textContent = 'Édito du ' + (edito.date_edito || edito.date);
+            document.getElementById('popupHai').textContent = 'HAI ' + edito.hai + ' ' + (edito.tendance || '');
+            document.getElementById('popupText').textContent = edito.texte;
+            document.getElementById('popupOverlay').classList.add('open');
+        }
+        function closePopup() {
+            document.getElementById('popupOverlay').classList.remove('open');
+        }
+        document.getElementById('popupOverlay').addEventListener('click', function(e) {
+            if (e.target === this) closePopup();
+        });
+    </script>
+</body>
+</html>

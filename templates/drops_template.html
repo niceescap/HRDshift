@@ -1,0 +1,136 @@
+<!-- =========================================================
+     HRDshift — DROPS TEMPLATE (avec boutons de partage)
+     ========================================================= -->
+<style>
+    .drops-page {
+        padding: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .drops-page h1 {
+        color: var(--gold);
+        font-family: var(--mono);
+        font-size: 2rem;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1rem;
+    }
+    .drop-card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 4px;
+    }
+    .drop-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        font-family: var(--mono);
+        font-size: 0.85rem;
+        color: var(--dim);
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 0.75rem;
+    }
+    .drop-date { letter-spacing: .1em; }
+    .drop-hai { color: var(--gold); font-weight: 600; }
+    .drop-text {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--text);
+        margin-bottom: 1.5rem;
+    }
+
+    /* Barre de partage */
+    .share-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        color: var(--dim);
+        letter-spacing: .06em;
+        text-transform: uppercase;
+    }
+    .share-btn {
+        background: var(--panel2);
+        border: 1px solid var(--border);
+        color: var(--dim);
+        padding: 4px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+        font-size: 0.7rem;
+        transition: all .15s;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .share-btn:hover {
+        color: var(--gold);
+        border-color: var(--gold);
+        background: rgba(200,168,75,0.08);
+    }
+    .share-btn .icon {
+        font-size: 0.85rem;
+    }
+</style>
+
+<div class="drops-page">
+    <h1>Analytics Drops</h1>
+    {{ DROPS_LIST }}
+</div>
+
+<!-- Script de construction des boutons au chargement -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.drop-card').forEach(function(card) {
+        // Récupérer le texte du drop
+        const texteEl = card.querySelector('.drop-text');
+        if (!texteEl) return;
+        const texte = texteEl.textContent.trim();
+        const dateEl = card.querySelector('.drop-date');
+        const date = dateEl ? dateEl.textContent.trim() : '';
+        const titre = 'HRDshift Analytics Drop — ' + date;
+        const url = window.location.origin + window.location.pathname;
+
+        // Créer la barre de partage
+        const bar = document.createElement('div');
+        bar.className = 'share-bar';
+
+        // X (Twitter)
+        const xLink = document.createElement('a');
+        xLink.className = 'share-btn';
+        xLink.href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(titre + '\n' + texte.substring(0, 200) + '...') + '&url=' + encodeURIComponent(url);
+        xLink.target = '_blank';
+        xLink.rel = 'noopener';
+        xLink.innerHTML = '<span class="icon">𝕏</span> X';
+
+        // LinkedIn
+        const liLink = document.createElement('a');
+        liLink.className = 'share-btn';
+        liLink.href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(titre) + '&summary=' + encodeURIComponent(texte.substring(0, 200));
+        liLink.target = '_blank';
+        liLink.rel = 'noopener';
+        liLink.innerHTML = '<span class="icon">🔗</span> LinkedIn';
+
+        // Reddit
+        const redditLink = document.createElement('a');
+        redditLink.className = 'share-btn';
+        redditLink.href = 'https://www.reddit.com/submit?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(titre);
+        redditLink.target = '_blank';
+        redditLink.rel = 'noopener';
+        redditLink.innerHTML = '<span class="icon">💬</span> Reddit';
+
+        bar.appendChild(xLink);
+        bar.appendChild(liLink);
+        bar.appendChild(redditLink);
+        card.appendChild(bar);
+    });
+});
+</script>

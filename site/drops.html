@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRDshift - Industrial Monitoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =============================================================
+   HRDshift — shell.html
+   Structure globale : topbar, head loop, sidebar, main, footer
+   Desktop : grille 220px + 1fr
+   Mobile  : colonne unique, nav barre horizontale avec mini SVG
+   ============================================================= */
+
+:root {
+  --bg:          #070707;
+  --panel:       #0d0d0d;
+  --panel2:      #111111;
+  --border:      #1e1e1e;
+  --border-soft: #171717;
+  --text:        #e3ddd5;
+  --dim:         #6e675f;
+  --muted:       #3c3834;
+  --gold:        #c8a84b;
+  --gold-soft:   rgba(200,168,75,.12);
+  --green:       #42b883;
+  --red:         #d14a3f;
+  --mono:        'IBM Plex Mono', monospace;
+  --ui:          'Inter', sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 14px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  overflow-x: hidden;
+}
+
+/* Grain */
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none;
+  opacity: .045;
+  background-image: radial-gradient(#ffffff 0.45px, transparent 0.45px);
+  background-size: 4px 4px; z-index: 9999;
+}
+
+/* Bandeau vidéo */
+.video-header {
+    width: 100%;
+    height: 78px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+.video-header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Topbar ─────────────────────────────────────────────── */
+#topbar {
+  height: 56px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(7,7,7,.96);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* Image de fond topbar — asset appelé depuis assets/ */
+#topbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("assets/topbar-bg.jpg") center/cover no-repeat;
+  opacity: .08;
+  pointer-events: none;
+}
+
+.topbar-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 18px;
+  gap: 16px;
+}
+
+/* Logo + headline */
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .28em;
+  line-height: 1;
+}
+.logo-headline {
+  font-size: 9px;
+  color: var(--dim);
+  letter-spacing: .12em;
+  font-style: italic;
+  line-height: 1;
+}
+
+/* Séparateur vertical */
+.topbar-sep {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.topline {
+  font-size: 10px;
+  color: var(--dim);
+  letter-spacing: .06em;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clock {
+  margin-left: auto;
+  color: var(--dim);
+  font-size: 11px;
+  flex-shrink: 0;
+  letter-spacing: .06em;
+}
+
+/* ── Grille desktop ─────────────────────────────────────── */
+#shell {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: calc(100vh - 56px);
+}
+
+/* ── Sidebar desktop ────────────────────────────────────── */
+#nav {
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  padding: 20px 0;
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-section { margin-bottom: 24px; }
+.nav-section:last-child { margin-bottom: 0; }
+
+.nav-label {
+  padding: 0 18px 10px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  color: var(--dim);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: .05em;
+  border-left: 2px solid transparent;
+  transition: .15s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--gold);
+  border-left-color: var(--gold);
+  background: rgba(255,255,255,.02);
+}
+.nav-link .nav-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+}
+
+/* ── Trajectory mini charts ─────────────────────────────── */
+.nav-trajectory {
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mini-chart-box {
+  border: 1px solid var(--border);
+  background: var(--panel2);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s, background 0.2s;
+}
+.mini-chart-box:hover {
+  border-color: var(--gold);
+  background: rgba(200,168,75,0.04);
+}
+
+.mini-chart-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.mini-chart-grid {
+  padding: 8px;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 20px 10px;
+}
+
+.mini-chart-grid svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ── Main ───────────────────────────────────────────────── */
+#main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--panel);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("assets/footer-bg.jpg") center/cover no-repeat;
+  opacity: .04;
+  pointer-events: none;
+}
+.footer-logo  { position: relative; color: var(--gold); font-size: 10px; font-weight: 600; letter-spacing: .2em; }
+.footer-text  { position: relative; color: var(--dim); font-size: 10px; font-style: italic; }
+.footer-build { position: relative; margin-left: auto; color: var(--muted); font-size: 9px; }
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 820px) {
+
+  #topbar { height: 48px; }
+  .logo-headline { display: none; }
+  .topline { display: none; }
+
+  #shell { grid-template-columns: 1fr; }
+
+  #nav {
+    position: sticky;
+    top: 48px;
+    z-index: 150;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 48px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+    flex-direction: row;
+  }
+
+  .nav-section { display: contents; }
+  .nav-label   { display: none; }
+
+  .nav-link {
+    border-left: none;
+    padding: 6px 12px;
+    font-size: 10px;
+    background: var(--panel2);
+    border-radius: 2px;
+    gap: 5px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .nav-link.active {
+    background: var(--gold-soft);
+    color: var(--gold);
+  }
+
+  .nav-trajectory {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .mini-chart-box {
+    border: 1px solid var(--border);
+    background: var(--panel2);
+    border-radius: 2px;
+    width: 72px;
+    flex-shrink: 0;
+  }
+  .mini-chart-label {
+    display: none;
+  }
+  .mini-chart-grid {
+    padding: 4px;
+  }
+  .mini-chart-grid svg {
+    width: 100%;
+    height: auto;
+  }
+
+  footer { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<!-- Bandeau vidéo -->
+<div class="video-header">
+    <video autoplay loop muted playsinline>
+        <source src="assets/loophead.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- ═══════════════ TOPBAR ═══════════════════════════════════ -->
+<header id="topbar">
+  <div class="topbar-inner">
+
+    <a href="index.html" class="logo-block">
+      <span class="logo">HRDshift</span>
+      <span class="logo-headline">Humanoid Robots Deployment</span>
+    </a>
+
+    <div class="topbar-sep"></div>
+
+    <span class="topline">
+      Industrial Monitoring of Humanoid Robot Deployment
+    </span>
+
+    <span class="clock" id="clock">--:--:--</span>
+
+  </div>
+</header>
+
+<!-- ═══════════════ SHELL ════════════════════════════════════ -->
+<div id="shell">
+
+  <!-- ── Sidebar ──────────────────────────────────────────── -->
+  <aside id="nav">
+
+    <!-- Navigation principale -->
+    <div class="nav-section">
+      <div class="nav-label">Navigation</div>
+      <a href="index.html"       class="nav-link active">
+        <span class="nav-icon">⬡</span> Accueil
+      </a>
+      <a href="drops.html"       class="nav-link">
+        <span class="nav-icon">◈</span> Éditos
+      </a>
+      <a href="trajectory.html"  class="nav-link">
+        <span class="nav-icon">◈</span> Trajectoire
+      </a>
+      <a href="about.html"       class="nav-link">
+        <span class="nav-icon">◎</span> À propos
+      </a>
+      <a href="community.html"   class="nav-link">
+        <span class="nav-icon">◉</span> Communauté
+      </a>
+    </div>
+
+    <!-- Mini SVG (desktop : colonne, mobile : row via media query) -->
+    <div class="nav-section">
+      <div class="nav-label">Trajectoire</div>
+      <div class="nav-trajectory">
+        <a href="trajectory.html" class="mini-chart-box" title="HAI 7 jours">
+          <div class="mini-chart-label"><span>HAI</span><span>7 jours</span></div>
+          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 12.0,32.4 18.0,5.294117647058789 30.0,5.294117647058789 C 42.0,5.294117647058789 48.0,3.599999999999999 60.0,3.599999999999999 C 72.0,3.599999999999999 78.0,10.376470588235273 90.0,10.376470588235273 C 102.0,10.376470588235273 108.0,15.458823529411758 120.0,15.458823529411758 C 132.0,15.458823529411758 138.0,10.376470588235273 150.0,10.376470588235273 C 162.0,10.376470588235273 168.0,32.4 180.0,32.4 " fill="none" stroke="#42b883" stroke-width="1.5" opacity="0.8"/></svg></div>
+        </a>
+        <a href="trajectory.html" class="mini-chart-box" title="Prix 7 jours">
+          <div class="mini-chart-label"><span>Prix</span><span>7 jours</span></div>
+          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 36.0,32.4 54.0,32.4 90.0,32.4 C 126.0,32.4 144.0,32.4 180.0,32.4 " fill="none" stroke="#c8a84b" stroke-width="1.5" opacity="0.8"/></svg></div>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ── Contenu central injecté par le webmaster ─────────── -->
+  <main id="main">
+    <!-- =========================================================
+     HRDshift — DROPS TEMPLATE (avec boutons de partage)
+     ========================================================= -->
+<style>
+    .drops-page {
+        padding: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .drops-page h1 {
+        color: var(--gold);
+        font-family: var(--mono);
+        font-size: 2rem;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1rem;
+    }
+    .drop-card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 4px;
+    }
+    .drop-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        font-family: var(--mono);
+        font-size: 0.85rem;
+        color: var(--dim);
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 0.75rem;
+    }
+    .drop-date { letter-spacing: .1em; }
+    .drop-hai { color: var(--gold); font-weight: 600; }
+    .drop-text {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--text);
+        margin-bottom: 1.5rem;
+    }
+
+    /* Barre de partage */
+    .share-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        color: var(--dim);
+        letter-spacing: .06em;
+        text-transform: uppercase;
+    }
+    .share-btn {
+        background: var(--panel2);
+        border: 1px solid var(--border);
+        color: var(--dim);
+        padding: 4px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+        font-size: 0.7rem;
+        transition: all .15s;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .share-btn:hover {
+        color: var(--gold);
+        border-color: var(--gold);
+        background: rgba(200,168,75,0.08);
+    }
+    .share-btn .icon {
+        font-size: 0.85rem;
+    }
+</style>
+
+<div class="drops-page">
+    <h1>Analytics Drops</h1>
+    
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">20/05/26 à 11:13</span>
+    <span class="drop-hai">HAI 29.5 ↑</span>
+  </div>
+  <div class="drop-text">Les dépêches récentes montrent une accélération timide mais positive vers l'adoption des robots humanoïdes, avec des signaux encourageants dans le domaine de la biopharmacie et de l'intelligence artificielle, même si les lay-offs dans le secteur de l'AI freinent légèrement la progression.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">19/05/26 à 07:33</span>
+    <span class="drop-hai">HAI 30.8 ↑</span>
+  </div>
+  <div class="drop-text">Les robots humanoïdes font un pas de plus vers l'industrialisation avec des partenariats clés et des déploiements pilotes, notamment avec Toyota et Boston Dynamics, qui accélèrent leur adoption dans les usines et les foyers.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">18/05/26 à 20:03</span>
+    <span class="drop-hai">HAI 30.2 ↑</span>
+  </div>
+  <div class="drop-text">L'industrie des robots humanoïdes accélère avec la production de NEO humanoids en Californie et les avancées technologiques en manipulation robotique, confirmant une progression vers la viabilité opérationnelle</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">18/05/26 à 14:08</span>
+    <span class="drop-hai">HAI 30.2 ↑</span>
+  </div>
+  <div class="drop-text">Les robots humanoïdes font un pas de plus vers l'industrialisation avec des avancées technologiques et des partenariats prometteurs, mais l'accélération reste modérée pour l'instant.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">18/05/26 à 10:09</span>
+    <span class="drop-hai">HAI 31.2 ↑</span>
+  </div>
+  <div class="drop-text">Les robots humanoïdes font un pas de géant avec des avancées technologiques et des démonstrations concrètes de leurs capacités. Les partenariats industriels et les déploiements terrain se multiplient, ce qui pousse le HAI à 31,2. L'avenir des robots humanoïdes se dessine de plus en plus clairement, avec des applications prometteuses dans les domaines de la santé, de l'industrie et des services.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">16/05/26 à 21:11</span>
+    <span class="drop-hai">HAI 30.8 ↑</span>
+  </div>
+  <div class="drop-text">Les robots humanoïdes franchissent une nouvelle étape avec des avancées technologiques et des partenariats industriels prometteurs, notamment avec Boston Dynamics et Google DeepMind. L'adoption industrielle se rapproche avec des premiers pilotes et des démonstrations de robots comme Digit. Le futur de la robotique humanoïde s'annonce radieux !</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">15/05/26 à 00:13</span>
+    <span class="drop-hai">HAI 31.2 ↑</span>
+  </div>
+  <div class="drop-text">L'accélération vers l'adoption des robots humanoïdes se confirme avec les annonces de production de Figure et 1X, tandis que les avancées technologiques de DAIMON Robotics et iRobot renforcent la crédibilité de ces outils innovants.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">14/05/26 à 23:59</span>
+    <span class="drop-hai">HAI 30.2 ↑</span>
+  </div>
+  <div class="drop-text">L'accélération vers l'adoption industrielle des robots humanoïdes se confirme avec des avancées concrètes dans le domaine de l'autonomie et de la robotique. Les déploiements de robots dans les secteurs de la logistique et du transport sont de plus en plus fréquents, tandis que les progrès technologiques ouvrent la voie à une intégration plus large et plus efficace de ces outils dans nos processus industriels.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">14/05/26 à 23:07</span>
+    <span class="drop-hai">HAI 32.1 ↑</span>
+  </div>
+  <div class="drop-text">L'industrie des robots humanoïdes accélère avec la production de NEO humanoids en Californie et des avancées technologiques, le HAI progresse de 4,8 points, confirmant l'essor de ces outils innovants.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">13/05/26 à 22:42</span>
+    <span class="drop-hai">HAI 29.5 ↑</span>
+  </div>
+  <div class="drop-text">Les robots humanoïdes font un pas de plus vers l'industrialisation avec des annonces de produits innovants et des partenariats prometteurs, mais il reste encore du chemin à parcourir pour atteindre une adoption à grande échelle.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">12/05/26 à 19:36</span>
+    <span class="drop-hai">HAI 31.2 ↑</span>
+  </div>
+  <div class="drop-text">Les robots humanoïdes gagnent en maturité avec des avancées technologiques notables, comme la création de robots vivants avec des systèmes nerveux et l'apprentissage de compétences de tennis par un robot humanoïde. Ces progrès démontrent une accélération de l'adoption industrielle à grande échelle de ces outils innovants.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">12/05/26 à 18:07</span>
+    <span class="drop-hai">HAI 31.2 ↑</span>
+  </div>
+  <div class="drop-text">Les robots humanoïdes franchissent une étape clé avec des avancées technologiques et des déploiements industriels croissants, renforçant leur potentiel d'adoption à grande échelle.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">12/05/26 à 11:11</span>
+    <span class="drop-hai">HAI 34.5 ↑</span>
+  </div>
+  <div class="drop-text">Les robots humanoïdes s'accélèrent vers l'industrialisation avec des annonces de production et de partenariats clés, notamment la montée en puissance de Figure et 1X, qui lance la production de robots humanoïdes, tandis que des avancées technologiques comme la dextérité humaine des mains de robot renforcent la crédibilité de cette tendance.</div>
+</article>
+
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">12/05/26 à 07:22</span>
+    <span class="drop-hai">HAI 31.2 ↑</span>
+  </div>
+  <div class="drop-text">L'industrie des robots humanoïdes accélère son rythme avec des annonces de déploiements concrets et de partenariats industriels, notamment dans le domaine de la logistique et de l'automatisation. Les premiers résultats prometteurs de robots autonnes et de systèmes de charge sans fil renforcent la crédibilité de cette tendance.</div>
+</article>
+</div>
+
+<!-- Script de construction des boutons au chargement -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.drop-card').forEach(function(card) {
+        // Récupérer le texte du drop
+        const texteEl = card.querySelector('.drop-text');
+        if (!texteEl) return;
+        const texte = texteEl.textContent.trim();
+        const dateEl = card.querySelector('.drop-date');
+        const date = dateEl ? dateEl.textContent.trim() : '';
+        const titre = 'HRDshift Analytics Drop — ' + date;
+        const url = window.location.origin + window.location.pathname;
+
+        // Créer la barre de partage
+        const bar = document.createElement('div');
+        bar.className = 'share-bar';
+
+        // X (Twitter)
+        const xLink = document.createElement('a');
+        xLink.className = 'share-btn';
+        xLink.href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(titre + '\n' + texte.substring(0, 200) + '...') + '&url=' + encodeURIComponent(url);
+        xLink.target = '_blank';
+        xLink.rel = 'noopener';
+        xLink.innerHTML = '<span class="icon">𝕏</span> X';
+
+        // LinkedIn
+        const liLink = document.createElement('a');
+        liLink.className = 'share-btn';
+        liLink.href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(titre) + '&summary=' + encodeURIComponent(texte.substring(0, 200));
+        liLink.target = '_blank';
+        liLink.rel = 'noopener';
+        liLink.innerHTML = '<span class="icon">🔗</span> LinkedIn';
+
+        // Reddit
+        const redditLink = document.createElement('a');
+        redditLink.className = 'share-btn';
+        redditLink.href = 'https://www.reddit.com/submit?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(titre);
+        redditLink.target = '_blank';
+        redditLink.rel = 'noopener';
+        redditLink.innerHTML = '<span class="icon">💬</span> Reddit';
+
+        bar.appendChild(xLink);
+        bar.appendChild(liLink);
+        bar.appendChild(redditLink);
+        card.appendChild(bar);
+    });
+});
+</script>
+
+  </main>
+
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════════════════════════ -->
+<footer>
+  <span class="footer-logo">BasculeDRH</span>
+  <span class="footer-text">
+    Déploiement des Robots Humanoïdes | Tenez-vous prêts.
+  </span>
+  <span class="footer-build">Build 2026-05-20 16:29</span>
+</footer>
+
+<!-- ═══════════════ JS SHELL ════════════════════════════════ -->
+<script>
+
+/* ── Horloge ────────────────────────────────────────────── */
+function updateClock() {
+  var now = new Date();
+  var pad = function(n){ return String(n).padStart(2,'0'); };
+  document.getElementById('clock').textContent =
+    pad(now.getHours()) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds());
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+/* ── Nav active auto ─────────────────────────────────────── */
+(function() {
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href === page) {
+      a.classList.add('active');
+    } else {
+      a.classList.remove('active');
+    }
+  });
+})();
+
+</script>
+
+</body>
+</html>

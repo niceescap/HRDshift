@@ -1,0 +1,266 @@
+<!-- bloom_block.html — nb_bloom_animator v4 -->
+<style>
+/* Vitesse ticker — piloté par TICKER_DUREE_SECONDES */
+.bloom-inner {
+  animation-duration: 90s !important;
+  will-change: transform;
+  cursor: grab;
+}
+
+/* Gel de l'animation pendant interaction */
+.bloom-inner.paused {
+  animation-play-state: paused !important;
+  cursor: grab;
+}
+
+.bloom-inner.dragging {
+  cursor: grabbing;
+}
+
+/* Flèche HAI — agrandie et mise en valeur */
+.bloom-arrow {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 26px;
+  text-align: center;
+  align-self: center;
+  pointer-events: none;
+}
+
+/* Contenu texte */
+.bloom-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  pointer-events: none;
+}
+
+/* Titre — 2 lignes max */
+.bloom-title {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #e3ddd5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Ligne méta */
+.bloom-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Badge score HAI */
+.bloom-score {
+  font-size: 9px;
+  letter-spacing: .10em;
+  color: #c8a84b;
+  font-weight: 600;
+  background: rgba(200,168,75,.08);
+  border: 1px solid rgba(200,168,75,.18);
+  padding: 1px 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Séparateur · */
+.bloom-sep {
+  font-size: 9px;
+  color: #3c3834;
+}
+
+/* "il y a X jours" */
+.bloom-age {
+  font-size: 9px;
+  color: #6e675f;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+/* Highlight au survol pendant pause */
+.bloom-inner.paused .bloom-item:hover {
+  background: rgba(255,255,255,.03);
+  outline: 1px solid rgba(200,168,75,.15);
+}
+</style>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/comau-to-acquire-brazilian-intralogistics-and-warehouse-automation-company-invent/101673/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Comau to acquire Brazilian intralogistics and warehouse automation company Invent</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/iss-national-lab-launches-orbital-edge-accelerator-with-up-to-750000-per-startup-and-iss-flight-access/101670/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">ISS National Lab launches Orbital Edge accelerator with up to $750,000 per startup and ISS flight access</span><span class="bloom-meta"><span class="bloom-score">HAI 30.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/einride-deploys-autonomous-electric-trucks-in-ohio-freight-corridor-pilot/101666/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Einride deploys autonomous electric trucks in Ohio freight corridor pilot</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/epson-robots-expands-scara-lineup-with-high-payload-ls50c/101663/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Epson Robots expands SCARA lineup with high-payload LS50C</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/rocsys-raises-13-million-and-unveils-worlds-first-multi-bay-hands-free-charging-solution-to-help-robotaxi-fleets-scale/101656/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Rocsys raises $13 million and unveils multi-bay hands-free charging solution for robotaxis</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/arrive-ai-using-nvidia-isaac-sim-and-blackwell-gpus-to-develop-autonomous-drone-delivery-network/101651/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Arrive AI using Nvidia Isaac Sim and Blackwell GPUs to develop autonomous drone delivery network</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/richtech-robotics-now-available-in-microsoft-marketplace/101647/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Richtech Robotics now available in Microsoft Marketplace</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/gft-takes-ai-from-visual-inspection-to-physical-action-for-auto-manufacturers/101644/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">GFT takes AI from visual inspection to physical action for auto manufacturers</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/deep-robotics-launches-new-wheeled-legged-robot-for-industrial-inspection-and-emergency-response/101641/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">Deep Robotics launches new wheeled-legged robot for industrial inspection and emergency response</span><span class="bloom-meta"><span class="bloom-score">HAI 40.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxObVRqSGN3a2tWMWk3ZFF0YWlFcjJQbkZwN0toNXdVaUQ4WGozVGRWQ2ZnTE9QWi0zbW1CN3RoYmdBUWlLLWpfSXZvaVZxeTI4bGNTc0NqR2R4VGdkY2praU9ZOUNSZ1lka3QyVHF6ZFV1a040MEZLbzFnWWxDaFBGOElMS3VhOENTWkhCNGh2VlNUWE5YV1pyZkZLZTRaOHBSTzRWci1HeUhHdHZGYWlJcGtJMVVIQ0lnY2p1OEZRN2RoMm8?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">China’s humanoid robotics commercial use cases still 'fairly restrictive' – UBP - MSN</span><span class="bloom-meta"><span class="bloom-score">HAI 35.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPN2ZlN2NITG5yam9BYWlaN2ljUkQ0Vmo5Y1dVZnVFQVNLN1A5U3lfYXplZFVvbWhJMDNnUVYyZUpsczFsWnRCczdLeXkwQUVNdmJpV1pwYk9BcUhrMkNIS1hjNEo3b3lPTXQtbHlrYzFwRmxONHdpdGs1RHNPR3F3elhJY2hXSGl1TTZsUWZXc1UzQ3ZJZEHSAZsBQVVfeXFMT2JaR2N2TmFza3dMWEJBUXBlTG82LTBxY0tqSVdnbkNBNnZzZXZ3ZWJPSnNEZFkzWXozRGc5UW9WNThhYWJZUFExZ1hNLTE0aUVaQnJGOXE2Wm5KMENxZnBoLUZ2ZzBuVFFEN2VzVm1ZWURDbllkbG1LNHlCeTNXTTFFMmM1SmVxRFl3cUE0dTdJMmtIcUtuY1laR1U?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">Kia to deploy Atlas robots first in toughest factory jobs - upi.com</span><span class="bloom-meta"><span class="bloom-score">HAI 35.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUGdBV25pS2l2d29TTUdzNnpHQ0lUeEtvV0ZlajE4MW5xRGplaDlBMzR0YzBEZF9idzk0RE5KOWM4SnJDYlljbDN5LVZfY09PX0hmcWtRNWNaY3VibFRObXk2b3hCNHVTN0xsRTRXVWRTOWZEOFI3WnYtUW1HUlo0N1EwcFl2TWJtRmRiQm5kdFFBaWNiSWZyYW9CclBuS19LYU45T3JGU1plQQ?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow up">↑</span><span class="bloom-content"><span class="bloom-title">Unitree Unveils ‘World’s First’ Production-Ready Mecha - Caixin Global</span><span class="bloom-meta"><span class="bloom-score">HAI 75.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/tungsten-carbide-manufacturing-and-the-future-of-next-generation-robotics/101632/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Tungsten Carbide Manufacturing and the Future of Next-Generation Robotics</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://spectrum.ieee.org/dull-dirty-dangerous-robots" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">What Makes a Job Dull, Dirty, or Dangerous?</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://events.bizzabo.com/867156" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Agentic AI for Robot Teams</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/start-ups/10-irish-medtech-start-ups-innovating-the-game" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">10 Irish medtech start-ups innovating the game</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/machines/ai-science-era-future-of-research-skills-academia-data-education" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">As AI meets science, what is in store for the future of research?</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/machines/dublins-ubotica-partners-with-novi-for-real-time-orbital-data-analysis" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Dublin’s Ubotica teams with Novi for real-time orbital data analysis</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/enterprise/hackers-access-github-download-codebase-grafana-labs-hack-security-breach" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Hackers access GitHub, download codebase in Grafana Labs breach</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9tUE5QZ3RIc1A2ajlfTEVvbVBSNFJvNWgzN2ZCemZIZ1RpQ20ya3l6WDl5dmo5ZTlrT2lkSG12OXFyd0R1OS1RLXlkVWp5Q0l5VVBrZk81ZnNiWmdQMUlpTEVfelJ1c0lScXNzYVJrRVFkSmNV?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow up">↑</span><span class="bloom-content"><span class="bloom-title">Tesla Optimus vs Boston Dynamics Atlas: 2026 Specs & Price - Robozaps</span><span class="bloom-meta"><span class="bloom-score">HAI 75.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQjZFWTlNdDN3TVFaVmdIT3V6UWZNSHI0RDhRekpoT19TVWw3ejR6aUhmbDRRYWNoVnc0emRNTG1BNm1DQ0V1TnBXZEdtYVhPX2MzRmVZQklNU1BPRlFyV3BsNnNpLW4xZVNwTEM3X1diQjhwWXAydDd4SUNqb0xYVk16aGlmWnhQN3FCUktQT2FMUTZNSWtyQURoVk1wNDhMNFdvSTBpNG5LUdIBqgFBVV95cUxOQjZFWTlNdDN3TVFaVmdIT3V6UWZNSHI0RDhRekpoT19TVWw3ejR6aUhmbDRRYWNoVnc0emRNTG1BNm1DQ0V1TnBXZEdtYVhPX2MzRmVZQklNU1BPRlFyV3BsNnNpLW4xZVNwTEM3X1diQjhwWXAydDd4SUNqb0xYVk16aGlmWnhQN3FCUktQT2FMUTZNSWtyQURoVk1wNDhMNFdvSTBpNG5LUQ?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow up">↑</span><span class="bloom-content"><span class="bloom-title">Unitree Secures Orders After Sensational Debut of Manned Mecha - iChongqing</span><span class="bloom-meta"><span class="bloom-score">HAI 75.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/fanuc-strengthens-nvidia-partnership-for-ai-robot-simulation-and-digital-twins/101628/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">Fanuc strengthens Nvidia partnership for AI robot simulation and digital twins</span><span class="bloom-meta"><span class="bloom-score">HAI 40.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/machines/ai-science-era-future-of-research-skills-academia-data-education" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">In the ‘AI science’ era, what is in store for the future of research?</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/machines/dublins-ubotica-partners-with-novi-for-real-time-orbital-data-analysis" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Dublin’s Ubotica partners with Novi for real-time orbital data analysis</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/enterprise/hackers-access-github-download-codebase-grafana-labs-hack-security-breach" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Hackers access GitHub and download codebase in Grafana Labs breach</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/business/samsung-strike-talks-enter-final-hours-as-global-chip-supply-chains-at-risk" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Samsung strike talks closing as global chip supply chains at risk</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQNUZlbWd2SU5NSV9ENGVpZFlsWGdUODdvUHA3S3lSbVprQkNnYkRtWTZmV2RRenVmc3V4RjlsaVFxZTNnU0lIVEthWGdmd1p2Z1ZGTnVfMjh5MlJoX2poOVQ0TVBGRmtPTUR4Q05ETjNKU2UwelRIM1J3QUhjTFloNGJNcUlZOGJIcjNxTWozZzIwXzF1amVZaQ?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">Humanoid robots closer to commercial reality - ITWeb</span><span class="bloom-meta"><span class="bloom-score">HAI 35.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE50aE42UXRhM0x3RF9TQnllcWp2WTFGNWVpMXhqb25xTEZ4YW9ORVlTZGRfRmQ1MkVmczNxTm9NMVB5dW9yc1JxcQ?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow up">↑</span><span class="bloom-content"><span class="bloom-title">Figure AI Launches 10-Hour Man vs. Machine Challenge as Human Intern Takes Early Lead - MEXC</span><span class="bloom-meta"><span class="bloom-score">HAI 75.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/business/frances-publicis-bags-liveramp-for-2-2bn-in-agentic-push" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">France’s Publicis bags LiveRamp for $2.2bn in agentic push</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">il y a 2 jours</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/business/can-eu-ai-act-actually-regulate-models-like-mythos" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Can EU AI Act actually regulate models like Mythos?</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">il y a 2 jours</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/comau-to-acquire-brazilian-intralogistics-and-warehouse-automation-company-invent/101673/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Comau to acquire Brazilian intralogistics and warehouse automation company Invent</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/iss-national-lab-launches-orbital-edge-accelerator-with-up-to-750000-per-startup-and-iss-flight-access/101670/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">ISS National Lab launches Orbital Edge accelerator with up to $750,000 per startup and ISS flight access</span><span class="bloom-meta"><span class="bloom-score">HAI 30.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/einride-deploys-autonomous-electric-trucks-in-ohio-freight-corridor-pilot/101666/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Einride deploys autonomous electric trucks in Ohio freight corridor pilot</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/epson-robots-expands-scara-lineup-with-high-payload-ls50c/101663/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Epson Robots expands SCARA lineup with high-payload LS50C</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/rocsys-raises-13-million-and-unveils-worlds-first-multi-bay-hands-free-charging-solution-to-help-robotaxi-fleets-scale/101656/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Rocsys raises $13 million and unveils multi-bay hands-free charging solution for robotaxis</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/arrive-ai-using-nvidia-isaac-sim-and-blackwell-gpus-to-develop-autonomous-drone-delivery-network/101651/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Arrive AI using Nvidia Isaac Sim and Blackwell GPUs to develop autonomous drone delivery network</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/richtech-robotics-now-available-in-microsoft-marketplace/101647/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Richtech Robotics now available in Microsoft Marketplace</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/gft-takes-ai-from-visual-inspection-to-physical-action-for-auto-manufacturers/101644/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">GFT takes AI from visual inspection to physical action for auto manufacturers</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/deep-robotics-launches-new-wheeled-legged-robot-for-industrial-inspection-and-emergency-response/101641/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">Deep Robotics launches new wheeled-legged robot for industrial inspection and emergency response</span><span class="bloom-meta"><span class="bloom-score">HAI 40.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxObVRqSGN3a2tWMWk3ZFF0YWlFcjJQbkZwN0toNXdVaUQ4WGozVGRWQ2ZnTE9QWi0zbW1CN3RoYmdBUWlLLWpfSXZvaVZxeTI4bGNTc0NqR2R4VGdkY2praU9ZOUNSZ1lka3QyVHF6ZFV1a040MEZLbzFnWWxDaFBGOElMS3VhOENTWkhCNGh2VlNUWE5YV1pyZkZLZTRaOHBSTzRWci1HeUhHdHZGYWlJcGtJMVVIQ0lnY2p1OEZRN2RoMm8?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">China’s humanoid robotics commercial use cases still 'fairly restrictive' – UBP - MSN</span><span class="bloom-meta"><span class="bloom-score">HAI 35.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPN2ZlN2NITG5yam9BYWlaN2ljUkQ0Vmo5Y1dVZnVFQVNLN1A5U3lfYXplZFVvbWhJMDNnUVYyZUpsczFsWnRCczdLeXkwQUVNdmJpV1pwYk9BcUhrMkNIS1hjNEo3b3lPTXQtbHlrYzFwRmxONHdpdGs1RHNPR3F3elhJY2hXSGl1TTZsUWZXc1UzQ3ZJZEHSAZsBQVVfeXFMT2JaR2N2TmFza3dMWEJBUXBlTG82LTBxY0tqSVdnbkNBNnZzZXZ3ZWJPSnNEZFkzWXozRGc5UW9WNThhYWJZUFExZ1hNLTE0aUVaQnJGOXE2Wm5KMENxZnBoLUZ2ZzBuVFFEN2VzVm1ZWURDbllkbG1LNHlCeTNXTTFFMmM1SmVxRFl3cUE0dTdJMmtIcUtuY1laR1U?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">Kia to deploy Atlas robots first in toughest factory jobs - upi.com</span><span class="bloom-meta"><span class="bloom-score">HAI 35.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUGdBV25pS2l2d29TTUdzNnpHQ0lUeEtvV0ZlajE4MW5xRGplaDlBMzR0YzBEZF9idzk0RE5KOWM4SnJDYlljbDN5LVZfY09PX0hmcWtRNWNaY3VibFRObXk2b3hCNHVTN0xsRTRXVWRTOWZEOFI3WnYtUW1HUlo0N1EwcFl2TWJtRmRiQm5kdFFBaWNiSWZyYW9CclBuS19LYU45T3JGU1plQQ?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow up">↑</span><span class="bloom-content"><span class="bloom-title">Unitree Unveils ‘World’s First’ Production-Ready Mecha - Caixin Global</span><span class="bloom-meta"><span class="bloom-score">HAI 75.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/tungsten-carbide-manufacturing-and-the-future-of-next-generation-robotics/101632/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Tungsten Carbide Manufacturing and the Future of Next-Generation Robotics</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://spectrum.ieee.org/dull-dirty-dangerous-robots" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">What Makes a Job Dull, Dirty, or Dangerous?</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://events.bizzabo.com/867156" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Agentic AI for Robot Teams</span><span class="bloom-meta"><span class="bloom-score">HAI 20.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/start-ups/10-irish-medtech-start-ups-innovating-the-game" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">10 Irish medtech start-ups innovating the game</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/machines/ai-science-era-future-of-research-skills-academia-data-education" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">As AI meets science, what is in store for the future of research?</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/machines/dublins-ubotica-partners-with-novi-for-real-time-orbital-data-analysis" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Dublin’s Ubotica teams with Novi for real-time orbital data analysis</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/enterprise/hackers-access-github-download-codebase-grafana-labs-hack-security-breach" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Hackers access GitHub, download codebase in Grafana Labs breach</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9tUE5QZ3RIc1A2ajlfTEVvbVBSNFJvNWgzN2ZCemZIZ1RpQ20ya3l6WDl5dmo5ZTlrT2lkSG12OXFyd0R1OS1RLXlkVWp5Q0l5VVBrZk81ZnNiWmdQMUlpTEVfelJ1c0lScXNzYVJrRVFkSmNV?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow up">↑</span><span class="bloom-content"><span class="bloom-title">Tesla Optimus vs Boston Dynamics Atlas: 2026 Specs & Price - Robozaps</span><span class="bloom-meta"><span class="bloom-score">HAI 75.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQjZFWTlNdDN3TVFaVmdIT3V6UWZNSHI0RDhRekpoT19TVWw3ejR6aUhmbDRRYWNoVnc0emRNTG1BNm1DQ0V1TnBXZEdtYVhPX2MzRmVZQklNU1BPRlFyV3BsNnNpLW4xZVNwTEM3X1diQjhwWXAydDd4SUNqb0xYVk16aGlmWnhQN3FCUktQT2FMUTZNSWtyQURoVk1wNDhMNFdvSTBpNG5LUdIBqgFBVV95cUxOQjZFWTlNdDN3TVFaVmdIT3V6UWZNSHI0RDhRekpoT19TVWw3ejR6aUhmbDRRYWNoVnc0emRNTG1BNm1DQ0V1TnBXZEdtYVhPX2MzRmVZQklNU1BPRlFyV3BsNnNpLW4xZVNwTEM3X1diQjhwWXAydDd4SUNqb0xYVk16aGlmWnhQN3FCUktQT2FMUTZNSWtyQURoVk1wNDhMNFdvSTBpNG5LUQ?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow up">↑</span><span class="bloom-content"><span class="bloom-title">Unitree Secures Orders After Sensational Debut of Manned Mecha - iChongqing</span><span class="bloom-meta"><span class="bloom-score">HAI 75.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://roboticsandautomationnews.com/2026/05/18/fanuc-strengthens-nvidia-partnership-for-ai-robot-simulation-and-digital-twins/101628/" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">Fanuc strengthens Nvidia partnership for AI robot simulation and digital twins</span><span class="bloom-meta"><span class="bloom-score">HAI 40.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/machines/ai-science-era-future-of-research-skills-academia-data-education" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">In the ‘AI science’ era, what is in store for the future of research?</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/machines/dublins-ubotica-partners-with-novi-for-real-time-orbital-data-analysis" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Dublin’s Ubotica partners with Novi for real-time orbital data analysis</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/enterprise/hackers-access-github-download-codebase-grafana-labs-hack-security-breach" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Hackers access GitHub and download codebase in Grafana Labs breach</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/business/samsung-strike-talks-enter-final-hours-as-global-chip-supply-chains-at-risk" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Samsung strike talks closing as global chip supply chains at risk</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQNUZlbWd2SU5NSV9ENGVpZFlsWGdUODdvUHA3S3lSbVprQkNnYkRtWTZmV2RRenVmc3V4RjlsaVFxZTNnU0lIVEthWGdmd1p2Z1ZGTnVfMjh5MlJoX2poOVQ0TVBGRmtPTUR4Q05ETjNKU2UwelRIM1J3QUhjTFloNGJNcUlZOGJIcjNxTWozZzIwXzF1amVZaQ?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow flat">→</span><span class="bloom-content"><span class="bloom-title">Humanoid robots closer to commercial reality - ITWeb</span><span class="bloom-meta"><span class="bloom-score">HAI 35.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE50aE42UXRhM0x3RF9TQnllcWp2WTFGNWVpMXhqb25xTEZ4YW9ORVlTZGRfRmQ1MkVmczNxTm9NMVB5dW9yc1JxcQ?oc=5" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow up">↑</span><span class="bloom-content"><span class="bloom-title">Figure AI Launches 10-Hour Man vs. Machine Challenge as Human Intern Takes Early Lead - MEXC</span><span class="bloom-meta"><span class="bloom-score">HAI 75.0</span><span class="bloom-sep">·</span><span class="bloom-age">hier</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/business/frances-publicis-bags-liveramp-for-2-2bn-in-agentic-push" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">France’s Publicis bags LiveRamp for $2.2bn in agentic push</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">il y a 2 jours</span></span></span></a>
+<a class="bloom-item" href="https://www.siliconrepublic.com/business/can-eu-ai-act-actually-regulate-models-like-mythos" target="_blank" rel="noopener noreferrer"><span class="bloom-arrow down">↓</span><span class="bloom-content"><span class="bloom-title">Can EU AI Act actually regulate models like Mythos?</span><span class="bloom-meta"><span class="bloom-score">HAI 10.0</span><span class="bloom-sep">·</span><span class="bloom-age">il y a 2 jours</span></span></span></a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+(function () {
+
+  var SEUIL_CLIC = 8;
+  var RAF_ID     = null;
+
+  var inner = document.querySelector('.bloom-inner');
+  if (!inner) return;
+
+  // ── État interne ─────────────────────────────────────────
+  var actif         = false;
+  var estDrag       = false;
+  var pointerId     = null;
+  var xDebut        = 0;
+  var xPrecedent    = 0;
+  var offsetCourant = 0;
+
+  // ── Lire la position X de l'animation CSS ───────────────
+  function lireOffsetCSS() {
+    try {
+      return new DOMMatrix(window.getComputedStyle(inner).transform).m41;
+    } catch (e) { return 0; }
+  }
+
+  // ── RAF ──────────────────────────────────────────────────
+  function appliquerOffset() {
+    inner.style.transform = 'translateX(' + offsetCourant + 'px)';
+    RAF_ID = null;
+  }
+
+  // ── Pause ────────────────────────────────────────────────
+  function pauserAnimation() {
+    offsetCourant = lireOffsetCSS();
+    inner.style.transform = 'translateX(' + offsetCourant + 'px)';
+    inner.classList.add('paused');
+    inner.classList.remove('dragging');
+  }
+
+  // ── Reprise ──────────────────────────────────────────────
+  function reprendreAnimation() {
+    if (RAF_ID) { cancelAnimationFrame(RAF_ID); RAF_ID = null; }
+    inner.style.transform = '';
+    inner.classList.remove('paused', 'dragging');
+    actif     = false;
+    pointerId = null;
+  }
+
+  // ── Remonter jusqu'au .bloom-item ───────────────────────
+  function trouverItem(el) {
+    while (el && el !== inner) {
+      if (el.classList && el.classList.contains('bloom-item')) return el;
+      el = el.parentElement;
+    }
+    return null;
+  }
+
+  // ── POINTER DOWN sur inner ────────────────────────────────
+  inner.addEventListener('pointerdown', function (e) {
+    if (e.button === 2) return;
+    actif      = true;
+    estDrag    = false;
+    pointerId  = e.pointerId;
+    xDebut     = e.clientX;
+    xPrecedent = e.clientX;
+    pauserAnimation();
+  });
+
+  // ── POINTER MOVE sur document ────────────────────────────
+  // { passive: false } indispensable pour que preventDefault fonctionne
+  document.addEventListener('pointermove', function (e) {
+    if (!actif || e.pointerId !== pointerId) return;
+
+    if (Math.abs(e.clientX - xDebut) > SEUIL_CLIC) {
+      estDrag = true;
+      inner.classList.add('dragging');
+      e.preventDefault();  // bloquer scroll natif — drag confirmé seulement
+    }
+
+    offsetCourant += e.clientX - xPrecedent;
+    xPrecedent     = e.clientX;
+
+    if (!RAF_ID) {
+      RAF_ID = requestAnimationFrame(appliquerOffset);
+    }
+  }, { passive: false });
+
+  // ── POINTER UP sur document ──────────────────────────────
+  document.addEventListener('pointerup', function (e) {
+    if (!actif || e.pointerId !== pointerId) return;
+
+    if (!estDrag) {
+      var item = trouverItem(e.target);
+      if (item) {
+        var href = item.getAttribute('href');
+        if (href && href !== '#') {
+          window.open(href, '_blank', 'noopener,noreferrer');
+        }
+      }
+      reprendreAnimation();
+    } else {
+      setTimeout(reprendreAnimation, 80);
+    }
+  });
+
+  // ── POINTER CANCEL ───────────────────────────────────────
+  document.addEventListener('pointercancel', function (e) {
+    if (!actif || e.pointerId !== pointerId) return;
+    reprendreAnimation();
+  });
+
+})();
+});
+</script>

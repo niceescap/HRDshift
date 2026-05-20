@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRDshift - Industrial Monitoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =============================================================
+   HRDshift — shell.html
+   Structure globale : topbar, head loop, sidebar, main, footer
+   Desktop : grille 220px + 1fr
+   Mobile  : colonne unique, nav barre horizontale avec mini SVG
+   ============================================================= */
+
+:root {
+  --bg:          #070707;
+  --panel:       #0d0d0d;
+  --panel2:      #111111;
+  --border:      #1e1e1e;
+  --border-soft: #171717;
+  --text:        #e3ddd5;
+  --dim:         #6e675f;
+  --muted:       #3c3834;
+  --gold:        #c8a84b;
+  --gold-soft:   rgba(200,168,75,.12);
+  --green:       #42b883;
+  --red:         #d14a3f;
+  --mono:        'IBM Plex Mono', monospace;
+  --ui:          'Inter', sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 14px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  overflow-x: hidden;
+}
+
+/* Grain */
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none;
+  opacity: .045;
+  background-image: radial-gradient(#ffffff 0.45px, transparent 0.45px);
+  background-size: 4px 4px; z-index: 9999;
+}
+
+/* Bandeau vidéo */
+.video-header {
+    width: 100%;
+    height: 78px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+.video-header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Topbar ─────────────────────────────────────────────── */
+#topbar {
+  height: 56px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(7,7,7,.96);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* Image de fond topbar — asset appelé depuis assets/ */
+#topbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("assets/topbar-bg.jpg") center/cover no-repeat;
+  opacity: .08;
+  pointer-events: none;
+}
+
+.topbar-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 18px;
+  gap: 16px;
+}
+
+/* Logo + headline */
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .28em;
+  line-height: 1;
+}
+.logo-headline {
+  font-size: 9px;
+  color: var(--dim);
+  letter-spacing: .12em;
+  font-style: italic;
+  line-height: 1;
+}
+
+/* Séparateur vertical */
+.topbar-sep {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.topline {
+  font-size: 10px;
+  color: var(--dim);
+  letter-spacing: .06em;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clock {
+  margin-left: auto;
+  color: var(--dim);
+  font-size: 11px;
+  flex-shrink: 0;
+  letter-spacing: .06em;
+}
+
+/* ── Grille desktop ─────────────────────────────────────── */
+#shell {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: calc(100vh - 56px);
+}
+
+/* ── Sidebar desktop ────────────────────────────────────── */
+#nav {
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  padding: 20px 0;
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-section { margin-bottom: 24px; }
+.nav-section:last-child { margin-bottom: 0; }
+
+.nav-label {
+  padding: 0 18px 10px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  color: var(--dim);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: .05em;
+  border-left: 2px solid transparent;
+  transition: .15s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--gold);
+  border-left-color: var(--gold);
+  background: rgba(255,255,255,.02);
+}
+.nav-link .nav-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+}
+
+/* ── Trajectory mini charts ─────────────────────────────── */
+.nav-trajectory {
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mini-chart-box {
+  border: 1px solid var(--border);
+  background: var(--panel2);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s, background 0.2s;
+}
+.mini-chart-box:hover {
+  border-color: var(--gold);
+  background: rgba(200,168,75,0.04);
+}
+
+.mini-chart-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.mini-chart-grid {
+  padding: 8px;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 20px 10px;
+}
+
+.mini-chart-grid svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ── Main ───────────────────────────────────────────────── */
+#main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--panel);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("assets/footer-bg.jpg") center/cover no-repeat;
+  opacity: .04;
+  pointer-events: none;
+}
+.footer-logo  { position: relative; color: var(--gold); font-size: 10px; font-weight: 600; letter-spacing: .2em; }
+.footer-text  { position: relative; color: var(--dim); font-size: 10px; font-style: italic; }
+.footer-build { position: relative; margin-left: auto; color: var(--muted); font-size: 9px; }
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 820px) {
+
+  #topbar { height: 48px; }
+  .logo-headline { display: none; }
+  .topline { display: none; }
+
+  #shell { grid-template-columns: 1fr; }
+
+  #nav {
+    position: sticky;
+    top: 48px;
+    z-index: 150;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 48px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+    flex-direction: row;
+  }
+
+  .nav-section { display: contents; }
+  .nav-label   { display: none; }
+
+  .nav-link {
+    border-left: none;
+    padding: 6px 12px;
+    font-size: 10px;
+    background: var(--panel2);
+    border-radius: 2px;
+    gap: 5px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .nav-link.active {
+    background: var(--gold-soft);
+    color: var(--gold);
+  }
+
+  .nav-trajectory {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .mini-chart-box {
+    border: 1px solid var(--border);
+    background: var(--panel2);
+    border-radius: 2px;
+    width: 72px;
+    flex-shrink: 0;
+  }
+  .mini-chart-label {
+    display: none;
+  }
+  .mini-chart-grid {
+    padding: 4px;
+  }
+  .mini-chart-grid svg {
+    width: 100%;
+    height: auto;
+  }
+
+  footer { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<!-- Bandeau vidéo -->
+<div class="video-header">
+    <video autoplay loop muted playsinline>
+        <source src="assets/loophead.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- ═══════════════ TOPBAR ═══════════════════════════════════ -->
+<header id="topbar">
+  <div class="topbar-inner">
+
+    <a href="index.html" class="logo-block">
+      <span class="logo">HRDshift</span>
+      <span class="logo-headline">Humanoid Robots Deployment</span>
+    </a>
+
+    <div class="topbar-sep"></div>
+
+    <span class="topline">
+      Industrial Monitoring of Humanoid Robot Deployment
+    </span>
+
+    <span class="clock" id="clock">--:--:--</span>
+
+  </div>
+</header>
+
+<!-- ═══════════════ SHELL ════════════════════════════════════ -->
+<div id="shell">
+
+  <!-- ── Sidebar ──────────────────────────────────────────── -->
+  <aside id="nav">
+
+    <!-- Navigation principale -->
+    <div class="nav-section">
+      <div class="nav-label">Navigation</div>
+      <a href="index.html"       class="nav-link active">
+        <span class="nav-icon">⬡</span> Accueil
+      </a>
+      <a href="drops.html"       class="nav-link">
+        <span class="nav-icon">◈</span> Éditos
+      </a>
+      <a href="trajectory.html"  class="nav-link">
+        <span class="nav-icon">◈</span> Trajectoire
+      </a>
+      <a href="about.html"       class="nav-link">
+        <span class="nav-icon">◎</span> À propos
+      </a>
+      <a href="community.html"   class="nav-link">
+        <span class="nav-icon">◉</span> Communauté
+      </a>
+    </div>
+
+    <!-- Mini SVG (desktop : colonne, mobile : row via media query) -->
+    <div class="nav-section">
+      <div class="nav-label">Trajectoire</div>
+      <div class="nav-trajectory">
+        <a href="trajectory.html" class="mini-chart-box" title="HAI 7 jours">
+          <div class="mini-chart-label"><span>HAI</span><span>7 jours</span></div>
+          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 12.0,32.4 18.0,5.294117647058789 30.0,5.294117647058789 C 42.0,5.294117647058789 48.0,3.599999999999999 60.0,3.599999999999999 C 72.0,3.599999999999999 78.0,10.376470588235273 90.0,10.376470588235273 C 102.0,10.376470588235273 108.0,15.458823529411758 120.0,15.458823529411758 C 132.0,15.458823529411758 138.0,10.376470588235273 150.0,10.376470588235273 C 162.0,10.376470588235273 168.0,32.4 180.0,32.4 " fill="none" stroke="#42b883" stroke-width="1.5" opacity="0.8"/></svg></div>
+        </a>
+        <a href="trajectory.html" class="mini-chart-box" title="Prix 7 jours">
+          <div class="mini-chart-label"><span>Prix</span><span>7 jours</span></div>
+          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 36.0,32.4 54.0,32.4 90.0,32.4 C 126.0,32.4 144.0,32.4 180.0,32.4 " fill="none" stroke="#c8a84b" stroke-width="1.5" opacity="0.8"/></svg></div>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ── Contenu central injecté par le webmaster ─────────── -->
+  <main id="main">
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos — HRDshift</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #070707;
+            --panel: #0d0d0d;
+            --border: #1e1e1e;
+            --text: #e3ddd5;
+            --dim: #6e675f;
+            --muted: #3c3834;
+            --gold: #c8a84b;
+            --green: #42b883;
+            --red: #d14a3f;
+            --mono: 'IBM Plex Mono', monospace;
+            --ui: 'Inter', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--ui);
+            line-height: 1.8;
+            padding: 2rem;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .045;
+            background-image: radial-gradient(#ffffff 0.45px, transparent 0.45px);
+            background-size: 4px 4px;
+            z-index: 9999;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: var(--gold);
+            font-family: var(--mono);
+            font-size: 2rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1.5rem;
+        }
+        strong {
+            color: var(--gold);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--gold);
+            font-family: var(--mono);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: .1em;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.7rem;
+            font-family: var(--mono);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>À propos de HRDshift</h1>
+        <p>HRDshift n’est ni un projet issu de la Silicon Valley, ni un programme universitaire, ni une démonstration théorique produite à distance du réel industriel.
+Le site est né d’une observation de terrain : celle d’un opérateur confronté directement aux mutations techniques, à l’automatisation croissante et à l’émergence rapide des capacités offertes par l’intelligence artificielle générative et la robotique humanoïde.</p>
+<p>Le constat à l’origine du projet est simple : la transition robotique a déjà commencé.</p>
+<p>Les outils existent.
+Les infrastructures progressent.
+Les premiers usages industriels apparaissent.
+Et les entreprises capables d’anticiper cette bascule disposeront d’une avance décisive dans les prochaines années.</p>
+<p>HRDshift documente cette transformation à travers une logique de veille, d’analyse et de structuration de l’information.
+La plateforme s’appuie sur des systèmes d’agrégation de revue de presse, de hiérarchisation éditoriale, de classification automatisée et de synthèse générée par intelligence artificielle afin de produire une lecture cohérente d’un écosystème technologique en accélération permanente.</p>
+<p>L’intelligence artificielle occupe ici une place centrale, non comme substitut magique au travail humain, mais comme multiplicateur de capacité individuelle.
+Elle permet à une structure légère de développer des outils d’analyse, de publication, d’automatisation et de traitement de données qui auraient nécessité, quelques années auparavant, des moyens beaucoup plus importants.</p>
+<p>Mais HRDshift défend également une idée fondamentale : les robots humanoïdes ne remplacent pas spontanément les travailleurs.
+Ils dépendent entièrement des savoir-faire humains qui leur sont transmis.</p>
+<p>Les gestes, les procédures, les réflexes métier, l’expérience terrain et l’intelligence pratique restent issus du travail humain.
+La machine n’efface pas l’ouvrier ; elle prolonge sa capacité d’action dans un nouvel environnement technique.</p>
+<p>Le site adopte donc une approche volontairement non conflictuelle de l’automatisation.
+L’objectif n’est pas d’opposer l’homme à la machine, mais d’anticiper les nouvelles formes d’organisation industrielle qui émergeront de leur coopération.</p>
+<p>Cette réflexion s’inscrit dans une continuité historique plus large autour des transformations techniques, industrielles et sociales.
+HRDshift mobilise des ressources philosophiques, politiques et historiques variées afin d’analyser la manière dont les systèmes technologiques redéfinissent progressivement le travail, la production et les structures humaines.</p>
+<p>Le projet assume enfin une dimension d’orientation stratégique : contribuer à rendre visibles les enjeux liés à la robotique humanoïde avant que ceux-ci ne deviennent des évidences économiques et organisationnelles.</p>
+<p>HRDshift ne prétend pas annoncer l’avenir.
+Le site part simplement d’un constat : l’industrie entre dans une nouvelle phase de son histoire.</p>
+<p>— Un agent robotique pour le compte du fondateur</p>
+        <a href="index.html" class="back-link">← Retour au dashboard</a>
+    </div>
+    
+</body>
+</html>
+
+  </main>
+
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════════════════════════ -->
+<footer>
+  <span class="footer-logo">BasculeDRH</span>
+  <span class="footer-text">
+    Déploiement des Robots Humanoïdes | Tenez-vous prêts.
+  </span>
+  <span class="footer-build">Build 2026-05-20 16:29</span>
+</footer>
+
+<!-- ═══════════════ JS SHELL ════════════════════════════════ -->
+<script>
+
+/* ── Horloge ────────────────────────────────────────────── */
+function updateClock() {
+  var now = new Date();
+  var pad = function(n){ return String(n).padStart(2,'0'); };
+  document.getElementById('clock').textContent =
+    pad(now.getHours()) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds());
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+/* ── Nav active auto ─────────────────────────────────────── */
+(function() {
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href === page) {
+      a.classList.add('active');
+    } else {
+      a.classList.remove('active');
+    }
+  });
+})();
+
+</script>
+
+</body>
+</html>

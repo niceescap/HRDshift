@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Drops — HRDshift</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #070707;
+            --panel: #0d0d0d;
+            --border: #1e1e1e;
+            --text: #e3ddd5;
+            --dim: #6e675f;
+            --muted: #3c3834;
+            --gold: #c8a84b;
+            --green: #42b883;
+            --red: #d14a3f;
+            --mono: 'IBM Plex Mono', monospace;
+            --ui: 'Inter', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--ui);
+            line-height: 1.7;
+            padding: 2rem;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .045;
+            background-image: radial-gradient(#ffffff 0.45px, transparent 0.45px);
+            background-size: 4px 4px;
+            z-index: 9999;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: var(--gold);
+            font-family: var(--mono);
+            font-size: 2rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+        .drop-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+        .drop-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-family: var(--mono);
+            font-size: 0.85rem;
+            color: var(--dim);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+        }
+        .drop-date {
+            letter-spacing: .1em;
+        }
+        .drop-hai {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        .drop-text {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text);
+            word-break: break-word;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--gold);
+            font-family: var(--mono);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: .1em;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+       footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.7rem;
+            font-family: var(--mono);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Analytics Drops</h1>
+        {{ DROPS_LIST }}
+        <a href="index.html" class="back-link">← Retour au dashboard</a>
+    </div>
+    
+</body>
+</html>

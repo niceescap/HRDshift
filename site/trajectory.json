@@ -1,0 +1,109 @@
+{
+  "hai": [
+    {
+      "date": "2026-05-12",
+      "valeur": 32.0
+    },
+    {
+      "date": "2026-05-13",
+      "valeur": 29.5
+    },
+    {
+      "date": "2026-05-14",
+      "valeur": 31.1
+    },
+    {
+      "date": "2026-05-15",
+      "valeur": 31.2
+    },
+    {
+      "date": "2026-05-16",
+      "valeur": 30.8
+    },
+    {
+      "date": "2026-05-18",
+      "valeur": 30.5
+    },
+    {
+      "date": "2026-05-19",
+      "valeur": 30.8
+    },
+    {
+      "date": "2026-05-20",
+      "valeur": 29.5
+    }
+  ],
+  "price": [
+    {
+      "date": "2026-05-18",
+      "valeur": 25000.0
+    },
+    {
+      "date": "2026-05-19",
+      "valeur": 25000.0
+    },
+    {
+      "date": "2026-05-20",
+      "valeur": 25000.0
+    }
+  ],
+  "edito_by_date": {
+    "2026-05-12": {
+      "date": "2026-05-12",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re son rythme avec des annonces de d\u00e9ploiements concrets et de partenariats industriels, notamment dans le domaine de la logistique et de l'automatisation. Les premiers r\u00e9sultats prometteurs de robots autonnes et de syst\u00e8mes de charge sans fil renforcent la cr\u00e9dibilit\u00e9 de cette tendance.",
+      "hai": 31.2,
+      "tendance": "\u2191",
+      "date_edito": ""
+    },
+    "2026-05-13": {
+      "date": "2026-05-13",
+      "texte": "Les robots humano\u00efdes font un pas de plus vers l'industrialisation avec des annonces de produits innovants et des partenariats prometteurs, mais il reste encore du chemin \u00e0 parcourir pour atteindre une adoption \u00e0 grande \u00e9chelle.",
+      "hai": 29.5,
+      "tendance": "\u2191",
+      "date_edito": ""
+    },
+    "2026-05-14": {
+      "date": "2026-05-14",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re avec la production de NEO humanoids en Californie et des avanc\u00e9es technologiques, le HAI progresse de 4,8 points, confirmant l'essor de ces outils innovants.",
+      "hai": 32.1,
+      "tendance": "\u2191",
+      "date_edito": ""
+    },
+    "2026-05-15": {
+      "date": "2026-05-15",
+      "texte": "L'acc\u00e9l\u00e9ration vers l'adoption des robots humano\u00efdes se confirme avec les annonces de production de Figure et 1X, tandis que les avanc\u00e9es technologiques de DAIMON Robotics et iRobot renforcent la cr\u00e9dibilit\u00e9 de ces outils innovants.",
+      "hai": 31.2,
+      "tendance": "\u2191",
+      "date_edito": ""
+    },
+    "2026-05-16": {
+      "date": "2026-05-16",
+      "texte": "Les robots humano\u00efdes franchissent une nouvelle \u00e9tape avec des avanc\u00e9es technologiques et des partenariats industriels prometteurs, notamment avec Boston Dynamics et Google DeepMind. L'adoption industrielle se rapproche avec des premiers pilotes et des d\u00e9monstrations de robots comme Digit. Le futur de la robotique humano\u00efde s'annonce radieux !",
+      "hai": 30.8,
+      "tendance": "\u2191",
+      "date_edito": ""
+    },
+    "2026-05-18": {
+      "date": "2026-05-18",
+      "texte": "Les robots humano\u00efdes font un pas de g\u00e9ant avec des avanc\u00e9es technologiques et des d\u00e9monstrations concr\u00e8tes de leurs capacit\u00e9s. Les partenariats industriels et les d\u00e9ploiements terrain se multiplient, ce qui pousse le HAI \u00e0 31,2. L'avenir des robots humano\u00efdes se dessine de plus en plus clairement, avec des applications prometteuses dans les domaines de la sant\u00e9, de l'industrie et des services.",
+      "hai": 31.2,
+      "tendance": "\u2191",
+      "date_edito": ""
+    },
+    "2026-05-19": {
+      "date": "2026-05-19",
+      "texte": "Les robots humano\u00efdes font un pas de plus vers l'industrialisation avec des partenariats cl\u00e9s et des d\u00e9ploiements pilotes, notamment avec Toyota et Boston Dynamics, qui acc\u00e9l\u00e8rent leur adoption dans les usines et les foyers.",
+      "hai": 30.8,
+      "tendance": "\u2191",
+      "date_edito": ""
+    },
+    "2026-05-20": {
+      "date": "2026-05-20",
+      "texte": "Les d\u00e9p\u00eaches r\u00e9centes montrent une acc\u00e9l\u00e9ration timide mais positive vers l'adoption des robots humano\u00efdes, avec des signaux encourageants dans le domaine de la biopharmacie et de l'intelligence artificielle, m\u00eame si les lay-offs dans le secteur de l'AI freinent l\u00e9g\u00e8rement la progression.",
+      "hai": 29.5,
+      "tendance": "\u2191",
+      "date_edito": ""
+    }
+  },
+  "generated": "2026-05-20T11:13:42.903864"
+}

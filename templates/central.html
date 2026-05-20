@@ -1,0 +1,450 @@
+<!-- =========================================================
+     HRD Shift  — CENTRAL (refonte v3)
+     ========================================================= -->
+<style>
+    /* ── Contenu central ───────────────────────────────────────── */
+    #main { display: flex; flex-direction: column; min-width: 0; }
+
+
+    /* ── Subtitle ───────────────────────────────────────────── */
+    #subtitle {
+        padding: 11px 18px; border-bottom: 1px solid var(--border);
+        background: var(--panel); font-size: 10px; color: var(--dim);
+        line-height: 1.7; letter-spacing: .03em; font-style: italic;
+    }
+
+    /* ── Bloom Feed (remonté) ──────────────────────────────── */
+    #bloom { border-bottom: 1px solid var(--border); }
+    .bloom-header {
+        height: 32px; display: flex; align-items: center;
+        padding: 0 18px; border-top: 1px solid var(--border); background: var(--panel);
+    }
+    .bloom-label { color: var(--dim); font-size: 9px; letter-spacing: .22em; text-transform: uppercase; }
+    .bloom-count { margin-left: auto; color: var(--muted); font-size: 9px; }
+
+    .bloom-track {
+        height: 88px; overflow: hidden; position: relative;
+        touch-action: pan-y;
+    }
+    .bloom-track::before, .bloom-track::after {
+        content: ''; position: absolute; top: 0; bottom: 0;
+        width: 60px; z-index: 2; pointer-events: none;
+    }
+    .bloom-track::before { left:  0; background: linear-gradient(90deg,  var(--bg), transparent); }
+    .bloom-track::after  { right: 0; background: linear-gradient(-90deg, var(--bg), transparent); }
+
+    .bloom-inner {
+        display: flex; position: absolute; left: 0; top: 0; height: 100%;
+        animation: bloom-scroll 90s linear infinite;
+        will-change: transform;
+        cursor: grab;
+    }
+    @keyframes bloom-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .bloom-item {
+        display: flex; align-items: center; gap: 12px;
+        min-width: 300px; max-width: 300px;
+        padding: 0 22px; border-right: 1px solid var(--border);
+        text-decoration: none;
+    }
+    .bloom-item:hover  { background: rgba(255,255,255,.02); }
+    .bloom-arrow       { font-size: 15px; font-weight: 700; }
+    .bloom-arrow.up    { color: var(--green); }
+    .bloom-arrow.down  { color: var(--red);   }
+    .bloom-arrow.flat  { color: var(--dim);   }
+    .bloom-title       { color: var(--text); font-size: 11px; line-height: 1.5; }
+
+    /* ── Analytics Drop ─────────────────────────────────────── */
+    #analytics {
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(180deg, rgba(200,168,75,.025), transparent 140px);
+        position: relative;
+    }
+    #analytics::before {
+        content: ''; position: absolute; top: 0; left: 0;
+        width: 2px; height: 100%;
+        background: linear-gradient(180deg, var(--gold), transparent);
+    }
+    .analytics-header {
+        height: 42px; display: flex; align-items: center;
+        gap: 14px; padding: 0 22px; border-bottom: 1px solid var(--border-soft);
+    }
+    .analytics-title { color: var(--gold); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; }
+    .analytics-date  { margin-left: auto; color: var(--dim); font-size: 10px; }
+
+    .analytics-body { padding: 28px 32px 24px 30px; }
+
+    .edito-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .live-dot   { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; animation: pulse 2.5s infinite; }
+    @keyframes pulse { 0%,100%{ opacity:1; } 50%{ opacity:.25; } }
+    .edito-sub  { font-size: 10px; color: var(--dim); letter-spacing: .14em; text-transform: uppercase; }
+
+    .edito-text {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.8;
+        letter-spacing: .01em;
+        color: #ddd8d0;
+        max-width: 72ch;
+        word-break: break-word;
+    }
+
+    .edito-nav {
+        margin-top: 24px; display: flex; align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid var(--border-soft); padding-top: 16px;
+    }
+    .edito-btn {
+        background: none; border: 1px solid var(--border); color: var(--dim);
+        padding: 8px 14px; font-size: 10px; letter-spacing: .12em;
+        text-transform: uppercase; cursor: pointer; font-family: var(--mono); transition: .15s;
+    }
+    .edito-btn:hover { color: var(--gold); border-color: var(--gold); background: var(--gold-soft); }
+    .edito-counter { color: var(--muted); font-size: 10px; letter-spacing: .14em; }
+
+    /* ── Lower : Prix + HAI ─────────────────────────────────── */
+    #lower { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
+    .data-block { padding: 24px; }
+    .data-block:first-child { border-right: 1px solid var(--border); }
+    .data-title {
+        color: var(--gold); font-size: 10px; letter-spacing: .2em;
+        text-transform: uppercase; margin-bottom: 18px;
+        display: flex; align-items: center; gap: 10px;
+    }
+
+    /* ── Prix façon compteur 7 segments ─────────────────────── */
+    .price-led {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 38px;
+        font-weight: 700;
+        color: #4aff4a;
+        background: #0a0a0a;
+        padding: 8px 16px;
+        border-radius: 6px;
+        display: inline-block;
+        letter-spacing: 4px;
+        text-shadow: 0 0 8px rgba(74,255,74,0.6);
+        border: 1px solid #1f3f1f;
+        line-height: 1;
+    }
+    .price-unit {
+        font-size: 18px;
+        color: var(--dim);
+        margin-left: 10px;
+        font-family: var(--mono);
+        letter-spacing: normal;
+        text-shadow: none;
+    }
+
+    .data-sub   { margin-top: 12px; color: var(--dim); font-size: 11px; line-height: 1.7; }
+
+    /* ── HAI bloc avec phases visibles ──────────────────────── */
+    .hai-block-top {
+        display: flex; align-items: flex-start; gap: 24px; margin-bottom: 16px;
+    }
+    .hai-big-value  { font-size: 48px; font-weight: 700; line-height: 1; letter-spacing: -.04em; }
+    .hai-big-trend  { font-size: 28px; font-weight: 800; line-height: 1; margin-left: 4px; }
+    .hai-big-trend.up   { color: var(--green); }
+    .hai-big-trend.down { color: var(--red);   }
+    .hai-big-trend.flat { color: var(--dim);   }
+
+    /* Barème HAI inline */
+    .hai-phases-inline {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-left: 0;
+        flex: 1;
+        font-size: 9px;
+        color: var(--dim);
+    }
+    .phase-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 2px 0;
+        border-bottom: 1px dotted rgba(255,255,255,0.05);
+    }
+    .phase-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .phase-label {
+        flex: 1;
+        letter-spacing: .04em;
+    }
+    .phase-range {
+        color: var(--muted);
+        font-size: 8px;
+    }
+    /* Couleurs des phases */
+    .ph-0 .phase-dot { background: #4a6fa5; }
+    .ph-1 .phase-dot { background: #2f8f5e; }
+    .ph-2 .phase-dot { background: #b89b52; }
+    .ph-3 .phase-dot { background: #d97732; }
+    .ph-4 .phase-dot { background: #c0392b; }
+    .phase-row.active-phase {
+        color: var(--text);
+        font-weight: 600;
+        background: rgba(255,255,255,0.02);
+        border-radius: 2px;
+        padding-left: 4px;
+    }
+    .phase-row.active-phase .phase-dot {
+        box-shadow: 0 0 6px currentColor;
+    }
+
+    .hai-gauge-labels {
+        display: flex; justify-content: space-between;
+        font-size: 9px; color: var(--muted); letter-spacing: .06em; margin-bottom: 6px;
+    }
+    .hai-gauge-bar  { width: 100%; height: 5px; background: var(--border); overflow: hidden; }
+    .hai-gauge-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--green)); transition: width .8s ease; }
+    .hai-phase      { margin-top: 9px; font-size: 9px; color: var(--dim); letter-spacing: .07em; font-style: italic; }
+
+    /* Mini chart HAI historique */
+    .data-mini-chart { height: 44px; display: flex; align-items: flex-end; gap: 3px; margin-top: 18px; }
+    .bar      { flex: 1; background: var(--border); border-radius: 2px 2px 0 0; }
+    .bar.hi   { background: rgba(66,184,131,.28); }
+    .bar.last { background: var(--green); }
+
+</style>
+
+<!-- ── Contenu central ──────────────────────────────────── -->
+
+<div id="subtitle">
+    Veille stratégique de la bascule DRH
+</div>
+
+<!-- Bloom Feed -->
+<section id="bloom">
+
+    <div class="bloom-track">
+        <div class="bloom-inner">{{ BLOOM_ANIM }}</div>
+    </div>
+
+    <div class="bloom-header">
+        <span class="bloom-label">Revue de presse internationale</span>
+        <span class="bloom-count">{{ BLOOM_COUNT }} articles</span>
+    </div>
+
+</section>
+
+<!-- Analytics Drop -->
+<section id="analytics">
+    <div class="analytics-header">
+        <span class="analytics-title">Latest Analytics Drop</span>
+        <span class="analytics-date" id="edito-date-header">{{ EDITO_DATE }}</span>
+    </div>
+    <div class="analytics-body">
+        <div class="edito-meta">
+            <div class="live-dot"></div>
+            <div class="edito-sub">Synthèse générée par notre IA</div>
+        </div>
+        <div class="edito-text" id="edito-text">{{ EDITO_TEXT }}</div>
+        <div class="edito-nav">
+            <button class="edito-btn" onclick="shiftEdito(-1)">⟪ Précédent</button>
+            <span class="edito-counter" id="edito-counter">Drop 1 / 1</span>
+            <button class="edito-btn" onclick="shiftEdito(1)">Plus récent ⟫</button>
+        </div>
+    </div>
+</section>
+
+<!-- Lower : Prix + HAI -->
+<section id="lower">
+    <!-- Prix compteur 7 segments -->
+    <div class="data-block" id="price-block">
+        <div class="data-title">Prix évoqué | $ |</div>
+        <div class="data-value">
+            <span class="price-led" id="price-display">{{ PRICE }}</span>
+        </div>
+        <div class="data-sub">Selon les lectures à ce jour</div>
+    </div>
+
+    <!-- HAI avec phases inline -->
+    <div class="data-block">
+        <div class="data-title">HAI Index</div>
+        <div class="hai-block-top">
+            <div>
+                <div class="hai-big-value" id="hai-big-value">{{ HAI_VALUE }}</div>
+                <div class="hai-big-trend {{ HAI_TREND_CLASS }}" id="hai-big-trend">{{ HAI_TREND }}</div>
+            </div>
+            <!-- Phases HAI directement visibles -->
+            <div class="hai-phases-inline" id="hai-phases-inline">
+                <div class="phase-row ph-0" data-min="0" data-max="25">
+                    <div class="phase-dot"></div>
+                    <div class="phase-label">Laboratoire &amp; R&amp;D</div>
+                    <div class="phase-range">0–25</div>
+                </div>
+                <div class="phase-row ph-1" data-min="26" data-max="50">
+                    <div class="phase-dot"></div>
+                    <div class="phase-label">Émergence &amp; Pilotes</div>
+                    <div class="phase-range">26–50</div>
+                </div>
+                <div class="phase-row ph-2" data-min="51" data-max="74">
+                    <div class="phase-dot"></div>
+                    <div class="phase-label">Structuration Économique</div>
+                    <div class="phase-range">51–74</div>
+                </div>
+                <div class="phase-row ph-3" data-min="75" data-max="90">
+                    <div class="phase-dot"></div>
+                    <div class="phase-label">Pré-déploiement &amp; Accélération</div>
+                    <div class="phase-range">75–90</div>
+                </div>
+                <div class="phase-row ph-4" data-min="91" data-max="100">
+                    <div class="phase-dot"></div>
+                    <div class="phase-label">Maturité &amp; Déploiement de Masse</div>
+                    <div class="phase-range">91–100</div>
+                </div>
+            </div>
+        </div>
+        <div class="hai-gauge-labels">
+            <span>0</span><span>25</span><span>50</span><span>75</span><span>100</span>
+        </div>
+        <div class="hai-gauge-bar">
+            <div class="hai-gauge-fill" id="hai-gauge-fill" style="width:{{ HAI_PERCENT }}%"></div>
+        </div>
+        <div class="hai-phase" id="hai-phase">—</div>
+        <div class="data-mini-chart" id="hai-chart"></div>
+    </div>
+</section>
+
+<!-- Données embarquées -->
+<script>{{ EMBEDDED_DATA_JS }}</script>
+
+<script>
+    /* ── Phases HAI ─────────────────────────────────────────── */
+    const HAI_PHASES = [
+        { min:  0, max: 25,  label: 'Laboratoire & R&D' },
+        { min: 26, max: 50,  label: 'Émergence & Pilotes' },
+        { min: 51, max: 74,  label: 'Structuration Économique' },
+        { min: 75, max: 90,  label: 'Pré-déploiement & Accélération' },
+        { min: 91, max: 100, label: 'Maturité & Déploiement de Masse' },
+    ];
+
+    function phaseLabel(score) {
+        for (var i = 0; i < HAI_PHASES.length; i++) {
+            if (score >= HAI_PHASES[i].min && score <= HAI_PHASES[i].max)
+                return HAI_PHASES[i].label;
+        }
+        return '—';
+    }
+
+    /* ── Mise à jour bloc HAI + phases ──────────────────────── */
+    function updateHaiBloc(score, tendance) {
+        var s = parseFloat(score) || 0;
+
+        var valEl   = document.getElementById('hai-big-value');
+        var trendEl = document.getElementById('hai-big-trend');
+        var fillEl  = document.getElementById('hai-gauge-fill');
+        var phaseEl = document.getElementById('hai-phase');
+
+        if (valEl)   valEl.textContent  = score;
+        if (fillEl)  fillEl.style.width = Math.min(100, Math.max(0, s)) + '%';
+        if (phaseEl) phaseEl.textContent = phaseLabel(s);
+
+        if (trendEl) {
+            trendEl.textContent = tendance;
+            trendEl.className   = 'hai-big-trend ' +
+                (tendance === '↑' ? 'up' : tendance === '↓' ? 'down' : 'flat');
+        }
+
+        // Activer la phase correspondante dans la liste inline
+        var rows = document.querySelectorAll('#hai-phases-inline .phase-row');
+        rows.forEach(function(row) {
+            row.classList.remove('active-phase');
+            var min = parseFloat(row.getAttribute('data-min'));
+            var max = parseFloat(row.getAttribute('data-max'));
+            if (s >= min && s <= max) {
+                row.classList.add('active-phase');
+            }
+        });
+    }
+
+    /* ── Mini chart ─────────────────────────────────────────── */
+    function buildChart(containerId, values) {
+        var el = document.getElementById(containerId);
+        if (!el || !values || !values.length) return;
+        var max = Math.max.apply(null, values);
+        values.forEach(function(v, i) {
+            var bar = document.createElement('div');
+            bar.className = 'bar' +
+                (i === values.length - 1 ? ' last' : (v === max ? ' hi' : ''));
+            bar.style.height = Math.round((v / max) * 100) + '%';
+            el.appendChild(bar);
+        });
+    }
+
+    /* ── Navigation éditos ──────────────────────────────────── */
+    var editos   = [];
+    var editoIdx = 0;
+
+    function renderEdito(idx) {
+        if (!editos.length) return;
+        editoIdx = idx;
+        var e = editos[idx];
+        document.getElementById('edito-text').textContent        = e.texte || '';
+        document.getElementById('edito-date-header').textContent = e.date_edito || e.date || '';
+        document.getElementById('edito-counter').textContent     =
+            'Drop ' + (idx + 1) + ' / ' + editos.length;
+        updateHaiBloc(e.hai, e.tendance);
+        updateNavButtons();
+    }
+
+    function updateNavButtons() {
+        var prev = document.querySelector('.edito-btn:first-of-type');
+        var next = document.querySelector('.edito-btn:last-of-type');
+        if (!prev || !next) return;
+        prev.style.opacity       = editoIdx === 0                  ? '0.3' : '1';
+        prev.style.pointerEvents = editoIdx === 0                  ? 'none' : 'auto';
+        next.style.opacity       = editoIdx === editos.length - 1  ? '0.3' : '1';
+        next.style.pointerEvents = editoIdx === editos.length - 1  ? 'none' : 'auto';
+    }
+
+    function shiftEdito(dir) {
+        if (!editos.length) return;
+        var n = editoIdx + dir;
+        if (n < 0 || n >= editos.length) return;
+        renderEdito(n);
+    }
+
+    function goToEdito(idx) {
+        if (!editos.length || idx < 0 || idx >= editos.length) return;
+        renderEdito(idx);
+    }
+
+    /* ── Prix propre ─────────────────────────────────────────── */
+    function nettoyerPrix(raw) {
+        if (!raw) return 'N/A';
+        var v = String(raw).replace(/[~$€£¥]/g,'').replace(/USD|EUR/gi,'').replace(/\s+/g,'').trim();
+        return (v === '' || v === '0') ? 'N/A' : v;
+    }
+
+    /* ── Init ───────────────────────────────────────────────── */
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof BBMAR_EDITOS !== 'undefined' && Array.isArray(BBMAR_EDITOS))
+            editos = BBMAR_EDITOS;
+
+        if (typeof BBMAR_HAI_SERIE !== 'undefined' && BBMAR_HAI_SERIE.length)
+            buildChart('hai-chart', BBMAR_HAI_SERIE.map(function(h){ return h.valeur; }));
+
+        // Prix propre
+        var priceEl = document.getElementById('price-display');
+        if (priceEl) priceEl.textContent = nettoyerPrix(priceEl.textContent);
+
+        // Init édito : index 0 = plus récent
+        if (editos.length) {
+            renderEdito(editos.length - 1);
+        } else {
+            document.getElementById('edito-counter').textContent = 'Aucun drop';
+            var s = parseFloat((document.getElementById('hai-big-value') || {}).textContent) || 0;
+            var t = (document.getElementById('hai-big-trend') || {}).textContent || '→';
+            updateHaiBloc(s, t);
+        }
+    });
+</script>

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRDshift - Industrial Monitoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =============================================================
+   HRDshift — shell.html
+   Structure globale : topbar, head loop, sidebar, main, footer
+   Desktop : grille 220px + 1fr
+   Mobile  : colonne unique, nav barre horizontale avec mini SVG
+   ============================================================= */
+
+:root {
+  --bg:          #070707;
+  --panel:       #0d0d0d;
+  --panel2:      #111111;
+  --border:      #1e1e1e;
+  --border-soft: #171717;
+  --text:        #e3ddd5;
+  --dim:         #6e675f;
+  --muted:       #3c3834;
+  --gold:        #c8a84b;
+  --gold-soft:   rgba(200,168,75,.12);
+  --green:       #42b883;
+  --red:         #d14a3f;
+  --mono:        'IBM Plex Mono', monospace;
+  --ui:          'Inter', sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 14px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  overflow-x: hidden;
+}
+
+/* Grain */
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none;
+  opacity: .045;
+  background-image: radial-gradient(#ffffff 0.45px, transparent 0.45px);
+  background-size: 4px 4px; z-index: 9999;
+}
+
+/* Bandeau vidéo */
+.video-header {
+    width: 100%;
+    height: 78px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+.video-header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Topbar ─────────────────────────────────────────────── */
+#topbar {
+  height: 56px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(7,7,7,.96);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* Image de fond topbar — asset appelé depuis assets/ */
+#topbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("assets/topbar-bg.jpg") center/cover no-repeat;
+  opacity: .08;
+  pointer-events: none;
+}
+
+.topbar-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 18px;
+  gap: 16px;
+}
+
+/* Logo + headline */
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .28em;
+  line-height: 1;
+}
+.logo-headline {
+  font-size: 9px;
+  color: var(--dim);
+  letter-spacing: .12em;
+  font-style: italic;
+  line-height: 1;
+}
+
+/* Séparateur vertical */
+.topbar-sep {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.topline {
+  font-size: 10px;
+  color: var(--dim);
+  letter-spacing: .06em;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clock {
+  margin-left: auto;
+  color: var(--dim);
+  font-size: 11px;
+  flex-shrink: 0;
+  letter-spacing: .06em;
+}
+
+/* ── Grille desktop ─────────────────────────────────────── */
+#shell {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: calc(100vh - 56px);
+}
+
+/* ── Sidebar desktop ────────────────────────────────────── */
+#nav {
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  padding: 20px 0;
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-section { margin-bottom: 24px; }
+.nav-section:last-child { margin-bottom: 0; }
+
+.nav-label {
+  padding: 0 18px 10px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  color: var(--dim);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: .05em;
+  border-left: 2px solid transparent;
+  transition: .15s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--gold);
+  border-left-color: var(--gold);
+  background: rgba(255,255,255,.02);
+}
+.nav-link .nav-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+}
+
+/* ── Trajectory mini charts ─────────────────────────────── */
+.nav-trajectory {
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mini-chart-box {
+  border: 1px solid var(--border);
+  background: var(--panel2);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s, background 0.2s;
+}
+.mini-chart-box:hover {
+  border-color: var(--gold);
+  background: rgba(200,168,75,0.04);
+}
+
+.mini-chart-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.mini-chart-grid {
+  padding: 8px;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 20px 10px;
+}
+
+.mini-chart-grid svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ── Main ───────────────────────────────────────────────── */
+#main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--panel);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("assets/footer-bg.jpg") center/cover no-repeat;
+  opacity: .04;
+  pointer-events: none;
+}
+.footer-logo  { position: relative; color: var(--gold); font-size: 10px; font-weight: 600; letter-spacing: .2em; }
+.footer-text  { position: relative; color: var(--dim); font-size: 10px; font-style: italic; }
+.footer-build { position: relative; margin-left: auto; color: var(--muted); font-size: 9px; }
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 820px) {
+
+  #topbar { height: 48px; }
+  .logo-headline { display: none; }
+  .topline { display: none; }
+
+  #shell { grid-template-columns: 1fr; }
+
+  #nav {
+    position: sticky;
+    top: 48px;
+    z-index: 150;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 48px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+    flex-direction: row;
+  }
+
+  .nav-section { display: contents; }
+  .nav-label   { display: none; }
+
+  .nav-link {
+    border-left: none;
+    padding: 6px 12px;
+    font-size: 10px;
+    background: var(--panel2);
+    border-radius: 2px;
+    gap: 5px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .nav-link.active {
+    background: var(--gold-soft);
+    color: var(--gold);
+  }
+
+  .nav-trajectory {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .mini-chart-box {
+    border: 1px solid var(--border);
+    background: var(--panel2);
+    border-radius: 2px;
+    width: 72px;
+    flex-shrink: 0;
+  }
+  .mini-chart-label {
+    display: none;
+  }
+  .mini-chart-grid {
+    padding: 4px;
+  }
+  .mini-chart-grid svg {
+    width: 100%;
+    height: auto;
+  }
+
+  footer { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<!-- Bandeau vidéo -->
+<div class="video-header">
+    <video autoplay loop muted playsinline>
+        <source src="assets/loophead.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- ═══════════════ TOPBAR ═══════════════════════════════════ -->
+<header id="topbar">
+  <div class="topbar-inner">
+
+    <a href="index.html" class="logo-block">
+      <span class="logo">HRDshift</span>
+      <span class="logo-headline">Humanoid Robots Deployment</span>
+    </a>
+
+    <div class="topbar-sep"></div>
+
+    <span class="topline">
+      Industrial Monitoring of Humanoid Robot Deployment
+    </span>
+
+    <span class="clock" id="clock">--:--:--</span>
+
+  </div>
+</header>
+
+<!-- ═══════════════ SHELL ════════════════════════════════════ -->
+<div id="shell">
+
+  <!-- ── Sidebar ──────────────────────────────────────────── -->
+  <aside id="nav">
+
+    <!-- Navigation principale -->
+    <div class="nav-section">
+      <div class="nav-label">Navigation</div>
+      <a href="index.html"       class="nav-link active">
+        <span class="nav-icon">⬡</span> Accueil
+      </a>
+      <a href="drops.html"       class="nav-link">
+        <span class="nav-icon">◈</span> Éditos
+      </a>
+      <a href="trajectory.html"  class="nav-link">
+        <span class="nav-icon">◈</span> Trajectoire
+      </a>
+      <a href="about.html"       class="nav-link">
+        <span class="nav-icon">◎</span> À propos
+      </a>
+      <a href="community.html"   class="nav-link">
+        <span class="nav-icon">◉</span> Communauté
+      </a>
+    </div>
+
+    <!-- Mini SVG (desktop : colonne, mobile : row via media query) -->
+    <div class="nav-section">
+      <div class="nav-label">Trajectoire</div>
+      <div class="nav-trajectory">
+        <a href="trajectory.html" class="mini-chart-box" title="HAI 7 jours">
+          <div class="mini-chart-label"><span>HAI</span><span>7 jours</span></div>
+          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 12.0,32.4 18.0,5.294117647058789 30.0,5.294117647058789 C 42.0,5.294117647058789 48.0,3.599999999999999 60.0,3.599999999999999 C 72.0,3.599999999999999 78.0,10.376470588235273 90.0,10.376470588235273 C 102.0,10.376470588235273 108.0,15.458823529411758 120.0,15.458823529411758 C 132.0,15.458823529411758 138.0,10.376470588235273 150.0,10.376470588235273 C 162.0,10.376470588235273 168.0,32.4 180.0,32.4 " fill="none" stroke="#42b883" stroke-width="1.5" opacity="0.8"/></svg></div>
+        </a>
+        <a href="trajectory.html" class="mini-chart-box" title="Prix 7 jours">
+          <div class="mini-chart-label"><span>Prix</span><span>7 jours</span></div>
+          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 36.0,32.4 54.0,32.4 90.0,32.4 C 126.0,32.4 144.0,32.4 180.0,32.4 " fill="none" stroke="#c8a84b" stroke-width="1.5" opacity="0.8"/></svg></div>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ── Contenu central injecté par le webmaster ─────────── -->
+  <main id="main">
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajectoire — HRDshift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --bg: #070707;
+            --panel: #0d0d0d;
+            --border: #1e1e1e;
+            --text: #e3ddd5;
+            --dim: #6e675f;
+            --muted: #3c3834;
+            --gold: #c8a84b;
+            --green: #42b883;
+            --red: #d14a3f;
+            --blue: #4a6fa5;
+            --orange: #d97732;
+            --mono: 'IBM Plex Mono', monospace;
+            --ui: 'Inter', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--ui);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        h1 {
+            font-family: var(--mono);
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .chart-wrapper {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        canvas { width: 100%; height: auto; max-height: 450px; }
+        .legend {
+            display: flex; justify-content: center; gap: 2rem;
+            margin-top: 1.5rem; font-size: 0.9rem; color: var(--dim);
+        }
+        .legend span::before { content: "●"; margin-right: 0.4rem; font-size: 1.2rem; vertical-align: middle; }
+        .legend .hai::before { color: var(--green); }
+        .legend .price::before { color: #000; }
+        .back-link {
+            display: inline-block; margin-top: 2rem;
+            font-family: var(--mono); font-size: 0.9rem; color: var(--gold);
+            text-decoration: none; border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .back-link:hover { border-bottom-color: var(--gold); }
+        .popup-hint { margin-top: 1rem; font-size: 0.85rem; color: var(--dim); }
+
+        /* Popup */
+        .popup-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.75); z-index: 1000;
+            align-items: center; justify-content: center;
+        }
+        .popup-overlay.open { display: flex; }
+        .popup {
+            background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+            max-width: 600px; width: 90%; padding: 1.5rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4); position: relative;
+            color: var(--text);
+        }
+        .popup-close {
+            position: absolute; top: 10px; right: 14px;
+            background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--dim);
+        }
+        .popup-date { font-family: var(--mono); font-size: 0.9rem; color: var(--dim); margin-bottom: 0.5rem; }
+        .popup-hai { font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem; color: var(--gold); }
+        .popup-text { font-family: var(--ui); line-height: 1.7; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trajectoire · HAI & Prix</h1>
+        <div class="chart-wrapper">
+            <canvas id="trajectoryChart"></canvas>
+        </div>
+        <div class="legend">
+            <span class="hai">Indice HAI (0–100)</span>
+            <span class="price">Prix estimé (USD)</span>
+        </div>
+        <p class="popup-hint">Cliquez sur un point pour afficher l'édito du jour.</p>
+        <a href="index.html" class="back-link">← Retour au tableau de bord</a>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup" id="popupContent">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div class="popup-date" id="popupDate"></div>
+            <div class="popup-hai" id="popupHai"></div>
+            <div class="popup-text" id="popupText"></div>
+        </div>
+    </div>
+
+    <script>
+        const haiData = [{"date": "2026-05-12", "valeur": 32.0}, {"date": "2026-05-13", "valeur": 29.5}, {"date": "2026-05-14", "valeur": 31.1}, {"date": "2026-05-15", "valeur": 31.2}, {"date": "2026-05-16", "valeur": 30.8}, {"date": "2026-05-18", "valeur": 30.5}, {"date": "2026-05-19", "valeur": 30.8}, {"date": "2026-05-20", "valeur": 29.5}];
+        const priceData = [{"date": "2026-05-18", "valeur": 25000.0}, {"date": "2026-05-19", "valeur": 25000.0}, {"date": "2026-05-20", "valeur": 25000.0}];
+        const editoByDate = {"2026-05-12": {"date": "2026-05-12", "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re son rythme avec des annonces de d\u00e9ploiements concrets et de partenariats industriels, notamment dans le domaine de la logistique et de l'automatisation. Les premiers r\u00e9sultats prometteurs de robots autonnes et de syst\u00e8mes de charge sans fil renforcent la cr\u00e9dibilit\u00e9 de cette tendance.", "hai": 31.2, "tendance": "\u2191", "date_edito": ""}, "2026-05-13": {"date": "2026-05-13", "texte": "Les robots humano\u00efdes font un pas de plus vers l'industrialisation avec des annonces de produits innovants et des partenariats prometteurs, mais il reste encore du chemin \u00e0 parcourir pour atteindre une adoption \u00e0 grande \u00e9chelle.", "hai": 29.5, "tendance": "\u2191", "date_edito": ""}, "2026-05-14": {"date": "2026-05-14", "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re avec la production de NEO humanoids en Californie et des avanc\u00e9es technologiques, le HAI progresse de 4,8 points, confirmant l'essor de ces outils innovants.", "hai": 32.1, "tendance": "\u2191", "date_edito": ""}, "2026-05-15": {"date": "2026-05-15", "texte": "L'acc\u00e9l\u00e9ration vers l'adoption des robots humano\u00efdes se confirme avec les annonces de production de Figure et 1X, tandis que les avanc\u00e9es technologiques de DAIMON Robotics et iRobot renforcent la cr\u00e9dibilit\u00e9 de ces outils innovants.", "hai": 31.2, "tendance": "\u2191", "date_edito": ""}, "2026-05-16": {"date": "2026-05-16", "texte": "Les robots humano\u00efdes franchissent une nouvelle \u00e9tape avec des avanc\u00e9es technologiques et des partenariats industriels prometteurs, notamment avec Boston Dynamics et Google DeepMind. L'adoption industrielle se rapproche avec des premiers pilotes et des d\u00e9monstrations de robots comme Digit. Le futur de la robotique humano\u00efde s'annonce radieux !", "hai": 30.8, "tendance": "\u2191", "date_edito": ""}, "2026-05-18": {"date": "2026-05-18", "texte": "Les robots humano\u00efdes font un pas de g\u00e9ant avec des avanc\u00e9es technologiques et des d\u00e9monstrations concr\u00e8tes de leurs capacit\u00e9s. Les partenariats industriels et les d\u00e9ploiements terrain se multiplient, ce qui pousse le HAI \u00e0 31,2. L'avenir des robots humano\u00efdes se dessine de plus en plus clairement, avec des applications prometteuses dans les domaines de la sant\u00e9, de l'industrie et des services.", "hai": 31.2, "tendance": "\u2191", "date_edito": ""}, "2026-05-19": {"date": "2026-05-19", "texte": "Les robots humano\u00efdes font un pas de plus vers l'industrialisation avec des partenariats cl\u00e9s et des d\u00e9ploiements pilotes, notamment avec Toyota et Boston Dynamics, qui acc\u00e9l\u00e8rent leur adoption dans les usines et les foyers.", "hai": 30.8, "tendance": "\u2191", "date_edito": ""}, "2026-05-20": {"date": "2026-05-20", "texte": "Les d\u00e9p\u00eaches r\u00e9centes montrent une acc\u00e9l\u00e9ration timide mais positive vers l'adoption des robots humano\u00efdes, avec des signaux encourageants dans le domaine de la biopharmacie et de l'intelligence artificielle, m\u00eame si les lay-offs dans le secteur de l'AI freinent l\u00e9g\u00e8rement la progression.", "hai": 29.5, "tendance": "\u2191", "date_edito": ""}};
+
+        const allDates = [...new Set([
+            ...haiData.map(d => d.date),
+            ...priceData.map(d => d.date)
+        ])].sort();
+
+        function getHaiColor(value) {
+            if (value <= 25) return '#4a6fa5';
+            if (value <= 50) return '#42b883';
+            if (value <= 74) return '#c8a84b';
+            if (value <= 90) return '#d97732';
+            return '#d14a3f';
+        }
+
+        const haiPoints = allDates.map(date => {
+            const found = haiData.find(d => d.date === date);
+            return found ? found.valeur : null;
+        });
+        const pricePoints = allDates.map(date => {
+            const found = priceData.find(d => d.date === date);
+            return found ? found.valeur : null;
+        });
+        const haiPointColors = haiPoints.map(v => v !== null ? getHaiColor(v) : 'transparent');
+
+        const ctx = document.getElementById('trajectoryChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: allDates,
+                datasets: [
+                    {
+                        label: 'HAI',
+                        data: haiPoints,
+                        borderColor: '#999999',
+                        backgroundColor: 'transparent',
+                        pointBackgroundColor: haiPointColors,
+                        pointBorderColor: haiPointColors,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                        borderWidth: 1.5,
+                        tension: 0.3,
+                        yAxisID: 'y',
+                    },
+                    {
+                        label: 'Prix (USD)',
+                        data: pricePoints,
+                        borderColor: '#000000',
+                        backgroundColor: 'transparent',
+                        pointBackgroundColor: '#000000',
+                        pointRadius: 3,
+                        pointHoverRadius: 5,
+                        borderWidth: 1.5,
+                        tension: 0.3,
+                        yAxisID: 'y1',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                onClick: (event, elements, chart) => {
+                    if (elements.length > 0) {
+                        const index = elements[0].index;
+                        const date = allDates[index];
+                        const edito = editoByDate[date];
+                        if (edito) {
+                            showPopup(edito);
+                        } else {
+                            alert('Aucun édito pour cette date.');
+                        }
+                    }
+                },
+                interaction: { mode: 'index', intersect: false },
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Date', color: '#555' },
+                        grid: { color: '#f0f0f0' },
+                        ticks: { color: '#555', maxTicksLimit: 8 }
+                    },
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        title: { display: true, text: 'HAI (0–100)', color: '#555' },
+                        grid: { color: '#f0f0f0' },
+                        ticks: { color: '#555', stepSize: 10 },
+                        min: 0, max: 100,
+                    },
+                    y1: {
+                        type: 'linear',
+                        position: 'right',
+                        title: { display: true, text: 'Prix (USD)', color: '#555' },
+                        grid: { drawOnChartArea: false },
+                        ticks: {
+                            color: '#555',
+                            callback: v => v >= 1000 ? v.toLocaleString() + ' $' : v + ' $'
+                        }
+                    }
+                }
+            }
+        });
+
+        function showPopup(edito) {
+            document.getElementById('popupDate').textContent = 'Édito du ' + (edito.date_edito || edito.date);
+            document.getElementById('popupHai').textContent = 'HAI ' + edito.hai + ' ' + (edito.tendance || '');
+            document.getElementById('popupText').textContent = edito.texte;
+            document.getElementById('popupOverlay').classList.add('open');
+        }
+        function closePopup() {
+            document.getElementById('popupOverlay').classList.remove('open');
+        }
+        document.getElementById('popupOverlay').addEventListener('click', function(e) {
+            if (e.target === this) closePopup();
+        });
+    </script>
+</body>
+</html>
+
+  </main>
+
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════════════════════════ -->
+<footer>
+  <span class="footer-logo">BasculeDRH</span>
+  <span class="footer-text">
+    Déploiement des Robots Humanoïdes | Tenez-vous prêts.
+  </span>
+  <span class="footer-build">Build 2026-05-20 16:29</span>
+</footer>
+
+<!-- ═══════════════ JS SHELL ════════════════════════════════ -->
+<script>
+
+/* ── Horloge ────────────────────────────────────────────── */
+function updateClock() {
+  var now = new Date();
+  var pad = function(n){ return String(n).padStart(2,'0'); };
+  document.getElementById('clock').textContent =
+    pad(now.getHours()) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds());
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+/* ── Nav active auto ─────────────────────────────────────── */
+(function() {
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href === page) {
+      a.classList.add('active');
+    } else {
+      a.classList.remove('active');
+    }
+  });
+})();
+
+</script>
+
+</body>
+</html>
