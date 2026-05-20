@@ -23,3 +23,6 @@ __pycache__/
 
 # Système
 .DS_Store
+data/hai.json
+data/last_analysis.json
+data/merge.txt
