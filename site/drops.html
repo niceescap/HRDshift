@@ -357,6 +357,17 @@ footer::before {
   footer { flex-wrap: wrap; }
 }
 </style>
+<meta property="og:title" content="HRDshift — Analytics Drops">
+<meta property="og:description" content="Les derniers éditos de veille sur les robots humanoïdes commerciaux.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hrdshift.pages.dev/drops.html">
+<meta property="og:image" content="https://hrdshift.pages.dev/assets/og-hai.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HRDshift — Analytics Drops">
+<meta name="twitter:description" content="Les derniers éditos de veille sur les robots humanoïdes commerciaux.">
+<meta name="twitter:image" content="https://hrdshift.pages.dev/assets/og-hai.png">
 </head>
 <body>
 
@@ -419,7 +430,7 @@ footer::before {
       <div class="nav-trajectory">
         <a href="trajectory.html" class="mini-chart-box" title="HAI 7 jours">
           <div class="mini-chart-label"><span>HAI</span><span>7 jours</span></div>
-          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,24.886956521739112 C 12.0,24.886956521739112 18.0,4.852173913043453 30.0,4.852173913043453 C 42.0,4.852173913043453 48.0,3.599999999999999 60.0,3.599999999999999 C 72.0,3.599999999999999 78.0,8.60869565217389 90.0,8.60869565217389 C 102.0,8.60869565217389 108.0,12.365217391304336 120.0,12.365217391304336 C 132.0,12.365217391304336 138.0,8.60869565217389 150.0,8.60869565217389 C 162.0,8.60869565217389 168.0,32.4 180.0,32.4 " fill="none" stroke="#42b883" stroke-width="1.5" opacity="0.8"/></svg></div>
+          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,25.854545454545452 C 12.0,25.854545454545452 18.0,4.909090909090883 30.0,4.909090909090883 C 42.0,4.909090909090883 48.0,3.599999999999999 60.0,3.599999999999999 C 72.0,3.599999999999999 78.0,8.83636363636362 90.0,8.83636363636362 C 102.0,8.83636363636362 108.0,12.76363636363636 120.0,12.76363636363636 C 132.0,12.76363636363636 138.0,8.83636363636362 150.0,8.83636363636362 C 162.0,8.83636363636362 168.0,32.4 180.0,32.4 " fill="none" stroke="#42b883" stroke-width="1.5" opacity="0.8"/></svg></div>
         </a>
         <a href="trajectory.html" class="mini-chart-box" title="Prix 7 jours">
           <div class="mini-chart-label"><span>Prix</span><span>7 jours</span></div>
@@ -433,7 +444,7 @@ footer::before {
   <!-- ── Contenu central injecté par le webmaster ─────────── -->
   <main id="main">
     <!-- =========================================================
-     HRDshift — DROPS TEMPLATE (avec boutons de partage)
+     HRDshift — DROPS TEMPLATE (boutons X, LinkedIn, Partager)
      ========================================================= -->
 <style>
     .drops-page {
@@ -500,10 +511,12 @@ footer::before {
         border-radius: 3px;
         text-decoration: none;
         font-size: 0.7rem;
+        cursor: pointer;
         transition: all .15s;
         display: inline-flex;
         align-items: center;
         gap: 4px;
+        font-family: var(--mono);
     }
     .share-btn:hover {
         color: var(--gold);
@@ -518,6 +531,14 @@ footer::before {
 <div class="drops-page">
     <h1>Analytics Drops</h1>
     
+<article class="drop-card">
+  <div class="drop-meta">
+    <span class="drop-date">20/05/26 à 23:12</span>
+    <span class="drop-hai">HAI 29.2 ↑</span>
+  </div>
+  <div class="drop-text">Les robots humanoïdes gagnent du terrain ! Avec des dépêches qui mettent en avant leur commercialisation et leur intégration dans l'industrie, le HAI progresse de 1,5 point. Les signaux de production et de déploiement terrain sont de plus en plus forts, ce qui laisse présager une adoption à grande échelle dans un avenir proche.</div>
+</article>
+
 <article class="drop-card">
   <div class="drop-meta">
     <span class="drop-date">20/05/26 à 21:33</span>
@@ -639,11 +660,9 @@ footer::before {
 </article>
 </div>
 
-<!-- Script de construction des boutons au chargement -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.drop-card').forEach(function(card) {
-        // Récupérer le texte du drop
         const texteEl = card.querySelector('.drop-text');
         if (!texteEl) return;
         const texte = texteEl.textContent.trim();
@@ -652,7 +671,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const titre = 'HRDshift Analytics Drop — ' + date;
         const url = window.location.origin + window.location.pathname;
 
-        // Créer la barre de partage
+        // Création de la barre
         const bar = document.createElement('div');
         bar.className = 'share-bar';
 
@@ -672,17 +691,25 @@ document.addEventListener('DOMContentLoaded', function() {
         liLink.rel = 'noopener';
         liLink.innerHTML = '<span class="icon">🔗</span> LinkedIn';
 
-        // Reddit
-        const redditLink = document.createElement('a');
-        redditLink.className = 'share-btn';
-        redditLink.href = 'https://www.reddit.com/submit?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(titre);
-        redditLink.target = '_blank';
-        redditLink.rel = 'noopener';
-        redditLink.innerHTML = '<span class="icon">💬</span> Reddit';
+        // Partager (Web Share API)
+        const shareBtn = document.createElement('button');
+        shareBtn.className = 'share-btn';
+        shareBtn.innerHTML = '<span class="icon">📤</span> Partager';
+        shareBtn.addEventListener('click', function() {
+            if (navigator.share) {
+                navigator.share({
+                    title: titre,
+                    text: texte.substring(0, 200) + '...',
+                    url: url,
+                }).catch(console.error);
+            } else {
+                alert('Partage non disponible sur ce navigateur. Copiez le lien : ' + url);
+            }
+        });
 
         bar.appendChild(xLink);
         bar.appendChild(liLink);
-        bar.appendChild(redditLink);
+        bar.appendChild(shareBtn);
         card.appendChild(bar);
     });
 });
@@ -698,7 +725,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <span class="footer-text">
     Déploiement des Robots Humanoïdes | Tenez-vous prêts.
   </span>
-  <span class="footer-build">Build 2026-05-20 21:33</span>
+  <span class="footer-build">Build 2026-05-20 23:12</span>
 </footer>
 
 <!-- ═══════════════ JS SHELL ════════════════════════════════ -->
