@@ -31,6 +31,10 @@
     {
       "date": "2026-05-20",
       "valeur": 29.0
+    },
+    {
+      "date": "2026-05-21",
+      "valeur": 32.1
     }
   ],
   "price": [
@@ -44,6 +48,10 @@
     },
     {
       "date": "2026-05-20",
+      "valeur": 25000.0
+    },
+    {
+      "date": "2026-05-21",
       "valeur": 25000.0
     }
   ],
@@ -103,7 +111,14 @@
       "hai": 29.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-05-21": {
+      "date": "2026-05-21",
+      "texte": "Les robots humano\u00efdes s'approchent de l'industrialisation \u00e0 grande \u00e9chelle, avec des annonces de d\u00e9ploiements commerciaux et des partenariats cl\u00e9s. Le HAI progresse de 4,4 points, refl\u00e9tant une acc\u00e9l\u00e9ration concr\u00e8te vers la viabilit\u00e9 op\u00e9rationnelle.",
+      "hai": 32.1,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-20T23:26:07.244077"
+  "generated": "2026-05-21T09:16:17.806744"
 }
