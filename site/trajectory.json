@@ -35,6 +35,10 @@
     {
       "date": "2026-05-21",
       "valeur": 32.1
+    },
+    {
+      "date": "2026-05-22",
+      "valeur": 32.1
     }
   ],
   "price": [
@@ -52,6 +56,10 @@
     },
     {
       "date": "2026-05-21",
+      "valeur": 25000.0
+    },
+    {
+      "date": "2026-05-22",
       "valeur": 25000.0
     }
   ],
@@ -118,7 +126,14 @@
       "hai": 32.1,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-05-22": {
+      "date": "2026-05-22",
+      "texte": "Les robots humano\u00efdes entrent dans une nouvelle \u00e8re avec des prix en baisse et des pr\u00e9commandes ouvertes. Le march\u00e9 se structure en plusieurs niveaux, avec des acteurs comme 1X et Meta qui pr\u00e9voient des livraisons \u00e0 domicile en 2026. L'acc\u00e9l\u00e9ration industrielle est en marche, avec des partenariats et des d\u00e9ploiements qui se multiplient. Le futur des robots humano\u00efdes au service des op\u00e9rateurs manuels hautement qualifi\u00e9s s'annonce radieux.",
+      "hai": 32.1,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-21T09:16:17.806744"
+  "generated": "2026-05-22T07:15:32.334552"
 }
