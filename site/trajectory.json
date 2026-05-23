@@ -39,6 +39,10 @@
     {
       "date": "2026-05-22",
       "valeur": 32.1
+    },
+    {
+      "date": "2026-05-23",
+      "valeur": 32.1
     }
   ],
   "price": [
@@ -61,6 +65,10 @@
     {
       "date": "2026-05-22",
       "valeur": 25000.0
+    },
+    {
+      "date": "2026-05-23",
+      "valeur": 29000.0
     }
   ],
   "edito_by_date": {
@@ -133,7 +141,14 @@
       "hai": 32.1,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-05-23": {
+      "date": "2026-05-23",
+      "texte": "Les robots humano\u00efdes s'approchent de l'industrie : des partenariats cl\u00e9s et des productions acc\u00e9l\u00e9r\u00e9es chez Apptronik et Figure AI font grimper le HAI. Les humano\u00efdes envahissent les usines, pr\u00eats \u00e0 r\u00e9volutionner la fabrication !",
+      "hai": 32.1,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-22T11:43:35.746848"
+  "generated": "2026-05-23T10:12:34.042027"
 }
