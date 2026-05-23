@@ -43,6 +43,10 @@
     {
       "date": "2026-05-23",
       "valeur": 32.1
+    },
+    {
+      "date": "2026-05-24",
+      "valeur": 32.5
     }
   ],
   "price": [
@@ -68,6 +72,10 @@
     },
     {
       "date": "2026-05-23",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-05-24",
       "valeur": 29000.0
     }
   ],
@@ -148,7 +156,14 @@
       "hai": 32.1,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-05-24": {
+      "date": "2026-05-24",
+      "texte": "L'acc\u00e9l\u00e9ration de l'industrie des robots humano\u00efdes se confirme avec l'ouverture de nouvelles usines et le lancement de productions en s\u00e9rie, notamment avec 1X et Unitree Robotics. Les prix comp\u00e9titifs et les partenariats industriels annonc\u00e9s font peser l'avenir de cette technologie du c\u00f4t\u00e9 de l'adoption massive.",
+      "hai": 32.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-23T10:12:34.042027"
+  "generated": "2026-05-24T00:01:08.897649"
 }
