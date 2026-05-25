@@ -47,6 +47,10 @@
     {
       "date": "2026-05-24",
       "valeur": 32.5
+    },
+    {
+      "date": "2026-05-25",
+      "valeur": 32.5
     }
   ],
   "price": [
@@ -76,6 +80,10 @@
     },
     {
       "date": "2026-05-24",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-05-25",
       "valeur": 29000.0
     }
   ],
@@ -163,7 +171,14 @@
       "hai": 32.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-05-25": {
+      "date": "2026-05-25",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re son rythme avec des commandes fermes et des partenariats industriels croissants, notamment avec UBTECH et Airbus, annon\u00e7ant une production de masse et des d\u00e9ploiements concrets dans les usines et les cha\u00eenes de production.",
+      "hai": 32.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-24T00:01:08.897649"
+  "generated": "2026-05-25T15:50:24.040808"
 }
