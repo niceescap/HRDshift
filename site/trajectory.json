@@ -51,6 +51,10 @@
     {
       "date": "2026-05-25",
       "valeur": 32.5
+    },
+    {
+      "date": "2026-05-26",
+      "valeur": 29.1
     }
   ],
   "price": [
@@ -84,6 +88,10 @@
     },
     {
       "date": "2026-05-25",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-05-26",
       "valeur": 29000.0
     }
   ],
@@ -178,7 +186,14 @@
       "hai": 32.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-05-26": {
+      "date": "2026-05-26",
+      "texte": "Les robots humano\u00efdes font un pas de g\u00e9ant avec des prix en baisse et des lancements de production imminents, notamment chez Tesla. L'indice d'acc\u00e9l\u00e9ration vers l'adoption industrielle \u00e0 grande \u00e9chelle progresse, confirmant l'arriv\u00e9e de ces outils r\u00e9volutionnaires dans les usines et les ateliers.",
+      "hai": 29.1,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-25T15:50:24.040808"
+  "generated": "2026-05-26T17:01:34.565505"
 }
