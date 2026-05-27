@@ -55,6 +55,10 @@
     {
       "date": "2026-05-26",
       "valeur": 29.1
+    },
+    {
+      "date": "2026-05-27",
+      "valeur": 31.2
     }
   ],
   "price": [
@@ -92,6 +96,10 @@
     },
     {
       "date": "2026-05-26",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-05-27",
       "valeur": 29000.0
     }
   ],
@@ -193,7 +201,14 @@
       "hai": 29.1,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-05-27": {
+      "date": "2026-05-27",
+      "texte": "Les robots humano\u00efdes sont sur le point de r\u00e9volutionner notre quotidien ! Avec des pr\u00e9commandes ouvertes et des lancements de produits concrets, les signaux forts se multiplient. L'ouverture d'une usine de production en Californie et le lancement de mechs transformables sont autant de preuves que l'industrie est pr\u00eate \u00e0 passer \u00e0 la vitesse sup\u00e9rieure. Le HAI progresse de 4,4 points, refl\u00e9tant l'acc\u00e9l\u00e9ration de l'adoption industrielle de ces outils innovants.",
+      "hai": 31.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-26T17:01:34.565505"
+  "generated": "2026-05-27T10:26:21.616215"
 }
