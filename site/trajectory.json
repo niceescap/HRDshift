@@ -59,6 +59,10 @@
     {
       "date": "2026-05-27",
       "valeur": 31.2
+    },
+    {
+      "date": "2026-05-28",
+      "valeur": 27.2
     }
   ],
   "price": [
@@ -100,6 +104,10 @@
     },
     {
       "date": "2026-05-27",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-05-28",
       "valeur": 29000.0
     }
   ],
@@ -208,7 +216,14 @@
       "hai": 31.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-05-28": {
+      "date": "2026-05-28",
+      "texte": "Les robots humano\u00efdes font un pas en avant avec l'annonce de Stretch 4 et les mises \u00e0 jour sur Optimus 3, confiant dans leur adoption industrielle croissante.",
+      "hai": 27.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-27T10:26:21.616215"
+  "generated": "2026-05-28T08:40:53.654833"
 }
