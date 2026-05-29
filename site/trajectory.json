@@ -63,6 +63,10 @@
     {
       "date": "2026-05-28",
       "valeur": 27.2
+    },
+    {
+      "date": "2026-05-29",
+      "valeur": 31.5
     }
   ],
   "price": [
@@ -108,6 +112,10 @@
     },
     {
       "date": "2026-05-28",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-05-29",
       "valeur": 29000.0
     }
   ],
@@ -223,7 +231,14 @@
       "hai": 27.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-05-29": {
+      "date": "2026-05-29",
+      "texte": "Les partenariats industriels et les d\u00e9ploiements de robots humano\u00efdes se multiplient, avec des annonces cl\u00e9s de Unitree Robotics et Humanoid. L'acc\u00e9l\u00e9ration est r\u00e9elle, le HAI progresse de 5,4 points, vers une adoption industrielle \u00e0 grande \u00e9chelle de plus en plus probable.",
+      "hai": 31.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-28T08:40:53.654833"
+  "generated": "2026-05-29T15:24:55.571178"
 }
