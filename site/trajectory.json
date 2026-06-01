@@ -3,11 +3,19 @@
     {
       "date": "2026-05-31",
       "valeur": 28.8
+    },
+    {
+      "date": "2026-06-01",
+      "valeur": 31.5
     }
   ],
   "price": [
     {
       "date": "2026-05-31",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-01",
       "valeur": 29000.0
     }
   ],
@@ -18,7 +26,14 @@
       "hai": 27.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-01": {
+      "date": "2026-06-01",
+      "texte": "Les robots humano\u00efdes ont franchi un cap avec des prix en baisse et des pr\u00e9commandes ouvertes, prouvant leur viabilit\u00e9 industrielle grandissante",
+      "hai": 31.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-05-31T21:00:16.988540"
+  "generated": "2026-06-01T07:00:17.408543"
 }
