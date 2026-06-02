@@ -419,11 +419,11 @@ footer::before {
       <div class="nav-trajectory">
         <a href="trajectory.html" class="mini-chart-box" title="HAI 7 jours">
           <div class="mini-chart-label"><span>HAI</span><span>7 jours</span></div>
-          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 72.0,32.4 108.0,3.599999999999999 180.0,3.599999999999999 " fill="none" stroke="#42b883" stroke-width="1.5" opacity="0.8"/></svg></div>
+          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 36.0,32.4 54.0,3.599999999999999 90.0,3.599999999999999 C 126.0,3.599999999999999 144.0,5.815384615384611 180.0,5.815384615384611 " fill="none" stroke="#42b883" stroke-width="1.5" opacity="0.8"/></svg></div>
         </a>
         <a href="trajectory.html" class="mini-chart-box" title="Prix 7 jours">
           <div class="mini-chart-label"><span>Prix</span><span>7 jours</span></div>
-          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 72.0,32.4 108.0,32.4 180.0,32.4 " fill="none" stroke="#c8a84b" stroke-width="1.5" opacity="0.8"/></svg></div>
+          <div class="mini-chart-grid"><svg width="180" height="36"><path d="M 0.0,32.4 C 36.0,32.4 54.0,32.4 90.0,32.4 C 126.0,32.4 144.0,32.4 180.0,32.4 " fill="none" stroke="#c8a84b" stroke-width="1.5" opacity="0.8"/></svg></div>
         </a>
       </div>
     </div>
@@ -546,9 +546,9 @@ footer::before {
     </div>
 
     <script>
-        const haiData = [{"date": "2026-05-31", "valeur": 28.8}, {"date": "2026-06-01", "valeur": 31.4}];
-        const priceData = [{"date": "2026-05-31", "valeur": 29000.0}, {"date": "2026-06-01", "valeur": 29000.0}];
-        const editoByDate = {"2026-05-31": {"date": "2026-05-31", "texte": "Les signaux technologiques et industriels se multiplient, avec des annonces de plateformes de finance embarqu\u00e9e et de centres de R&D. Le HAI progresse l\u00e9g\u00e8rement, mais reste dans une phase de recherche exp\u00e9rimentale. Les fonds lev\u00e9s par Moonshot AI et la cr\u00e9ation de nouveaux centres de R&D sont des indicateurs prometteurs pour l'avenir des robots humano\u00efdes.", "hai": 27.5, "tendance": "\u2191", "date_edito": ""}, "2026-06-01": {"date": "2026-06-01", "texte": "Les robots humano\u00efdes ont franchi un cap avec des prix en baisse et des pr\u00e9commandes ouvertes, prouvant leur viabilit\u00e9 industrielle grandissante", "hai": 31.5, "tendance": "\u2191", "date_edito": ""}};
+        const haiData = [{"date": "2026-05-31", "valeur": 28.8}, {"date": "2026-06-01", "valeur": 31.4}, {"date": "2026-06-02", "valeur": 31.2}];
+        const priceData = [{"date": "2026-05-31", "valeur": 29000.0}, {"date": "2026-06-01", "valeur": 29000.0}, {"date": "2026-06-02", "valeur": 29000.0}];
+        const editoByDate = {"2026-05-31": {"date": "2026-05-31", "texte": "Les signaux technologiques et industriels se multiplient, avec des annonces de plateformes de finance embarqu\u00e9e et de centres de R&D. Le HAI progresse l\u00e9g\u00e8rement, mais reste dans une phase de recherche exp\u00e9rimentale. Les fonds lev\u00e9s par Moonshot AI et la cr\u00e9ation de nouveaux centres de R&D sont des indicateurs prometteurs pour l'avenir des robots humano\u00efdes.", "hai": 27.5, "tendance": "\u2191", "date_edito": ""}, "2026-06-01": {"date": "2026-06-01", "texte": "Les robots humano\u00efdes ont franchi un cap avec des prix en baisse et des pr\u00e9commandes ouvertes, prouvant leur viabilit\u00e9 industrielle grandissante", "hai": 31.5, "tendance": "\u2191", "date_edito": ""}, "2026-06-02": {"date": "2026-06-02", "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re son rythme avec des commandes fermes et des partenariats industriels de poids, notamment avec UBTECH et Airbus. Les d\u00e9ploiements de robots sur les cha\u00eenes de production et les pr\u00e9commandes records laissent pr\u00e9sager une adoption \u00e0 grande \u00e9chelle prochaine.", "hai": 31.2, "tendance": "\u2191", "date_edito": ""}};
 
         const allDates = [...new Set([
             ...haiData.map(d => d.date),
@@ -676,7 +676,7 @@ footer::before {
   <span class="footer-text">
     Déploiement des Robots Humanoïdes | Tenez-vous prêts.
   </span>
-  <span class="footer-build">Build 2026-06-01 21:00</span>
+  <span class="footer-build">Build 2026-06-02 07:00</span>
 </footer>
 
 <!-- ═══════════════ JS SHELL ════════════════════════════════ -->
