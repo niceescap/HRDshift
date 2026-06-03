@@ -11,6 +11,10 @@
     {
       "date": "2026-06-02",
       "valeur": 30.1
+    },
+    {
+      "date": "2026-06-03",
+      "valeur": 27.5
     }
   ],
   "price": [
@@ -24,6 +28,10 @@
     },
     {
       "date": "2026-06-02",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-03",
       "valeur": 29000.0
     }
   ],
@@ -48,7 +56,14 @@
       "hai": 31.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-03": {
+      "date": "2026-06-03",
+      "texte": "Les robots humano\u00efdes acc\u00e9l\u00e8rent leur marche vers l'industrialisation, avec des annonces de production et de d\u00e9ploiement concrets, notamment avec le Stretch 4 de Hello Robot et les mises \u00e0 jour sur le calendrier de production d'Optimus 3 d'Elon Musk, confirmant une progression tangible vers une adoption \u00e0 grande \u00e9chelle.",
+      "hai": 27.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-02T21:00:18.166103"
+  "generated": "2026-06-03T07:00:15.745875"
 }
