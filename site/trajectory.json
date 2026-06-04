@@ -15,6 +15,10 @@
     {
       "date": "2026-06-03",
       "valeur": 27.1
+    },
+    {
+      "date": "2026-06-04",
+      "valeur": 27.5
     }
   ],
   "price": [
@@ -32,6 +36,10 @@
     },
     {
       "date": "2026-06-03",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-04",
       "valeur": 29000.0
     }
   ],
@@ -63,7 +71,14 @@
       "hai": 27.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-04": {
+      "date": "2026-06-04",
+      "texte": "L'acc\u00e9l\u00e9ration vers l'adoption industrielle des robots humano\u00efdes se poursuit avec des avanc\u00e9es technologiques et des partenariats industriels prometteurs, notamment dans le domaine de la vision et de la dext\u00e9rit\u00e9 robotique, ce qui pousse le HAI \u00e0 27,5.",
+      "hai": 27.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-03T21:00:16.619462"
+  "generated": "2026-06-04T07:00:17.504875"
 }
