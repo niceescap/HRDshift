@@ -19,6 +19,10 @@
     {
       "date": "2026-06-04",
       "valeur": 27.8
+    },
+    {
+      "date": "2026-06-05",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -40,6 +44,10 @@
     },
     {
       "date": "2026-06-04",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-05",
       "valeur": 29000.0
     }
   ],
@@ -78,7 +86,14 @@
       "hai": 27.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-05": {
+      "date": "2026-06-05",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re avec des annonces de lancement de nouveaux produits et de premi\u00e8res commandes, notamment avec Ai2 et GMEX Robotics, confirmant la progression vers une viabilit\u00e9 op\u00e9rationnelle.",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-04T21:00:17.058143"
+  "generated": "2026-06-05T07:00:17.677884"
 }
