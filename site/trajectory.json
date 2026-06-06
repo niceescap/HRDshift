@@ -23,6 +23,10 @@
     {
       "date": "2026-06-05",
       "valeur": 28.9
+    },
+    {
+      "date": "2026-06-06",
+      "valeur": 27.2
     }
   ],
   "price": [
@@ -48,6 +52,10 @@
     },
     {
       "date": "2026-06-05",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-06",
       "valeur": 29000.0
     }
   ],
@@ -93,7 +101,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-06": {
+      "date": "2026-06-06",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re son rythme avec l'arriv\u00e9e de nouveaux mod\u00e8les comme le Mornine M1 et le Helix-02, capables de travailler 8 heures d'affil\u00e9e en usine. Les investissements dans la recherche et le d\u00e9veloppement, comme ceux de RLWRLD et All3, renforcent cette tendance. Le HAI progresse de 1,6 point, refl\u00e9tant une augmentation de l'activit\u00e9 industrielle et technologique dans le secteur.",
+      "hai": 27.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-05T21:00:15.919859"
+  "generated": "2026-06-06T07:00:18.980793"
 }
