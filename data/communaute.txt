@@ -1,0 +1,33 @@
+Bienvenue dans l’atelier de HRDshift.
+
+Si la page À propos expose la réflexion générale du projet, cet espace est consacré à la pratique, à l’expérimentation et à l’échange autour des outils qui transforment déjà le travail industriel.
+
+HRDshift n’a pas été conçu comme une démarche isolée.
+Le site repose au contraire sur une idée simple : les capacités offertes par l’intelligence artificielle générative, l’automatisation légère et les outils numériques accessibles permettent désormais à des autodidactes de construire des infrastructures, des systèmes de veille et des outils fonctionnels avec des moyens extrêmement modestes.
+
+Cette plateforme elle-même en est une démonstration.
+
+Le projet n’est pas né dans un incubateur technologique ni dans un environnement académique spécialisé.
+Il a été développé progressivement, de manière artisanale, à partir d’outils accessibles, de tests, d’itérations et d’apprentissage continu.
+
+L’atelier désigne donc autant un état d’esprit qu’un espace de discussion : se retrousser les manches, expérimenter, apprendre et construire avec les nouveaux outils disponibles dans l’atelier numérique actuel, afin de mieux comprendre ce que pourrait devenir l’atelier physique de demain lorsque les robots humanoïdes entreront réellement dans les environnements de production.
+
+L’un des objectifs du projet consiste également à ouvrir une réflexion concrète sur les usages réels des futurs assistants robotisés.
+
+Quelles tâches répétitives, physiques ou pénibles pourraient être déléguées ?
+Quels gestes devraient rester exclusivement humains ?
+Comment préserver la souveraineté du savoir-faire humain dans un monde où les machines apprendront progressivement à reproduire certaines opérations techniques ?
+
+HRDshift considère que cette transition ne pourra fonctionner qu’à partir de l’expérience des travailleurs eux-mêmes.
+Les robots humanoïdes dépendront nécessairement des compétences, des méthodes et des connaissances transmises par le terrain.
+
+La plateforme explore également, dans une logique prospective, les possibilités offertes par les outils émergents de machine learning personnel, d’automatisation locale et d’intelligence artificielle embarquée.
+Ce qui semblait irréaliste il y a encore quelques années devient progressivement accessible à des profils autodidactes disposant simplement de temps, de curiosité et des bons outils logiciels.
+
+La qualité modeste mais concrète de cette expérimentation constitue précisément le cœur du message : si un projet comme HRDshift peut être construit progressivement par un opérateur de terrain avec des ressources limitées, alors la démocratisation future des outils de robotique et d’intelligence artificielle appliqués au travail paraît désormais crédible.
+
+Cette page a vocation à évoluer vers un véritable espace communautaire.
+En attendant la mise en place d’un forum dédié, toutes les remarques, propositions, critiques, retours d’expérience ou discussions autour de la robotique humanoïde, de l’automatisation et du travail peuvent être envoyés à : contact@fu19.org
+
+HRDshift documente une transition déjà en cours.
+L’atelier reste ouvert à tous ceux qui souhaitent observer, comprendre ou participer à cette évolution.
