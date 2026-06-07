@@ -27,6 +27,10 @@
     {
       "date": "2026-06-06",
       "valeur": 28.3
+    },
+    {
+      "date": "2026-06-07",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -56,6 +60,10 @@
     },
     {
       "date": "2026-06-06",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-07",
       "valeur": 29000.0
     }
   ],
@@ -108,7 +116,14 @@
       "hai": 27.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-07": {
+      "date": "2026-06-07",
+      "texte": "Les robots humano\u00efdes continuent de gagner du terrain avec des annonces de prix et de pr\u00e9commandes concr\u00e8tes, comme ceux de Unitree et 1X, ainsi que des partenariats industriels prometteurs. L'acc\u00e9l\u00e9ration est r\u00e9elle, mais il reste encore du chemin \u00e0 parcourir avant une adoption \u00e0 grande \u00e9chelle.",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-06T21:00:19.413885"
+  "generated": "2026-06-07T07:00:16.476747"
 }
