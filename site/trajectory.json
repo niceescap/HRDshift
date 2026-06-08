@@ -31,6 +31,10 @@
     {
       "date": "2026-06-07",
       "valeur": 28.2
+    },
+    {
+      "date": "2026-06-08",
+      "valeur": 30.5
     }
   ],
   "price": [
@@ -64,6 +68,10 @@
     },
     {
       "date": "2026-06-07",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-08",
       "valeur": 29000.0
     }
   ],
@@ -123,7 +131,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-08": {
+      "date": "2026-06-08",
+      "texte": "Les robots humano\u00efdes font un pas de plus vers l'industrialisation avec des partenariats cl\u00e9s et des lancements commerciaux, notamment Unitree et OLO Robotics, qui renforcent la cr\u00e9dibilit\u00e9 de ce march\u00e9 en plein essor.",
+      "hai": 30.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-07T21:00:16.016111"
+  "generated": "2026-06-08T07:00:18.578943"
 }
