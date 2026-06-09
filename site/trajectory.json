@@ -35,6 +35,10 @@
     {
       "date": "2026-06-08",
       "valeur": 27.6
+    },
+    {
+      "date": "2026-06-09",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -72,6 +76,10 @@
     },
     {
       "date": "2026-06-08",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-09",
       "valeur": 29000.0
     }
   ],
@@ -138,7 +146,14 @@
       "hai": 30.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-09": {
+      "date": "2026-06-09",
+      "texte": "Les robots humano\u00efdes gagnent du terrain dans l'industrie, avec des signaux concrets de d\u00e9ploiement et de partenariats industriels. La concurrence entre robots et op\u00e9rateurs humains montre les limites actuelles, mais les progr\u00e8s sont rapides et prometteurs.",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-08T21:00:16.735000"
+  "generated": "2026-06-09T07:00:18.959502"
 }
