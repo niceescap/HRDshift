@@ -39,6 +39,10 @@
     {
       "date": "2026-06-09",
       "valeur": 27.9
+    },
+    {
+      "date": "2026-06-10",
+      "valeur": 30.5
     }
   ],
   "price": [
@@ -80,6 +84,10 @@
     },
     {
       "date": "2026-06-09",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-10",
       "valeur": 29000.0
     }
   ],
@@ -153,7 +161,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-10": {
+      "date": "2026-06-10",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re son rythme avec des annonces de production et de d\u00e9ploiement concrets, notamment la chute de 68% du prix des robots humano\u00efdes d'ici 2030 et l'ouverture d'une nouvelle usine de production aux \u00c9tats-Unis. Les partenariats industriels et les pr\u00e9commandes se multiplient, confirmant l'arriv\u00e9e imminente de ces outils r\u00e9volutionnaires dans les op\u00e9rations manuelles hautement qualifi\u00e9es.",
+      "hai": 30.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-09T21:00:17.541952"
+  "generated": "2026-06-10T07:00:18.588762"
 }
