@@ -43,6 +43,10 @@
     {
       "date": "2026-06-10",
       "valeur": 29.2
+    },
+    {
+      "date": "2026-06-11",
+      "valeur": 28.5
     }
   ],
   "price": [
@@ -88,6 +92,10 @@
     },
     {
       "date": "2026-06-10",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-11",
       "valeur": 29000.0
     }
   ],
@@ -168,7 +176,14 @@
       "hai": 30.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-11": {
+      "date": "2026-06-11",
+      "texte": "L'acc\u00e9l\u00e9ration vers l'adoption des robots humano\u00efdes se confirme avec des partenariats cl\u00e9s comme celui entre Humanoid et Bosch, et des avanc\u00e9es technologiques prometteuses, portant le HAI \u00e0 28,5, en progression de 2,7 points par rapport \u00e0 la semaine derni\u00e8re.",
+      "hai": 28.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-10T21:00:16.674566"
+  "generated": "2026-06-11T07:00:17.603756"
 }
