@@ -47,6 +47,10 @@
     {
       "date": "2026-06-11",
       "valeur": 28.5
+    },
+    {
+      "date": "2026-06-12",
+      "valeur": 30.5
     }
   ],
   "price": [
@@ -96,6 +100,10 @@
     },
     {
       "date": "2026-06-11",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-12",
       "valeur": 29000.0
     }
   ],
@@ -183,7 +191,14 @@
       "hai": 28.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-12": {
+      "date": "2026-06-12",
+      "texte": "Les robots humano\u00efdes s'approchent de la phase de prototypes cr\u00e9dibles, avec des annonces de prix et de dates de livraison concr\u00e8tes. Unitree H2 et les avanc\u00e9es de Physical AI dans les usines sont des signaux forts de cette progression.",
+      "hai": 30.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-11T21:00:18.192984"
+  "generated": "2026-06-12T07:00:16.845636"
 }
