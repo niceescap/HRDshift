@@ -55,6 +55,10 @@
     {
       "date": "2026-06-13",
       "valeur": 28.9
+    },
+    {
+      "date": "2026-06-14",
+      "valeur": 27.5
     }
   ],
   "price": [
@@ -112,6 +116,10 @@
     },
     {
       "date": "2026-06-13",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-14",
       "valeur": 29000.0
     }
   ],
@@ -213,7 +221,14 @@
       "hai": 26.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-14": {
+      "date": "2026-06-14",
+      "texte": "Les robots humano\u00efdes se rapprochent de l'industrialisation avec des pr\u00e9commandes ouvertes pour des mod\u00e8les comme le NEO et des partenariats prometteurs comme ceux d'UBTech, prouvant une acc\u00e9l\u00e9ration concr\u00e8te vers une adoption \u00e0 grande \u00e9chelle.",
+      "hai": 27.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-13T21:00:16.139358"
+  "generated": "2026-06-14T07:00:17.225807"
 }
