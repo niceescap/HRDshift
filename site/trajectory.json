@@ -59,6 +59,10 @@
     {
       "date": "2026-06-14",
       "valeur": 28.8
+    },
+    {
+      "date": "2026-06-15",
+      "valeur": 27.4
     }
   ],
   "price": [
@@ -120,6 +124,10 @@
     },
     {
       "date": "2026-06-14",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-15",
       "valeur": 29000.0
     }
   ],
@@ -228,7 +236,14 @@
       "hai": 27.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-15": {
+      "date": "2026-06-15",
+      "texte": "Les robots humano\u00efdes font un pas de plus vers l'industrialisation avec l'acquisition de Mapless AI par Fort Robotics et la pr\u00e9sentation de nouveaux robots par Flexiv, tandis que les applications concr\u00e8tes de robots dans la s\u00e9curit\u00e9 et la fabrication m\u00e9tallique montrent une progression vers une adoption \u00e0 grande \u00e9chelle.",
+      "hai": 27.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-14T21:00:16.902931"
+  "generated": "2026-06-15T07:00:19.837101"
 }
