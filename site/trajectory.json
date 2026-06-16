@@ -63,6 +63,10 @@
     {
       "date": "2026-06-15",
       "valeur": 27.4
+    },
+    {
+      "date": "2026-06-16",
+      "valeur": 30.5
     }
   ],
   "price": [
@@ -128,6 +132,10 @@
     },
     {
       "date": "2026-06-15",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-16",
       "valeur": 29000.0
     }
   ],
@@ -243,7 +251,14 @@
       "hai": 27.4,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-16": {
+      "date": "2026-06-16",
+      "texte": "Les robots humano\u00efdes s'approchent de la production de masse, avec des annonces de production et de livraison concr\u00e8tes, notamment chez XPeng et Apptronik. Le HAI progresse, refl\u00e9tant l'acc\u00e9l\u00e9ration de l'industrie vers l'adoption \u00e0 grande \u00e9chelle de ces outils r\u00e9volutionnaires.",
+      "hai": 30.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-15T21:00:17.598813"
+  "generated": "2026-06-16T07:00:17.382019"
 }
