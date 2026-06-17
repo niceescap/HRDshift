@@ -67,6 +67,10 @@
     {
       "date": "2026-06-16",
       "valeur": 29.4
+    },
+    {
+      "date": "2026-06-17",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -136,6 +140,10 @@
     },
     {
       "date": "2026-06-16",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-17",
       "valeur": 29000.0
     }
   ],
@@ -258,7 +266,14 @@
       "hai": 30.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-17": {
+      "date": "2026-06-17",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re son rythme avec des partenariats cl\u00e9s et des annonces de production, notamment la cr\u00e9ation de la premi\u00e8re usine de robots humano\u00efdes verticalement int\u00e9gr\u00e9e aux \u00c9tats-Unis par 1X. Les investissements dans les ETF d\u00e9di\u00e9s aux robots humano\u00efdes et les collaborations entre entreprises comme Nvidia et Boston Dynamics renforcent cette tendance positive.",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-16T21:00:18.492769"
+  "generated": "2026-06-17T07:00:17.296685"
 }
