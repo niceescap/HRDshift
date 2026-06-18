@@ -71,6 +71,10 @@
     {
       "date": "2026-06-17",
       "valeur": 27.5
+    },
+    {
+      "date": "2026-06-18",
+      "valeur": 26.2
     }
   ],
   "price": [
@@ -144,6 +148,10 @@
     },
     {
       "date": "2026-06-17",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-18",
       "valeur": 29000.0
     }
   ],
@@ -273,7 +281,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-18": {
+      "date": "2026-06-18",
+      "texte": "Les robots humano\u00efdes font un pas de plus vers l'industrialisation avec des avanc\u00e9es dans l'agriculture autonome et les grippers pneumatiques. Les partenariats et les lev\u00e9es de fonds soutiennent cette tendance positive.",
+      "hai": 26.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-17T21:00:18.564296"
+  "generated": "2026-06-18T07:00:23.044291"
 }
