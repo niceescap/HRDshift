@@ -79,6 +79,10 @@
     {
       "date": "2026-06-19",
       "valeur": 26.8
+    },
+    {
+      "date": "2026-06-20",
+      "valeur": 30.5
     }
   ],
   "price": [
@@ -160,6 +164,10 @@
     },
     {
       "date": "2026-06-19",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-20",
       "valeur": 29000.0
     }
   ],
@@ -303,7 +311,14 @@
       "hai": 26.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-20": {
+      "date": "2026-06-20",
+      "texte": "L'industrie des robots humano\u00efdes prend de l'essor avec UBTECH, qui d\u00e9passe les 1000 pr\u00e9commandes en 3 jours pour son robot humano\u00efde biomim\u00e9tique. Cette acc\u00e9l\u00e9ration est soutenue par des partenariats et des d\u00e9ploiements industriels en cours, ouvrant la voie \u00e0 une adoption plus large dans les op\u00e9rations manuelles de haute pr\u00e9cision.",
+      "hai": 30.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-19T21:00:16.531993"
+  "generated": "2026-06-20T07:00:17.581705"
 }
