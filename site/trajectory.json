@@ -83,6 +83,10 @@
     {
       "date": "2026-06-20",
       "valeur": 27.8
+    },
+    {
+      "date": "2026-06-21",
+      "valeur": 28.2
     }
   ],
   "price": [
@@ -168,6 +172,10 @@
     },
     {
       "date": "2026-06-20",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-21",
       "valeur": 29000.0
     }
   ],
@@ -318,7 +326,14 @@
       "hai": 30.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-21": {
+      "date": "2026-06-21",
+      "texte": "L'acc\u00e9l\u00e9ration de l'industrie des robots humano\u00efdes en Chine et le lancement de RobOmni pour la perception tactile et la manipulation d\u00e9montrent une progression concr\u00e8te vers la viabilit\u00e9 op\u00e9rationnelle, renfor\u00e7ant l'optimisme quant \u00e0 l'adoption industrielle \u00e0 grande \u00e9chelle de ces robots.",
+      "hai": 28.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-20T21:00:17.320515"
+  "generated": "2026-06-21T07:00:16.553836"
 }
