@@ -87,6 +87,10 @@
     {
       "date": "2026-06-21",
       "valeur": 27.9
+    },
+    {
+      "date": "2026-06-22",
+      "valeur": 27.2
     }
   ],
   "price": [
@@ -176,6 +180,10 @@
     },
     {
       "date": "2026-06-21",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-22",
       "valeur": 29000.0
     }
   ],
@@ -333,7 +341,14 @@
       "hai": 28.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-22": {
+      "date": "2026-06-22",
+      "texte": "L'acc\u00e9l\u00e9ration vers l'adoption industrielle des robots humano\u00efdes se confirme avec des annonces de partenariats cl\u00e9s et des avanc\u00e9es technologiques, notamment avec Sharpa et Nvidia pour des mains robotiques dextres et Hyundai Motor qui mise sur Boston Dynamics pour son campaign 'School of Football'.",
+      "hai": 27.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-21T21:00:18.460610"
+  "generated": "2026-06-22T07:00:15.531860"
 }
