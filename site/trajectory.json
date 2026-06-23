@@ -91,6 +91,10 @@
     {
       "date": "2026-06-22",
       "valeur": 29.6
+    },
+    {
+      "date": "2026-06-23",
+      "valeur": 26.2
     }
   ],
   "price": [
@@ -184,6 +188,10 @@
     },
     {
       "date": "2026-06-22",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-23",
       "valeur": 29000.0
     }
   ],
@@ -348,7 +356,14 @@
       "hai": 27.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-23": {
+      "date": "2026-06-23",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re son rythme avec des investissements records comme la lev\u00e9e de fonds de 1,4 milliard de dollars par Neura Robotics, et des d\u00e9ploiements concrets comme les 400 robots autonomes de Geekplus chez Toyota. Les signaux sont clairs : les robots humano\u00efdes sont pr\u00eats \u00e0 r\u00e9volutionner l'industrie !",
+      "hai": 26.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-22T21:00:19.130116"
+  "generated": "2026-06-23T07:00:18.781195"
 }
