@@ -95,6 +95,10 @@
     {
       "date": "2026-06-23",
       "valeur": 26.6
+    },
+    {
+      "date": "2026-06-24",
+      "valeur": 27.2
     }
   ],
   "price": [
@@ -192,6 +196,10 @@
     },
     {
       "date": "2026-06-23",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-24",
       "valeur": 29000.0
     }
   ],
@@ -363,7 +371,14 @@
       "hai": 26.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-24": {
+      "date": "2026-06-24",
+      "texte": "Les initiatives de d\u00e9ploiement de robots humano\u00efdes se multiplient, avec des acteurs majeurs comme YY Group et Hyundai Motor qui lancent des programmes commerciaux pour int\u00e9grer l'intelligence artificielle et r\u00e9pondre aux p\u00e9nuries de main-d'\u0153uvre. Le HAI progresse, refl\u00e9tant une acc\u00e9l\u00e9ration de l'adoption industrielle de ces technologies.",
+      "hai": 27.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-23T21:00:18.157591"
+  "generated": "2026-06-24T07:00:17.911104"
 }
