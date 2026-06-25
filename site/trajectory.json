@@ -99,6 +99,10 @@
     {
       "date": "2026-06-24",
       "valeur": 27.5
+    },
+    {
+      "date": "2026-06-25",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -200,6 +204,10 @@
     },
     {
       "date": "2026-06-24",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-25",
       "valeur": 29000.0
     }
   ],
@@ -378,7 +386,14 @@
       "hai": 27.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-25": {
+      "date": "2026-06-25",
+      "texte": "L'acc\u00e9l\u00e9ration vers l'adoption industrielle des robots humano\u00efdes se confirme avec des annonces de production et de pr\u00e9commandes records, t\u00e9moignant d'une volont\u00e9 croissante d'int\u00e9grer ces outils dans les processus op\u00e9rationnels.",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-24T21:00:14.402682"
+  "generated": "2026-06-25T07:00:15.174385"
 }
