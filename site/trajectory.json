@@ -103,6 +103,10 @@
     {
       "date": "2026-06-25",
       "valeur": 27.6
+    },
+    {
+      "date": "2026-06-26",
+      "valeur": 30.1
     }
   ],
   "price": [
@@ -208,6 +212,10 @@
     },
     {
       "date": "2026-06-25",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-26",
       "valeur": 29000.0
     }
   ],
@@ -393,7 +401,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-26": {
+      "date": "2026-06-26",
+      "texte": "L'industrie des robots humano\u00efdes se renforce avec des partenariats cl\u00e9s, une production en hausse et des pr\u00e9commandes prometteuses, mais les d\u00e9fis de d\u00e9ploiement commercial et de co\u00fbt restent \u00e0 relever.",
+      "hai": 30.1,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-25T21:00:16.209290"
+  "generated": "2026-06-26T07:00:20.380909"
 }
