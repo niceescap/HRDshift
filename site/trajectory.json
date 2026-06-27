@@ -107,6 +107,10 @@
     {
       "date": "2026-06-26",
       "valeur": 29.5
+    },
+    {
+      "date": "2026-06-27",
+      "valeur": 26.5
     }
   ],
   "price": [
@@ -216,6 +220,10 @@
     },
     {
       "date": "2026-06-26",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-27",
       "valeur": 29000.0
     }
   ],
@@ -408,7 +416,14 @@
       "hai": 30.1,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-27": {
+      "date": "2026-06-27",
+      "texte": "Les partenariats industriels et les avanc\u00e9es technologiques dans le domaine des robots humano\u00efdes montrent une acc\u00e9l\u00e9ration de l'adoption, avec des entreprises comme Third Wave Automation et Sanctuary AI qui font progresser l'intelligence artificielle physique. Les d\u00e9ploiements terrain et les lev\u00e9es de fonds, comme celle de CuspAI, renforcent cette tendance positive.",
+      "hai": 26.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-26T21:00:17.525479"
+  "generated": "2026-06-27T07:00:14.653692"
 }
