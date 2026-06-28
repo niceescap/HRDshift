@@ -111,6 +111,10 @@
     {
       "date": "2026-06-27",
       "valeur": 26.8
+    },
+    {
+      "date": "2026-06-28",
+      "valeur": 26.5
     }
   ],
   "price": [
@@ -224,6 +228,10 @@
     },
     {
       "date": "2026-06-27",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-28",
       "valeur": 29000.0
     }
   ],
@@ -423,7 +431,14 @@
       "hai": 26.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-28": {
+      "date": "2026-06-28",
+      "texte": "L'annonce de Boston Dynamics sur les capacit\u00e9s de son robot Atlas \u00e0 montrer des signes d'intelligence g\u00e9n\u00e9rale pour le travail en usine pousse l'indice HAI \u00e0 26,5, marquant une progression significative vers l'adoption industrielle des robots humano\u00efdes.",
+      "hai": 26.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-27T21:00:15.162666"
+  "generated": "2026-06-28T07:00:17.599490"
 }
