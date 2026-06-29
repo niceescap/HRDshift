@@ -115,6 +115,10 @@
     {
       "date": "2026-06-28",
       "valeur": 26.8
+    },
+    {
+      "date": "2026-06-29",
+      "valeur": 28.5
     }
   ],
   "price": [
@@ -232,6 +236,10 @@
     },
     {
       "date": "2026-06-28",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-29",
       "valeur": 29000.0
     }
   ],
@@ -438,7 +446,14 @@
       "hai": 26.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-29": {
+      "date": "2026-06-29",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re son rythme avec des annonces de prix comp\u00e9titifs et des partenariats industriels, notamment avec Tesla Optimus et NVIDIA, confirmant une tendance positive vers une adoption \u00e0 grande \u00e9chelle.",
+      "hai": 28.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-28T21:00:15.544371"
+  "generated": "2026-06-29T07:00:16.156950"
 }
