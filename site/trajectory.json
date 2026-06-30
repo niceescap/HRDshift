@@ -119,6 +119,10 @@
     {
       "date": "2026-06-29",
       "valeur": 27.2
+    },
+    {
+      "date": "2026-06-30",
+      "valeur": 26.5
     }
   ],
   "price": [
@@ -240,6 +244,10 @@
     },
     {
       "date": "2026-06-29",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-06-30",
       "valeur": 29000.0
     }
   ],
@@ -453,7 +461,14 @@
       "hai": 28.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-06-30": {
+      "date": "2026-06-30",
+      "texte": "L'annonce de NVIDIA concernant le logiciel Halos pour acc\u00e9l\u00e9rer la certification de s\u00e9curit\u00e9 des robots humano\u00efdes commerciaux constitue un signal fort en faveur de l'acc\u00e9l\u00e9ration de l'adoption industrielle. Cela pousse le HAI \u00e0 26,5, avec une tendance haussi\u00e8re, confirmant l'imminence de l'arriv\u00e9e de ces robots dans les op\u00e9rations industrielles.",
+      "hai": 26.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-29T21:00:16.856581"
+  "generated": "2026-06-30T07:00:15.823547"
 }
