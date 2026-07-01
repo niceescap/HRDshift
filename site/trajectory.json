@@ -123,6 +123,10 @@
     {
       "date": "2026-06-30",
       "valeur": 29.1
+    },
+    {
+      "date": "2026-07-01",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -248,6 +252,10 @@
     },
     {
       "date": "2026-06-30",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-07-01",
       "valeur": 29000.0
     }
   ],
@@ -468,7 +476,14 @@
       "hai": 26.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-01": {
+      "date": "2026-07-01",
+      "texte": "Les robots humano\u00efdes font un pas de g\u00e9ant avec des prix en baisse et des pr\u00e9commandes records. Les partenariats industriels et les lancements de nouveaux mod\u00e8les acc\u00e9l\u00e8rent leur adoption. L'avenir est radieux pour ces outils r\u00e9volutionnaires !",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-06-30T21:00:17.483162"
+  "generated": "2026-07-01T07:00:16.365521"
 }
