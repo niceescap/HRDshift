@@ -127,6 +127,10 @@
     {
       "date": "2026-07-01",
       "valeur": 29.2
+    },
+    {
+      "date": "2026-07-02",
+      "valeur": 27.5
     }
   ],
   "price": [
@@ -256,6 +260,10 @@
     },
     {
       "date": "2026-07-01",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-07-02",
       "valeur": 29000.0
     }
   ],
@@ -483,7 +491,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-02": {
+      "date": "2026-07-02",
+      "texte": "Les ventes de robots humano\u00efdes ont connu une forte croissance en 2025, et des partenariats industriels prometteurs comme celui de BMW Group avec le projet Figure 03 renforcent la tendance. L'acc\u00e9l\u00e9ration de l'adoption industrielles des robots humano\u00efdes est en marche, avec une progression concr\u00e8te vers une viabilit\u00e9 op\u00e9rationnelle.",
+      "hai": 27.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-01T21:00:17.165552"
+  "generated": "2026-07-02T07:00:16.153990"
 }
