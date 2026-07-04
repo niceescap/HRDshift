@@ -135,6 +135,10 @@
     {
       "date": "2026-07-03",
       "valeur": 26.6
+    },
+    {
+      "date": "2026-07-04",
+      "valeur": 28.2
     }
   ],
   "price": [
@@ -272,6 +276,10 @@
     },
     {
       "date": "2026-07-03",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-07-04",
       "valeur": 29000.0
     }
   ],
@@ -513,7 +521,14 @@
       "hai": 27.3,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-04": {
+      "date": "2026-07-04",
+      "texte": "Les robots humano\u00efdes font un pas de plus vers l'industrialisation avec des pr\u00e9commandes record pour Ubtech Robotics et des d\u00e9ploiements r\u00e9ussis en usine, comme ceux d'Agibot en Chine. L'acc\u00e9l\u00e9ration est en marche !",
+      "hai": 28.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-03T21:00:15.059031"
+  "generated": "2026-07-04T07:00:15.394919"
 }
