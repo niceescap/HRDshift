@@ -139,6 +139,10 @@
     {
       "date": "2026-07-04",
       "valeur": 28.8
+    },
+    {
+      "date": "2026-07-05",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -280,6 +284,10 @@
     },
     {
       "date": "2026-07-04",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-07-05",
       "valeur": 29000.0
     }
   ],
@@ -528,7 +536,14 @@
       "hai": 28.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-05": {
+      "date": "2026-07-05",
+      "texte": "L'industrie des robots humano\u00efdes acc\u00e9l\u00e8re avec les annonces d'Apptronik, UBTech et d'autres acteurs cl\u00e9s, confirmant une tendance positive vers l'adoption \u00e0 grande \u00e9chelle.",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-04T21:00:16.489256"
+  "generated": "2026-07-05T07:00:14.629698"
 }
