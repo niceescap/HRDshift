@@ -143,6 +143,10 @@
     {
       "date": "2026-07-05",
       "valeur": 29.2
+    },
+    {
+      "date": "2026-07-06",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -288,6 +292,10 @@
     },
     {
       "date": "2026-07-05",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-07-06",
       "valeur": 29000.0
     }
   ],
@@ -543,7 +551,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-06": {
+      "date": "2026-07-06",
+      "texte": "L'industrie des robots humano\u00efdes prend de l'ampleur avec des annonces de lancement de produits comme l'UWORLD U1 d'UBTECH et des partenariats prometteurs. Le HAI progresse, refl\u00e9tant une acc\u00e9l\u00e9ration concr\u00e8te vers une adoption industrielle \u00e0 grande \u00e9chelle.",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-05T21:00:20.876326"
+  "generated": "2026-07-06T07:00:15.156012"
 }
