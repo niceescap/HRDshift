@@ -147,6 +147,10 @@
     {
       "date": "2026-07-06",
       "valeur": 28.3
+    },
+    {
+      "date": "2026-07-07",
+      "valeur": 27.2
     }
   ],
   "price": [
@@ -296,6 +300,10 @@
     },
     {
       "date": "2026-07-06",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-07-07",
       "valeur": 29000.0
     }
   ],
@@ -558,7 +566,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-07": {
+      "date": "2026-07-07",
+      "texte": "Les robots humano\u00efdes gagnent du terrain avec des d\u00e9ploiements concrets comme ceux de Figure AI chez BMW et d'UBTech \u00e0 la fronti\u00e8re chinoise. L'investissement dans la technologie et les partenariats industriels renforcent la tendance \u00e0 l'adoption.",
+      "hai": 27.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-06T21:00:16.344337"
+  "generated": "2026-07-07T07:00:15.400158"
 }
