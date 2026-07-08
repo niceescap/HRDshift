@@ -151,6 +151,10 @@
     {
       "date": "2026-07-07",
       "valeur": 29.2
+    },
+    {
+      "date": "2026-07-08",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -304,6 +308,10 @@
     },
     {
       "date": "2026-07-07",
+      "valeur": 29000.0
+    },
+    {
+      "date": "2026-07-08",
       "valeur": 29000.0
     }
   ],
@@ -573,7 +581,14 @@
       "hai": 27.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-08": {
+      "date": "2026-07-08",
+      "texte": "L'acc\u00e9l\u00e9ration vers l'adoption des robots humano\u00efdes se confirme avec des annonces de lancement de nouveaux mod\u00e8les et des partenariats industriels. Les d\u00e9p\u00eaches r\u00e9centes montrent une progression concr\u00e8te vers une viabilit\u00e9 op\u00e9rationnelle, notamment avec le lancement de l'UWORLD U1 par UBTECH et les d\u00e9monstrations de robots humano\u00efdes dans des environnements r\u00e9els. Le HAI progresse de 4,5 points, refl\u00e9tant une augmentation de l'activit\u00e9 industrielle et technologique dans le domaine.",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-07T21:00:14.927110"
+  "generated": "2026-07-08T07:00:16.105641"
 }
