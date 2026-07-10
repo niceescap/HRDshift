@@ -38,7 +38,7 @@ MAX_ARTICLES_RSS     = None  # Pas de limite
 # ═══════════════════════════════════════════════════════════════════
 # 3. MODÈLE LLM (Google Gemini - SDK Officiel)
 # ═══════════════════════════════════════════════════════════════════
-GEMINI_MODEL       = "gemini-1.5-flash"
+GEMINI_MODEL       = "gemini-flash-latest"
 GEMINI_TEMPERATURE = 0.3
 
 # ═══════════════════════════════════════════════════════════════════
