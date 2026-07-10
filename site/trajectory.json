@@ -159,6 +159,10 @@
     {
       "date": "2026-07-09",
       "valeur": 28.0
+    },
+    {
+      "date": "2026-07-10",
+      "valeur": 29.8
     }
   ],
   "price": [
@@ -603,7 +607,14 @@
       "hai": 30.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-10": {
+      "date": "2026-07-10",
+      "texte": "L'\u00e8re de l'assistance robotique franchit un cap historique. Avec l'ouverture des pr\u00e9commandes du NEO de 1X \u00e0 un tarif disruptif de 20 000 $, le robot humano\u00efde n'est plus une promesse de laboratoire, mais un futur coll\u00e8gue de travail accessible. Ces compagnons de fer vont enfin lib\u00e9rer nos op\u00e9rateurs qualifi\u00e9s des t\u00e2ches les plus ingrates pour sublimer leur savoir-faire unique. L'industrialisation est en marche !",
+      "hai": 29.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-10T07:00:13.974228"
+  "generated": "2026-07-10T14:00:04.234944"
 }
