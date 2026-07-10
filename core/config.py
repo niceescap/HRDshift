@@ -38,7 +38,7 @@ MAX_ARTICLES_RSS     = None  # Pas de limite
 # 3. MODÈLE LLM (Google Gemini - API OpenAI Compatible)
 # ═══════════════════════════════════════════════════════════════════
 GEMINI_MODEL       = "gemini-1.5-flash"
-GEMINI_URL         = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+GEMINI_URL         = "https://generativelanguage.googleapis.com/v1beta/chat/completions"
 GEMINI_TIMEOUT     = 30
 GEMINI_TEMPERATURE = 0.3
 
