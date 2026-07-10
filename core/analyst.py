@@ -2,7 +2,7 @@
 """
 analyst.py — Agent d'analyse (fusion édito + HAI)
 Pioche ARTICLES_PAR_ANALYSE articles non consommés dans le stock
-Si stock suffisant → appel Groq → edito + HAI + tendance
+Si stock suffisant → appel Gemini → edito + HAI + tendance
 Archive → archives/editos/edito_AAMMJJ.json
 """
 
@@ -10,8 +10,9 @@ import json
 import sqlite3
 import requests
 from datetime import datetime, timezone
+# 1. MODIFICATION : Import des nouvelles variables de configuration
 from core.config import (
-    GROQ_API_KEY, GROQ_MODEL, GROQ_URL, GROQ_TIMEOUT,
+    GOOGLE_API_KEY, GEMINI_MODEL, GEMINI_URL, GEMINI_TIMEOUT,
     PROMPT_EDITO_TXT, ARCHIVES_EDITO,
     REGISTRY_DB, HAI_INDEX_JSON, LAST_ANALYSIS_JSON,
     ARTICLES_PAR_ANALYSE, SEUIL_ANALYSE,
@@ -29,12 +30,10 @@ def lire_curseur() -> int:
     return data.get("offset", 0)
 
 def ecrire_curseur(offset: int, hai: float, articles_count: int):
-    # Lire le fichier existant pour ne pas écraser last_analysis
     data = {}
     if LAST_ANALYSIS_JSON.exists():
         data = json.loads(LAST_ANALYSIS_JSON.read_text())
     
-    # Mettre à jour uniquement les clés offset
     data["offset"]            = offset
     data["hai_courant"]       = hai
     data["articles_consommes"] = articles_count
@@ -98,23 +97,31 @@ def construire_contexte(articles: list[dict]) -> str:
     return "\n".join(lignes)
 
 # ═══════════════════════════════════════════════════════════════════
-# APPEL GROQ
+# APPEL GEMINI (Remplaçant de Groq)
 # ═══════════════════════════════════════════════════════════════════
 
-def appeler_groq(prompt: str) -> dict:
+def appeler_gemini(prompt: str) -> dict:
+    # L'authentification OpenAI-like chez Google demande "Bearer {API_KEY}"
     headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Authorization": f"Bearer {GOOGLE_API_KEY}",
         "Content-Type":  "application/json",
     }
     payload = {
-        "model":       GROQ_MODEL,
+        "model":       GEMINI_MODEL,
         "messages":    [{"role": "user", "content": prompt}],
         "temperature": 0.7,
         "max_tokens":  1024,
     }
-    response = requests.post(GROQ_URL, headers=headers, json=payload, timeout=GROQ_TIMEOUT)
+    # Envoi de la requête sur l'URL compatible OpenAI de Google
+    response = requests.post(GEMINI_URL, headers=headers, json=payload, timeout=GEMINI_TIMEOUT)
     response.raise_for_status()
     contenu = response.json()["choices"][0]["message"]["content"].strip()
+
+    # Nettoyage optionnel si Gemini entoure son JSON de blocs de code ```json ... ```
+    if contenu.startswith("```json"):
+        contenu = contenu.split("```json")[1].split("```")[0].strip()
+    elif contenu.startswith("```"):
+        contenu = contenu.split("```")[1].split("```")[0].strip()
 
     # Tentative de parsing JSON strict
     try:
@@ -133,7 +140,7 @@ def exporter(resultat: dict, hai_global: float, articles: list[dict]):
     payload  = {
         "meta": {
             "agent":     "nb_analyst",
-            "modele":    GROQ_MODEL,
+            "modele":    GEMINI_MODEL,  # Mis à jour pour le suivi du modèle
             "timestamp": datetime.now().isoformat(),
             "nb_articles": len(articles),
         },
@@ -189,9 +196,9 @@ if __name__ == "__main__":
         prompt_final = prompt_brut.replace("{articles}", contexte)\
                                   .replace("{hai_global}", str(hai_global))
 
-        # Appel Groq
-        print(f"  🔁 Envoi à {GROQ_MODEL}...")
-        resultat = appeler_groq(prompt_final)
+        # Appel Gemini (Modification de l'appel)
+        print(f"  🔁 Envoi à {GEMINI_MODEL}...")
+        resultat = appeler_gemini(prompt_final)
 
         # Export + affichage
         fichier = exporter(resultat, hai_global, articles)
