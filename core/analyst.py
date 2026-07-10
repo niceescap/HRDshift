@@ -99,25 +99,30 @@ def construire_contexte(articles: list[dict]) -> str:
 # ═══════════════════════════════════════════════════════════════════
 # APPEL GEMINI (Remplaçant de Groq)
 # ═══════════════════════════════════════════════════════════════════
-
 def appeler_gemini(prompt: str) -> dict:
-    # L'authentification OpenAI-like chez Google demande "Bearer {API_KEY}"
     headers = {
-        "Authorization": f"Bearer {GOOGLE_API_KEY}",
         "Content-Type":  "application/json",
     }
+    # Structure du payload natif Google Gemini
     payload = {
-        "model":       GEMINI_MODEL,
-        "messages":    [{"role": "user", "content": prompt}],
-        "temperature": 0.7,
-        "max_tokens":  1024,
+        "contents": [{
+            "parts": [{
+                "text": prompt
+            }]
+        }],
+        "generationConfig": {
+            "temperature": 0.3, # On réutilise la valeur basse pour le respect du JSON
+            "maxOutputTokens": 1024
+        }
     }
-    # Envoi de la requête sur l'URL compatible OpenAI de Google
+    
     response = requests.post(GEMINI_URL, headers=headers, json=payload, timeout=GEMINI_TIMEOUT)
     response.raise_for_status()
-    contenu = response.json()["choices"][0]["message"]["content"].strip()
+    
+    # Extraction de la réponse dans la structure de l'API Google
+    contenu = response.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
 
-    # Nettoyage optionnel si Gemini entoure son JSON de blocs de code ```json ... ```
+    # Nettoyage classique si Gemini entoure son JSON de blocs de code markdown
     if contenu.startswith("```json"):
         contenu = contenu.split("```json")[1].split("```")[0].strip()
     elif contenu.startswith("```"):
@@ -129,6 +134,7 @@ def appeler_gemini(prompt: str) -> dict:
     except json.JSONDecodeError:
         # Fallback : le LLM n'a pas respecté le format JSON
         return {"hai": None, "tendance": "→", "edito": contenu}
+
 
 # ═══════════════════════════════════════════════════════════════════
 # EXPORT
