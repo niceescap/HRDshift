@@ -20,9 +20,10 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-if not GROQ_API_KEY:
-    raise RuntimeError("❌ GROQ_API_KEY introuvable dans .env")
+# Migration de GROQ_API_KEY à GOOGLE_API_KEY
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+if not GOOGLE_API_KEY:
+    raise RuntimeError("❌ GOOGLE_API_KEY introuvable dans .env")
 
 # ═══════════════════════════════════════════════════════════════════
 # 2. PIPELINE — FRÉQUENCE & SEUILS
@@ -34,12 +35,12 @@ MAX_ARTICLES_GNEWS   = 15
 MAX_ARTICLES_RSS     = None  # Pas de limite
 
 # ═══════════════════════════════════════════════════════════════════
-# 3. MODÈLE LLM (Groq)
+# 3. MODÈLE LLM (Google Gemini - API OpenAI Compatible)
 # ═══════════════════════════════════════════════════════════════════
-GROQ_MODEL       = "llama-3.3-70b-versatile"
-GROQ_URL         = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_TIMEOUT     = 30
-GROQ_TEMPERATURE = 0.3
+GEMINI_MODEL       = "gemini-1.5-flash"
+GEMINI_URL         = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+GEMINI_TIMEOUT     = 30
+GEMINI_TEMPERATURE = 0.3
 
 # ═══════════════════════════════════════════════════════════════════
 # 4. ACTEURS SURVEILLÉS
@@ -184,8 +185,8 @@ if __name__ == "__main__":
     print("  Humanoïd Robots Demand shift")
     print("═" * 52)
     print(f"  PROJECT_ROOT         : {PROJECT_ROOT}")
-    print(f"  GROQ_API_KEY         : ✅ OK")
-    print(f"  GROQ_MODEL           : {GROQ_MODEL}")
+    print(f"  GOOGLE_API_KEY       : ✅ OK")
+    print(f"  GEMINI_MODEL         : {GEMINI_MODEL}")
     print()
     print(f"  FREQUENCE_RUN        : toutes les {FREQUENCE_RUN}h")
     print(f"  SEUIL_ANALYSE        : {SEUIL_ANALYSE} dépêches")
