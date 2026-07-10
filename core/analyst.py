@@ -103,7 +103,7 @@ def construire_contexte(articles: list[dict]) -> str:
 # ═══════════════════════════════════════════════════════════════════
 def appeler_gemini(prompt: str) -> dict:
     # On force le SDK à utiliser la version stable au lieu de 'v1beta'
-    client = genai.Client(api_key=GOOGLE_API_KEY))
+    client = genai.Client(api_key=GOOGLE_API_KEY)
     
     response = client.models.generate_content(
         model=GEMINI_MODEL,
