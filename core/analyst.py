@@ -2,17 +2,18 @@
 """
 analyst.py — Agent d'analyse (fusion édito + HAI)
 Pioche ARTICLES_PAR_ANALYSE articles non consommés dans le stock
-Si stock suffisant → appel Gemini → edito + HAI + tendance
+Si stock suffisant → appel Gemini (SDK) → edito + HAI + tendance
 Archive → archives/editos/edito_AAMMJJ.json
 """
 
 import json
 import sqlite3
-import requests
 from datetime import datetime, timezone
-# 1. MODIFICATION : Import des nouvelles variables de configuration
+from google import genai
+from google.genai import types
+
 from core.config import (
-    GOOGLE_API_KEY, GEMINI_MODEL, GEMINI_URL, GEMINI_TIMEOUT,
+    GOOGLE_API_KEY, GEMINI_MODEL, GEMINI_TEMPERATURE,
     PROMPT_EDITO_TXT, ARCHIVES_EDITO,
     REGISTRY_DB, HAI_INDEX_JSON, LAST_ANALYSIS_JSON,
     ARTICLES_PAR_ANALYSE, SEUIL_ANALYSE,
@@ -34,6 +35,7 @@ def ecrire_curseur(offset: int, hai: float, articles_count: int):
     if LAST_ANALYSIS_JSON.exists():
         data = json.loads(LAST_ANALYSIS_JSON.read_text())
     
+    data["last_analysis"]      = datetime.now(timezone.utc).isoformat()
     data["offset"]            = offset
     data["hai_courant"]       = hai
     data["articles_consommes"] = articles_count
@@ -97,32 +99,24 @@ def construire_contexte(articles: list[dict]) -> str:
     return "\n".join(lignes)
 
 # ═══════════════════════════════════════════════════════════════════
-# APPEL GEMINI (Remplaçant de Groq)
+# APPEL GEMINI VIA SDK OFFICIEL
 # ═══════════════════════════════════════════════════════════════════
-def appeler_gemini(prompt: str) -> dict:
-    headers = {
-        "Content-Type":  "application/json",
-    }
-    # Structure du payload natif Google Gemini
-    payload = {
-        "contents": [{
-            "parts": [{
-                "text": prompt
-            }]
-        }],
-        "generationConfig": {
-            "temperature": 0.3, # On réutilise la valeur basse pour le respect du JSON
-            "maxOutputTokens": 1024
-        }
-    }
-    
-    response = requests.post(GEMINI_URL, headers=headers, json=payload, timeout=GEMINI_TIMEOUT)
-    response.raise_for_status()
-    
-    # Extraction de la réponse dans la structure de l'API Google
-    contenu = response.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
 
-    # Nettoyage classique si Gemini entoure son JSON de blocs de code markdown
+def appeler_gemini(prompt: str) -> dict:
+    # Utilisation du client officiel google-genai
+    client = genai.Client(api_key=GOOGLE_API_KEY)
+    
+    response = client.models.generate_content(
+        model=GEMINI_MODEL,
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            temperature=GEMINI_TEMPERATURE,
+        )
+    )
+    
+    contenu = response.text.strip()
+
+    # Nettoyage Markdown JSON classique
     if contenu.startswith("```json"):
         contenu = contenu.split("```json")[1].split("```")[0].strip()
     elif contenu.startswith("```"):
@@ -132,9 +126,7 @@ def appeler_gemini(prompt: str) -> dict:
     try:
         return json.loads(contenu)
     except json.JSONDecodeError:
-        # Fallback : le LLM n'a pas respecté le format JSON
         return {"hai": None, "tendance": "→", "edito": contenu}
-
 
 # ═══════════════════════════════════════════════════════════════════
 # EXPORT
@@ -146,7 +138,7 @@ def exporter(resultat: dict, hai_global: float, articles: list[dict]):
     payload  = {
         "meta": {
             "agent":     "nb_analyst",
-            "modele":    GEMINI_MODEL,  # Mis à jour pour le suivi du modèle
+            "modele":    GEMINI_MODEL,
             "timestamp": datetime.now().isoformat(),
             "nb_articles": len(articles),
         },
@@ -191,26 +183,21 @@ if __name__ == "__main__":
         articles = lire_stock(offset)
         print(f"🧠 Analyse de {len(articles)} articles en cours...\n")
 
-        # Contexte injecté — titres + scores + signaux, sans bruit
         contexte    = construire_contexte(articles)
         hai_global  = calculer_hai_global()
 
-        # Chargement prompt et injection
         if not PROMPT_EDITO_TXT.exists():
             raise FileNotFoundError(f"❌ {PROMPT_EDITO_TXT.name} introuvable")
         prompt_brut  = PROMPT_EDITO_TXT.read_text(encoding="utf-8")
         prompt_final = prompt_brut.replace("{articles}", contexte)\
                                   .replace("{hai_global}", str(hai_global))
 
-        # Appel Gemini (Modification de l'appel)
         print(f"  🔁 Envoi à {GEMINI_MODEL}...")
         resultat = appeler_gemini(prompt_final)
 
-        # Export + affichage
         fichier = exporter(resultat, hai_global, articles)
         afficher(resultat, hai_global)
 
-        # Avancer le curseur
         nouvel_offset = offset + len(articles)
         ecrire_curseur(nouvel_offset, hai_global, nouvel_offset)
         print(f"  💾 Sauvegardé → {fichier.name}")
