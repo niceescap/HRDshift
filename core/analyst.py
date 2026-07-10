@@ -101,10 +101,9 @@ def construire_contexte(articles: list[dict]) -> str:
 # ═══════════════════════════════════════════════════════════════════
 # APPEL GEMINI VIA SDK OFFICIEL
 # ═══════════════════════════════════════════════════════════════════
-
 def appeler_gemini(prompt: str) -> dict:
-    # Utilisation du client officiel google-genai
-    client = genai.Client(api_key=GOOGLE_API_KEY)
+    # On force le SDK à utiliser la version 'v1' stable au lieu de 'v1beta'
+    client = genai.Client(api_key=GOOGLE_API_KEY, http_options={'api_version': 'v1'})
     
     response = client.models.generate_content(
         model=GEMINI_MODEL,
@@ -115,6 +114,9 @@ def appeler_gemini(prompt: str) -> dict:
     )
     
     contenu = response.text.strip()
+    # ... le reste du nettoyage JSON reste identique ...
+    
+
 
     # Nettoyage Markdown JSON classique
     if contenu.startswith("```json"):
