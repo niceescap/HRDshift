@@ -163,6 +163,10 @@
     {
       "date": "2026-07-10",
       "valeur": 29.8
+    },
+    {
+      "date": "2026-07-11",
+      "valeur": 29.2
     }
   ],
   "price": [
@@ -614,7 +618,14 @@
       "hai": 29.8,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-11": {
+      "date": "2026-07-11",
+      "texte": "L'\u00e8re industrielle du humano\u00efde s'acc\u00e9l\u00e8re ! Avec le lancement par UBTECH du UWORLD U1, premier mod\u00e8le de taille r\u00e9elle produit en s\u00e9rie, nous franchissons un cap historique. Ces auxiliaires ultra-bioniques s'appr\u00eatent \u00e0 lib\u00e9rer nos op\u00e9rateurs hautement qualifi\u00e9s des t\u00e2ches p\u00e9nibles pour sublimer leur savoir-faire. L'usine collaborative est en marche.",
+      "hai": 29.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-10T21:00:07.022462"
+  "generated": "2026-07-11T07:00:13.395431"
 }
