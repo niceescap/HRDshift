@@ -167,6 +167,10 @@
     {
       "date": "2026-07-11",
       "valeur": 29.4
+    },
+    {
+      "date": "2026-07-12",
+      "valeur": 28.5
     }
   ],
   "price": [
@@ -625,7 +629,14 @@
       "hai": 29.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-12": {
+      "date": "2026-07-12",
+      "texte": "L'industrialisation s'acc\u00e9l\u00e8re ! Entre l'int\u00e9gration de Figure 03 chez BMW et les feuilles de route de Unitree et UBTECH pour 2026, l'humano\u00efde s'impose comme le copilote ultime de nos op\u00e9rateurs qualifi\u00e9s. N'en d\u00e9plaise aux investisseurs frileux, la r\u00e9volution de l'atelier est en marche.",
+      "hai": 28.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-11T21:00:19.892713"
+  "generated": "2026-07-12T07:00:15.655136"
 }
