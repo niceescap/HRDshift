@@ -20,10 +20,10 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 
-# Migration de GROQ_API_KEY à GOOGLE_API_KEY
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-if not GOOGLE_API_KEY:
-    raise RuntimeError("❌ GOOGLE_API_KEY introuvable dans .env")
+# Migration vers OpenRouter (unifié avec Fu19)
+OR_API_KEY = os.getenv("OR_API_KEY")
+if not OR_API_KEY:
+    raise RuntimeError("❌ OR_API_KEY introuvable dans .env")
 
 # ═══════════════════════════════════════════════════════════════════
 # 2. PIPELINE — FRÉQUENCE & SEUILS
