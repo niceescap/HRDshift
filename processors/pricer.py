@@ -114,7 +114,7 @@ def exporter(resultat: dict, nb_sources: int, prix_precedent: int) -> object:
     payload = {
         "meta": {
             "agent":          "pricer",
-            "modele":         GROQ_MODEL,
+            "modele":         OR_MODEL,
             "timestamp":      datetime.now(timezone.utc).isoformat(),
             "nb_sources":     nb_sources,
             "prix_precedent": prix_precedent,
