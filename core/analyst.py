@@ -197,8 +197,8 @@ if __name__ == "__main__":
         prompt_final = prompt_brut.replace("{articles}", contexte)\
                                   .replace("{hai_global}", str(hai_global))
 
-        print(f"  🔁 Envoi à {GEMINI_MODEL}...")
-        resultat = appeler_gemini(prompt_final)
+        print(f"  🔁 Envoi à {OR_MODEL}...")
+        resultat = appeler_llm(prompt_final)
 
         fichier = exporter(resultat, hai_global, articles)
         afficher(resultat, hai_global)
