@@ -114,6 +114,13 @@ def appeler_llm(prompt: str) -> dict:
         "temperature": OR_TEMPERATURE,
     }
     response = requests.post(OR_URL, headers=headers, json=payload, timeout=OR_TIMEOUT)
+    if response.status_code == 429:
+        for attempt in range(3):
+            print(f"[LLM] 429 — retry {attempt + 1}/3 dans 15s...")
+            time.sleep(15)
+            response = requests.post(OR_URL, headers=headers, json=payload, timeout=OR_TIMEOUT)
+            if response.status_code != 429:
+                break
     if response.status_code != 200:
         print(f"[LLM] Erreur {response.status_code} : {response.text[:300]}")
     response.raise_for_status()
