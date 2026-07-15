@@ -98,21 +98,25 @@ def construire_contexte(articles: list[dict]) -> str:
     return "\n".join(lignes)
 
 # ═══════════════════════════════════════════════════════════════════
-# APPEL GEMINI VIA SDK OFFICIEL
+# APPEL LLM VIA OPENROUTER (REST)
 # ═══════════════════════════════════════════════════════════════════
-def appeler_gemini(prompt: str) -> dict:
-    # On force le SDK à utiliser la version stable au lieu de 'v1beta'
-    client = genai.Client(api_key=GOOGLE_API_KEY)
-    
-    response = client.models.generate_content(
-        model=GEMINI_MODEL,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=GEMINI_TEMPERATURE,
-        )
-    )
-    
-    contenu = response.text.strip()
+def appeler_llm(prompt: str) -> dict:
+    headers = {
+        "Authorization": f"Bearer {OR_API_KEY}",
+        "Content-Type":  "application/json",
+        "HTTP-Referer":  OR_REFERER,
+        "X-Title":       OR_APP_TITLE,
+    }
+    payload = {
+        "model":       OR_MODEL,
+        "messages":    [{"role": "user", "content": prompt}],
+        "temperature": OR_TEMPERATURE,
+    }
+    response = requests.post(OR_URL, headers=headers, json=payload, timeout=OR_TIMEOUT)
+    if response.status_code != 200:
+        print(f"[LLM] Erreur {response.status_code} : {response.text[:300]}")
+    response.raise_for_status()
+    contenu = response.json()["choices"][0]["message"]["content"].strip()
     # ... le reste du nettoyage JSON reste identique ...
     
 
