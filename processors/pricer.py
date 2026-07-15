@@ -9,6 +9,7 @@ Détecte les signaux prix dans collected.json via MOTS_PRIX
 
 import json
 import requests
+import time
 from datetime import datetime, timezone
 from core.config import (
     OR_API_KEY, OR_MODEL, OR_URL, OR_TIMEOUT, OR_REFERER, OR_APP_TITLE,
