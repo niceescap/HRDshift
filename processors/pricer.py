@@ -3,7 +3,7 @@
 pricer.py — Agent estimateur de prix HRDshift
 Détecte les signaux prix dans collected.json via MOTS_PRIX
 → Injecte le prix précédent comme ancre de continuité
-→ Appel Groq via templates/prompt_price.txt
+→ Appel OpenRouter via templates/prompt_price.txt
 → data/archives/prices/price_AAMMJJ_HHMM.json
 """
 
@@ -11,7 +11,7 @@ import json
 import requests
 from datetime import datetime, timezone
 from core.config import (
-    GROQ_API_KEY, GROQ_MODEL, GROQ_URL, GROQ_TIMEOUT,
+    OR_API_KEY, OR_MODEL, OR_URL, OR_TIMEOUT, OR_REFERER, OR_APP_TITLE,
     COLLECTED_JSON, ARCHIVES_PRICE,
     PROMPT_PRICE_TXT, MOTS_PRIX,
 )
@@ -64,21 +64,25 @@ def construire_contexte(articles: list[dict]) -> str:
 
 
 # ═══════════════════════════════════════════════════════════════════
-# APPEL GROQ
+# APPEL OPENROUTER
 # ═══════════════════════════════════════════════════════════════════
 
-def appeler_groq(prompt: str) -> dict:
+def appeler_llm(prompt: str) -> dict:
     headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Authorization": f"Bearer {OR_API_KEY}",
         "Content-Type":  "application/json",
+        "HTTP-Referer":  OR_REFERER,
+        "X-Title":       OR_APP_TITLE,
     }
     payload = {
-        "model":       GROQ_MODEL,
+        "model":       OR_MODEL,
         "messages":    [{"role": "user", "content": prompt}],
         "temperature": 0.2,
         "max_tokens":  256,
     }
-    response = requests.post(GROQ_URL, headers=headers, json=payload, timeout=GROQ_TIMEOUT)
+    response = requests.post(OR_URL, headers=headers, json=payload, timeout=OR_TIMEOUT)
+    if response.status_code != 200:
+        print(f"[LLM] Erreur {response.status_code} : {response.text[:300]}")
     response.raise_for_status()
     contenu = response.json()["choices"][0]["message"]["content"].strip()
 
@@ -110,7 +114,7 @@ def exporter(resultat: dict, nb_sources: int, prix_precedent: int) -> object:
     payload = {
         "meta": {
             "agent":          "pricer",
-            "modele":         GROQ_MODEL,
+            "modele":         OR_MODEL,
             "timestamp":      datetime.now(timezone.utc).isoformat(),
             "nb_sources":     nb_sources,
             "prix_precedent": prix_precedent,
@@ -148,8 +152,8 @@ if __name__ == "__main__":
                         .replace("{articles}",       contexte)
                         .replace("{prix_precedent}", str(prix_precedent) if prix_precedent else "inconnue"))
 
-        print(f"   🔁 Envoi à {GROQ_MODEL}...")
-        resultat = appeler_groq(prompt_final)
+        print(f"   🔁 Envoi à {OR_MODEL}...")
+        resultat = appeler_llm(prompt_final)
 
         archive, prix_net = exporter(resultat, len(articles), prix_precedent)
         print(f"   💵 Prix estimé   : {prix_net} $")

@@ -20,10 +20,10 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 
-# Migration de GROQ_API_KEY à GOOGLE_API_KEY
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-if not GOOGLE_API_KEY:
-    raise RuntimeError("❌ GOOGLE_API_KEY introuvable dans .env")
+# Migration vers OpenRouter (unifié avec Fu19)
+OR_API_KEY = os.getenv("OR_API_KEY")
+if not OR_API_KEY:
+    raise RuntimeError("❌ OR_API_KEY introuvable dans .env")
 
 # ═══════════════════════════════════════════════════════════════════
 # 2. PIPELINE — FRÉQUENCE & SEUILS
@@ -36,10 +36,14 @@ MAX_ARTICLES_RSS     = None  # Pas de limite
 
 
 # ═══════════════════════════════════════════════════════════════════
-# 3. MODÈLE LLM (Google Gemini - SDK Officiel)
+# 3. MODÈLE LLM (OpenRouter — Google Gemma)
 # ═══════════════════════════════════════════════════════════════════
-GEMINI_MODEL       = "gemini-flash-latest"
-GEMINI_TEMPERATURE = 0.3
+OR_MODEL       = os.getenv("OR_MODEL", "google/gemma-4-31b-it:free")
+OR_URL         = "https://openrouter.ai/api/v1/chat/completions"
+OR_TIMEOUT     = 60
+OR_REFERER     = "https://hrdshift.org"
+OR_APP_TITLE   = "HRDshift"
+OR_TEMPERATURE = 0.3
 
 # ═══════════════════════════════════════════════════════════════════
 # 4. ACTEURS SURVEILLÉS
@@ -184,8 +188,8 @@ if __name__ == "__main__":
     print("  Humanoïd Robots Demand shift")
     print("═" * 52)
     print(f"  PROJECT_ROOT         : {PROJECT_ROOT}")
-    print(f"  GOOGLE_API_KEY       : ✅ OK")
-    print(f"  GEMINI_MODEL         : {GEMINI_MODEL}")
+    print(f"  OR_API_KEY          : ✅ OK")
+    print(f"  OR_MODEL            : {OR_MODEL}")
     print()
     print(f"  FREQUENCE_RUN        : toutes les {FREQUENCE_RUN}h")
     print(f"  SEUIL_ANALYSE        : {SEUIL_ANALYSE} dépêches")

@@ -2,18 +2,17 @@
 """
 analyst.py — Agent d'analyse (fusion édito + HAI)
 Pioche ARTICLES_PAR_ANALYSE articles non consommés dans le stock
-Si stock suffisant → appel Gemini (SDK) → edito + HAI + tendance
+Si stock suffisant → appel OpenRouter → edito + HAI + tendance
 Archive → archives/editos/edito_AAMMJJ.json
 """
 
 import json
 import sqlite3
+import requests
 from datetime import datetime, timezone
-from google import genai
-from google.genai import types
 
 from core.config import (
-    GOOGLE_API_KEY, GEMINI_MODEL, GEMINI_TEMPERATURE,
+    OR_API_KEY, OR_MODEL, OR_URL, OR_TIMEOUT, OR_REFERER, OR_APP_TITLE, OR_TEMPERATURE,
     PROMPT_EDITO_TXT, ARCHIVES_EDITO,
     REGISTRY_DB, HAI_INDEX_JSON, LAST_ANALYSIS_JSON,
     ARTICLES_PAR_ANALYSE, SEUIL_ANALYSE,
@@ -99,21 +98,25 @@ def construire_contexte(articles: list[dict]) -> str:
     return "\n".join(lignes)
 
 # ═══════════════════════════════════════════════════════════════════
-# APPEL GEMINI VIA SDK OFFICIEL
+# APPEL LLM VIA OPENROUTER (REST)
 # ═══════════════════════════════════════════════════════════════════
-def appeler_gemini(prompt: str) -> dict:
-    # On force le SDK à utiliser la version stable au lieu de 'v1beta'
-    client = genai.Client(api_key=GOOGLE_API_KEY)
-    
-    response = client.models.generate_content(
-        model=GEMINI_MODEL,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=GEMINI_TEMPERATURE,
-        )
-    )
-    
-    contenu = response.text.strip()
+def appeler_llm(prompt: str) -> dict:
+    headers = {
+        "Authorization": f"Bearer {OR_API_KEY}",
+        "Content-Type":  "application/json",
+        "HTTP-Referer":  OR_REFERER,
+        "X-Title":       OR_APP_TITLE,
+    }
+    payload = {
+        "model":       OR_MODEL,
+        "messages":    [{"role": "user", "content": prompt}],
+        "temperature": OR_TEMPERATURE,
+    }
+    response = requests.post(OR_URL, headers=headers, json=payload, timeout=OR_TIMEOUT)
+    if response.status_code != 200:
+        print(f"[LLM] Erreur {response.status_code} : {response.text[:300]}")
+    response.raise_for_status()
+    contenu = response.json()["choices"][0]["message"]["content"].strip()
     # ... le reste du nettoyage JSON reste identique ...
     
 
@@ -140,7 +143,7 @@ def exporter(resultat: dict, hai_global: float, articles: list[dict]):
     payload  = {
         "meta": {
             "agent":     "nb_analyst",
-            "modele":    GEMINI_MODEL,
+            "modele":    OR_MODEL,
             "timestamp": datetime.now().isoformat(),
             "nb_articles": len(articles),
         },
@@ -194,8 +197,8 @@ if __name__ == "__main__":
         prompt_final = prompt_brut.replace("{articles}", contexte)\
                                   .replace("{hai_global}", str(hai_global))
 
-        print(f"  🔁 Envoi à {GEMINI_MODEL}...")
-        resultat = appeler_gemini(prompt_final)
+        print(f"  🔁 Envoi à {OR_MODEL}...")
+        resultat = appeler_llm(prompt_final)
 
         fichier = exporter(resultat, hai_global, articles)
         afficher(resultat, hai_global)
