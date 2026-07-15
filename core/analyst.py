@@ -124,7 +124,10 @@ def appeler_llm(prompt: str) -> dict:
     if response.status_code != 200:
         print(f"[LLM] Erreur {response.status_code} : {response.text[:300]}")
     response.raise_for_status()
-    contenu = response.json()["choices"][0]["message"]["content"].strip()
+    contenu = response.json()["choices"][0]["message"]["content"]
+    if contenu is None:
+        raise RuntimeError("Le modèle n'a généré aucun contenu (response vide).")
+    contenu = contenu.strip()
     # ... le reste du nettoyage JSON reste identique ...
     
 
