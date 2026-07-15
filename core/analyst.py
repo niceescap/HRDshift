@@ -2,18 +2,17 @@
 """
 analyst.py — Agent d'analyse (fusion édito + HAI)
 Pioche ARTICLES_PAR_ANALYSE articles non consommés dans le stock
-Si stock suffisant → appel Gemini (SDK) → edito + HAI + tendance
+Si stock suffisant → appel OpenRouter → edito + HAI + tendance
 Archive → archives/editos/edito_AAMMJJ.json
 """
 
 import json
 import sqlite3
+import requests
 from datetime import datetime, timezone
-from google import genai
-from google.genai import types
 
 from core.config import (
-    GOOGLE_API_KEY, GEMINI_MODEL, GEMINI_TEMPERATURE,
+    OR_API_KEY, OR_MODEL, OR_URL, OR_TIMEOUT, OR_REFERER, OR_APP_TITLE, OR_TEMPERATURE,
     PROMPT_EDITO_TXT, ARCHIVES_EDITO,
     REGISTRY_DB, HAI_INDEX_JSON, LAST_ANALYSIS_JSON,
     ARTICLES_PAR_ANALYSE, SEUIL_ANALYSE,
