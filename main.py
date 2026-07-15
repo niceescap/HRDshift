@@ -130,6 +130,7 @@ def main():
     # ── Couche 3 : Analyse ─────────────────────────────────────────
     run_script("core/scorer.py")
     run_script("processors/pricer.py")
+    time.sleep(10)  # Laisser respirer le rate limit OpenRouter
     run_script("core/analyst.py")
 
     # ── Couche 4 : Préparation affichage + site ────────────────────
