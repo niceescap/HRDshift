@@ -64,21 +64,25 @@ def construire_contexte(articles: list[dict]) -> str:
 
 
 # ═══════════════════════════════════════════════════════════════════
-# APPEL GROQ
+# APPEL OPENROUTER
 # ═══════════════════════════════════════════════════════════════════
 
-def appeler_groq(prompt: str) -> dict:
+def appeler_llm(prompt: str) -> dict:
     headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Authorization": f"Bearer {OR_API_KEY}",
         "Content-Type":  "application/json",
+        "HTTP-Referer":  OR_REFERER,
+        "X-Title":       OR_APP_TITLE,
     }
     payload = {
-        "model":       GROQ_MODEL,
+        "model":       OR_MODEL,
         "messages":    [{"role": "user", "content": prompt}],
         "temperature": 0.2,
         "max_tokens":  256,
     }
-    response = requests.post(GROQ_URL, headers=headers, json=payload, timeout=GROQ_TIMEOUT)
+    response = requests.post(OR_URL, headers=headers, json=payload, timeout=OR_TIMEOUT)
+    if response.status_code != 200:
+        print(f"[LLM] Erreur {response.status_code} : {response.text[:300]}")
     response.raise_for_status()
     contenu = response.json()["choices"][0]["message"]["content"].strip()
 
