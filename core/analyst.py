@@ -143,7 +143,7 @@ def exporter(resultat: dict, hai_global: float, articles: list[dict]):
     payload  = {
         "meta": {
             "agent":     "nb_analyst",
-            "modele":    GEMINI_MODEL,
+            "modele":    OR_MODEL,
             "timestamp": datetime.now().isoformat(),
             "nb_articles": len(articles),
         },
