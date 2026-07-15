@@ -171,6 +171,10 @@
     {
       "date": "2026-07-12",
       "valeur": 28.5
+    },
+    {
+      "date": "2026-07-15",
+      "valeur": 42.5
     }
   ],
   "price": [
@@ -636,7 +640,14 @@
       "hai": 28.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-15": {
+      "date": "2026-07-15",
+      "texte": "L'industrialisation bascule dans le concret. BMW officialise l'entr\u00e9e en production des Figure AI sur ses lignes : le premier grand constructeur automobile valide l'humano\u00efde comme outil de s\u00e9rie, pas comme cobaye. Simultan\u00e9ment, UBTECH engrange 13 300 pr\u00e9commandes fermes pour son U1, prouvant l'app\u00e9tit industriel chinois pour la main-d'\u0153uvre synth\u00e9tique. Unitree et UBTECH verrouillent 2026 comme horizon de commercialisation massive. Les prototypes ont quitt\u00e9 les laboratoires pour les ateliers et les carnets de commande. L'\u00e8re des pilotes est close ; l'\u00e8re du d\u00e9ploiement commence.",
+      "hai": 42.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-15T15:11:43.147211"
+  "generated": "2026-07-15T15:25:47.500836"
 }
