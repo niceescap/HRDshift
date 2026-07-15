@@ -3,7 +3,7 @@
 pricer.py — Agent estimateur de prix HRDshift
 Détecte les signaux prix dans collected.json via MOTS_PRIX
 → Injecte le prix précédent comme ancre de continuité
-→ Appel Groq via templates/prompt_price.txt
+→ Appel OpenRouter via templates/prompt_price.txt
 → data/archives/prices/price_AAMMJJ_HHMM.json
 """
 
@@ -11,7 +11,7 @@ import json
 import requests
 from datetime import datetime, timezone
 from core.config import (
-    GROQ_API_KEY, GROQ_MODEL, GROQ_URL, GROQ_TIMEOUT,
+    OR_API_KEY, OR_MODEL, OR_URL, OR_TIMEOUT, OR_REFERER, OR_APP_TITLE,
     COLLECTED_JSON, ARCHIVES_PRICE,
     PROMPT_PRICE_TXT, MOTS_PRIX,
 )
