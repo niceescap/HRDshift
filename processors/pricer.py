@@ -152,8 +152,8 @@ if __name__ == "__main__":
                         .replace("{articles}",       contexte)
                         .replace("{prix_precedent}", str(prix_precedent) if prix_precedent else "inconnue"))
 
-        print(f"   🔁 Envoi à {GROQ_MODEL}...")
-        resultat = appeler_groq(prompt_final)
+        print(f"   🔁 Envoi à {OR_MODEL}...")
+        resultat = appeler_llm(prompt_final)
 
         archive, prix_net = exporter(resultat, len(articles), prix_precedent)
         print(f"   💵 Prix estimé   : {prix_net} $")
