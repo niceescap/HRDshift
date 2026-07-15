@@ -36,10 +36,14 @@ MAX_ARTICLES_RSS     = None  # Pas de limite
 
 
 # ═══════════════════════════════════════════════════════════════════
-# 3. MODÈLE LLM (Google Gemini - SDK Officiel)
+# 3. MODÈLE LLM (OpenRouter — Google Gemma)
 # ═══════════════════════════════════════════════════════════════════
-GEMINI_MODEL       = "gemini-flash-latest"
-GEMINI_TEMPERATURE = 0.3
+OR_MODEL       = os.getenv("OR_MODEL", "google/gemma-4-31b-it:free")
+OR_URL         = "https://openrouter.ai/api/v1/chat/completions"
+OR_TIMEOUT     = 60
+OR_REFERER     = "https://hrdshift.org"
+OR_APP_TITLE   = "HRDshift"
+OR_TEMPERATURE = 0.3
 
 # ═══════════════════════════════════════════════════════════════════
 # 4. ACTEURS SURVEILLÉS
