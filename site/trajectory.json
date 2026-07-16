@@ -175,6 +175,10 @@
     {
       "date": "2026-07-15",
       "valeur": 34.2
+    },
+    {
+      "date": "2026-07-16",
+      "valeur": 28.4
     }
   ],
   "price": [
@@ -647,7 +651,14 @@
       "hai": 42.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-16": {
+      "date": "2026-07-16",
+      "texte": "Le HAI grimpe \u00e0 28.4, soutenu par le lancement commercial de Robot.com et l\u2019acquisition de stakes par STMicroelectronics, marquant le passage des prototypes \u00e0 la premi\u00e8re vague de d\u00e9ploiement industriel.",
+      "hai": 28.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-15T21:01:06.157096"
+  "generated": "2026-07-16T07:01:15.095115"
 }
