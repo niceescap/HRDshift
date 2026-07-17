@@ -179,6 +179,10 @@
     {
       "date": "2026-07-16",
       "valeur": 27.8
+    },
+    {
+      "date": "2026-07-17",
+      "valeur": 30.5
     }
   ],
   "price": [
@@ -662,7 +666,14 @@
       "hai": 28.4,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-17": {
+      "date": "2026-07-17",
+      "texte": "Les premiers robots humano\u00efdes sont d\u00e9sormais commercialis\u00e9s et la production 2025 explose, mais les d\u00e9ploiements restent limit\u00e9s. Cette dynamique montre que les op\u00e9rateurs hautement qualifi\u00e9s seront bient\u00f4t accompagn\u00e9s par des alli\u00e9s robotiques fiables, acc\u00e9l\u00e9rant l\u2019industrialisation et ouvrant de nouvelles opportunit\u00e9s de productivit\u00e9.",
+      "hai": 30.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-16T21:00:42.228663"
+  "generated": "2026-07-17T07:01:36.042829"
 }
