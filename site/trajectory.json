@@ -183,6 +183,10 @@
     {
       "date": "2026-07-17",
       "valeur": 31.8
+    },
+    {
+      "date": "2026-07-18",
+      "valeur": 27.4
     }
   ],
   "price": [
@@ -349,6 +353,10 @@
     {
       "date": "2026-07-16",
       "valeur": 22500.0
+    },
+    {
+      "date": "2026-07-18",
+      "valeur": 29900.0
     }
   ],
   "edito_by_date": {
@@ -673,7 +681,14 @@
       "hai": 30.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-18": {
+      "date": "2026-07-18",
+      "texte": "Le HAI fr\u00e9mit \u00e0 27.4 : Boston Dynamics passe sous pavillon Hyundai \u00e0 100%, et les makers humano\u00efdes se ruent sur les lignes de production r\u00e9elles (Forbes, 35). Lockheed et TerraFirma industrialisent d\u00e9j\u00e0 robots et infrastructures. La bascule vers des cobayes m\u00e9caniques au service des ouvriers d'\u00e9lite est en marche : l'outil humano\u00efde devient l'alli\u00e9 naturel du geste qualifi\u00e9.",
+      "hai": 27.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-17T21:00:56.458710"
+  "generated": "2026-07-18T07:00:34.388021"
 }
