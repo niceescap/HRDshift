@@ -187,6 +187,10 @@
     {
       "date": "2026-07-18",
       "valeur": 27.4
+    },
+    {
+      "date": "2026-07-19",
+      "valeur": 27.0
     }
   ],
   "price": [
@@ -688,7 +692,14 @@
       "hai": 27.4,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-19": {
+      "date": "2026-07-19",
+      "texte": "L'industrialisation des robots humano\u00efdes s'acc\u00e9l\u00e8re : LingBot-VLA 2.0 et Kimi K3 ouvrent une \u00e8re de flexibilit\u00e9 in\u00e9dite, tandis que Monumental et Noetra transforment la construction et la logistique. Le HAI grimpe \u00e0 27,0/100, port\u00e9 par des partenariats concrets et des mod\u00e8les d'IA pr\u00eats \u00e0 l'action. La r\u00e9volution robotique n'est plus un futur lointain, mais un pr\u00e9sent en devenir.",
+      "hai": 27.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-18T21:00:54.980729"
+  "generated": "2026-07-19T07:00:35.623614"
 }
