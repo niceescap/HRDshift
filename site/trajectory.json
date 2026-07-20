@@ -191,6 +191,10 @@
     {
       "date": "2026-07-19",
       "valeur": 29.7
+    },
+    {
+      "date": "2026-07-20",
+      "valeur": 36.0
     }
   ],
   "price": [
@@ -365,6 +369,10 @@
     {
       "date": "2026-07-19",
       "valeur": 0.0
+    },
+    {
+      "date": "2026-07-20",
+      "valeur": 29900.0
     }
   ],
   "edito_by_date": {
@@ -703,7 +711,14 @@
       "hai": 27.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-20": {
+      "date": "2026-07-20",
+      "texte": "Les premiers pas concrets d\u2019industrialisation des humano\u00efdes se concr\u00e9tisent : un prix ferme, des pr\u00e9commandes confirm\u00e9es et un d\u00e9ploiement r\u00e9el \u00e0 WAIC 2026 montrent que les op\u00e9rateurs hautement qualifi\u00e9s ne resteront pas \u00e0 l\u2019\u00e9cart. L\u2019IA robotique passe de la th\u00e9orie \u00e0 la production, et l\u2019avenir de la main\u2011d\u2019\u0153uvre manuelle est plus prometteur que jamais.",
+      "hai": 36.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-19T21:00:42.541592"
+  "generated": "2026-07-20T07:01:48.063406"
 }
