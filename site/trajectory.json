@@ -195,6 +195,10 @@
     {
       "date": "2026-07-20",
       "valeur": 37.9
+    },
+    {
+      "date": "2026-07-21",
+      "valeur": 25.9
     }
   ],
   "price": [
@@ -373,6 +377,10 @@
     {
       "date": "2026-07-20",
       "valeur": 14950.0
+    },
+    {
+      "date": "2026-07-21",
+      "valeur": 0.0
     }
   ],
   "edito_by_date": {
@@ -718,7 +726,14 @@
       "hai": 36.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-21": {
+      "date": "2026-07-21",
+      "texte": "{\"hai\": 24.0, \"tendance\": \"\u2193\", \"edito\": \"Les signaux r\u00e9cents restent majoritairement technologiques ou d\u2019annonces sans preuve de d\u00e9ploiement industriel ferme. La moyenne pond\u00e9r\u00e9e des scores (24/100) montre une l\u00e9g\u00e8re baisse du Humanoid Acceleration Index, confirmant que l\u2019\u00e9cosyst\u00e8me des humano\u00efdes \u00e9volue encore en phase de prototypes cr\u00e9dibles plut\u00f4t que de premiers pilotes \u00e0 grande \u00e9chelle.\"}**",
+      "hai": 25.9,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-20T21:01:05.344232"
+  "generated": "2026-07-21T07:01:51.186772"
 }
