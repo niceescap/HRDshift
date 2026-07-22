@@ -199,6 +199,10 @@
     {
       "date": "2026-07-21",
       "valeur": 27.4
+    },
+    {
+      "date": "2026-07-22",
+      "valeur": 33.3
     }
   ],
   "price": [
@@ -380,6 +384,10 @@
     },
     {
       "date": "2026-07-21",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-07-22",
       "valeur": 0.0
     }
   ],
@@ -733,7 +741,14 @@
       "hai": 25.9,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-07-22": {
+      "date": "2026-07-22",
+      "texte": "Samsung\u2019s new robotics arm, led by a former Boston Dynamics chief, plus tactile\u2011sensing demos and a high\u2011speed cosmetics pilot boost the HAI to 33.3, signifying a notable jump toward industrial deployment.",
+      "hai": 33.3,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-21T14:01:03.521304"
+  "generated": "2026-07-22T07:01:15.676299"
 }
