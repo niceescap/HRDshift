@@ -211,6 +211,10 @@
     {
       "date": "2026-07-24",
       "valeur": 29.9
+    },
+    {
+      "date": "2026-07-26",
+      "valeur": 36.5
     }
   ],
   "price": [
@@ -778,7 +782,14 @@
       "hai": 30.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-26": {
+      "date": "2026-07-26",
+      "texte": "Les pr\u00e9commandes massives et les premi\u00e8res livraisons d\u2019Ubtech montrent que les robots humano\u00efdes passent du stade de prototype \u00e0 une r\u00e9elle adoption industrielle, poussant le HAI \u00e0 grimper.",
+      "hai": 36.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-24T21:00:49.128728"
+  "generated": "2026-07-26T21:00:43.034634"
 }
