@@ -219,6 +219,10 @@
     {
       "date": "2026-07-27",
       "valeur": 25.6
+    },
+    {
+      "date": "2026-07-28",
+      "valeur": 25.6
     }
   ],
   "price": [
@@ -417,6 +421,10 @@
     {
       "date": "2026-07-27",
       "valeur": 0.0
+    },
+    {
+      "date": "2026-07-28",
+      "valeur": 20000.0
     }
   ],
   "edito_by_date": {
@@ -804,7 +812,14 @@
       "hai": 25.6,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-07-28": {
+      "date": "2026-07-28",
+      "texte": "Le HAI reste \u00e0 25,6\u202f: les signaux sont majoritairement de faible impact, la campagne Hyundai avec Atlas apporte une visibilit\u00e9, mais aucune pr\u00e9commande ferme ou d\u00e9ploiement industriel n\u2019est encore confirm\u00e9.",
+      "hai": 25.6,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-27T21:00:40.834893"
+  "generated": "2026-07-28T14:01:59.307758"
 }
