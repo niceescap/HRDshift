@@ -223,6 +223,10 @@
     {
       "date": "2026-07-28",
       "valeur": 26.9
+    },
+    {
+      "date": "2026-07-29",
+      "valeur": 27.0
     }
   ],
   "price": [
@@ -425,6 +429,10 @@
     {
       "date": "2026-07-28",
       "valeur": 20000.0
+    },
+    {
+      "date": "2026-07-29",
+      "valeur": 0.0
     }
   ],
   "edito_by_date": {
@@ -819,7 +827,14 @@
       "hai": 25.6,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-07-29": {
+      "date": "2026-07-29",
+      "texte": "Le lancement pr\u00e9vu de BYD en ao\u00fbt marque le premier pas concret vers la production de humano\u00efdes, propulsant l\u2019industrialisation d\u2019un cran tout en gardant le cap vers la viabilit\u00e9 op\u00e9rationnelle.",
+      "hai": 27.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-28T21:00:47.155689"
+  "generated": "2026-07-29T14:07:17.689892"
 }
