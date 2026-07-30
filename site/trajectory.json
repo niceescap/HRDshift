@@ -227,6 +227,10 @@
     {
       "date": "2026-07-29",
       "valeur": 27.0
+    },
+    {
+      "date": "2026-07-30",
+      "valeur": 19.9
     }
   ],
   "price": [
@@ -432,6 +436,10 @@
     },
     {
       "date": "2026-07-29",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-07-30",
       "valeur": 0.0
     }
   ],
@@ -834,7 +842,14 @@
       "hai": 27.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-07-30": {
+      "date": "2026-07-30",
+      "texte": "La r\u00e9cente alerte de la FCC sur les risques s\u00e9curitaires des robots avanc\u00e9s, coupl\u00e9e aux obstacles techniques et \u00e0 la guerre des prix qui freinent la production en s\u00e9rie de Tesla Optimus, p\u00e8se nettement sur l\u2019\u00e9lan vers l\u2019industrialisation des humano\u00efdes. Malgr\u00e9 quelques signaux positifs \u2013 lev\u00e9es de fonds en IA, d\u00e9ploiements d\u2019automatisation chez Renault et logiciels de construction et entre autres \u2013 l\u2019impact n\u00e9gatif dominant pousse l\u2019indice sous la barre des 20, confirmant que nous demeurons encore dans la phase de prototypes cr\u00e9dibles, mais avec une trajectoire temporairement ralentie.",
+      "hai": 19.9,
+      "tendance": "\u2193",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-29T21:00:41.170007"
+  "generated": "2026-07-30T07:01:19.840672"
 }
