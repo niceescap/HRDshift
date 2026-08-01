@@ -235,6 +235,10 @@
     {
       "date": "2026-07-31",
       "valeur": 27.1
+    },
+    {
+      "date": "2026-08-01",
+      "valeur": 30.8
     }
   ],
   "price": [
@@ -449,6 +453,10 @@
     {
       "date": "2026-07-31",
       "valeur": 0.0
+    },
+    {
+      "date": "2026-08-01",
+      "valeur": 29900.0
     }
   ],
   "edito_by_date": {
@@ -864,7 +872,14 @@
       "hai": 25.6,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-08-01": {
+      "date": "2026-08-01",
+      "texte": "L'acc\u00e9l\u00e9ration des robots humano\u00efdes se confirme : d\u00e9monstrations d'IA \u00e0 whole-body (Apptronik), d\u00e9ploiements op\u00e9rationnels (FedEx/Dexterity) et une acquisition majeure ($845M) signalent une maturation rapide vers la pr\u00e9-industrialisation. Le HAI grimpe, refl\u00e9tant une viabilit\u00e9 op\u00e9rationnelle \u00e9mergente pour les op\u00e9rateurs hautement qualifi\u00e9s.",
+      "hai": 30.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-07-31T21:00:32.645448"
+  "generated": "2026-08-01T07:01:50.531915"
 }
