@@ -239,6 +239,10 @@
     {
       "date": "2026-08-01",
       "valeur": 29.4
+    },
+    {
+      "date": "2026-08-03",
+      "valeur": 28.5
     }
   ],
   "price": [
@@ -879,7 +883,14 @@
       "hai": 30.8,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-03": {
+      "date": "2026-08-03",
+      "texte": "L'indice franchit un cap symbolique. L'IPO imminente de Unitree (75/100) valide l'app\u00e9tit capitalistique pour le pur-play humano\u00efde, tandis que BYD verrouille un calendrier industriel : ao\u00fbt pour la premi\u00e8re. Les int\u00e9grateurs certifi\u00e9s montent en puissance, Gemini 2 d\u00e9bloque le corps entier, et le narratif \"production de masse 2026\" s'impose comme consensus. Les pi\u00e8ces du puzzle s'assemblent : capitaux, calendrier, \u00e9cosyst\u00e8me. La bascule op\u00e9rationnelle approche.",
+      "hai": 28.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-01T21:00:43.204225"
+  "generated": "2026-08-03T14:01:04.297364"
 }
