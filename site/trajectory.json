@@ -247,6 +247,10 @@
     {
       "date": "2026-08-04",
       "valeur": 26.0
+    },
+    {
+      "date": "2026-08-05",
+      "valeur": 27.5
     }
   ],
   "price": [
@@ -905,7 +909,14 @@
       "hai": 25.0,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-08-05": {
+      "date": "2026-08-05",
+      "texte": "Les signaux de co\u00fbt, de production et d\u2019exploration commerciale confirment une progression concr\u00e8te vers l\u2019industrialisation des robots humano\u00efdes, poussant l\u2019HAI \u00e0 27,5, soit une hausse mod\u00e9r\u00e9e mais d\u00e9cisive.",
+      "hai": 27.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-04T21:00:49.433781"
+  "generated": "2026-08-05T07:01:51.012943"
 }
