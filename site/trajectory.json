@@ -251,6 +251,10 @@
     {
       "date": "2026-08-05",
       "valeur": 38.3
+    },
+    {
+      "date": "2026-08-06",
+      "valeur": 35.6
     }
   ],
   "price": [
@@ -916,7 +920,14 @@
       "hai": 27.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-06": {
+      "date": "2026-08-06",
+      "texte": "Le lancement imminent du robot U1 d\u2019UWORLD, avec prix et date de livraison confirm\u00e9s, et la lev\u00e9e de fonds d\u2019Apptronik t\u00e9moignent d\u2019une premi\u00e8re avanc\u00e9e concr\u00e8te vers le d\u00e9ploiement industriel des humano\u00efdes, signalant une mont\u00e9e en puissance rapide du secteur.",
+      "hai": 35.6,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-05T21:00:59.561048"
+  "generated": "2026-08-06T14:00:56.822122"
 }
