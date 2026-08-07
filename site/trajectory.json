@@ -255,6 +255,10 @@
     {
       "date": "2026-08-06",
       "valeur": 37.3
+    },
+    {
+      "date": "2026-08-07",
+      "valeur": 33.4
     }
   ],
   "price": [
@@ -476,6 +480,10 @@
     },
     {
       "date": "2026-08-04",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-08-07",
       "valeur": 0.0
     }
   ],
@@ -927,7 +935,14 @@
       "hai": 35.6,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-07": {
+      "date": "2026-08-07",
+      "texte": "L'acc\u00e9l\u00e9ration est fulgurante! L'annonce de l'IPO de Unitree propulse le secteur dans une dimension financi\u00e8re sans pr\u00e9c\u00e9dent. On quitte la phase de prototype pour entrer de plain-pied dans l'\u00e8re de la capitalisation massive. Les humano\u00efdes ne sont plus une promesse, ils deviennent un actif financier mondial. L'avenir de l'industrie s'\u00e9crit maintenant.",
+      "hai": 33.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-06T21:01:47.753550"
+  "generated": "2026-08-07T07:00:37.995765"
 }
