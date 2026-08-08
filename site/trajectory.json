@@ -259,6 +259,10 @@
     {
       "date": "2026-08-07",
       "valeur": 37.4
+    },
+    {
+      "date": "2026-08-08",
+      "valeur": 31.0
     }
   ],
   "price": [
@@ -942,7 +946,14 @@
       "hai": 33.4,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-08": {
+      "date": "2026-08-08",
+      "texte": "Le HAI grimpe \u00e0 31, refl\u00e9tant une premi\u00e8re vague de d\u00e9ploiements industriels concrets et des partenariats cl\u00e9s qui acc\u00e9l\u00e8rent l\u2019adoption des humano\u00efdes.",
+      "hai": 31.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-07T21:01:45.652908"
+  "generated": "2026-08-08T07:01:01.146889"
 }
