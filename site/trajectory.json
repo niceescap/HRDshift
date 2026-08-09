@@ -263,6 +263,10 @@
     {
       "date": "2026-08-08",
       "valeur": 29.8
+    },
+    {
+      "date": "2026-08-09",
+      "valeur": 59.2
     }
   ],
   "price": [
@@ -957,7 +961,14 @@
       "hai": 31.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-09": {
+      "date": "2026-08-09",
+      "texte": "Les robots humano\u00efdes passent de la th\u00e9orie \u00e0 la pratique : 250 unit\u00e9s d\u00e9j\u00e0 en service, un IPO record et des pr\u00e9\u2011commandes massives confirment que l\u2019industrialisation est en marche. Les op\u00e9rateurs hautement qualifi\u00e9s vont bient\u00f4t b\u00e9n\u00e9ficier d\u2019une arm\u00e9e de partenaires m\u00e9caniques, acc\u00e9l\u00e9rant la transition vers une production intelligente et collaborative.",
+      "hai": 59.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-08T14:00:37.527502"
+  "generated": "2026-08-09T21:02:18.040664"
 }
