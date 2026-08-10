@@ -267,6 +267,10 @@
     {
       "date": "2026-08-09",
       "valeur": 59.2
+    },
+    {
+      "date": "2026-08-10",
+      "valeur": 37.8
     }
   ],
   "price": [
@@ -968,7 +972,14 @@
       "hai": 59.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-10": {
+      "date": "2026-08-10",
+      "texte": "Les pr\u00e9commandes massives (UBTech, Unitree), l'IPO historique de Unitree \u00e0 9 milliards et la multiplication des ventes (China 97% du march\u00e9) marquent un acc\u00e9l\u00e9ration nette vers l'industrialisation des robots humano\u00efdes. Le HAI grimpe \u00e0 37,8, signal d'une phase de prototypes cr\u00e9dibles pass\u00e9e, vers des premiers d\u00e9ploiements industriels.",
+      "hai": 37.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-09T21:02:18.040664"
+  "generated": "2026-08-10T14:02:52.021426"
 }
