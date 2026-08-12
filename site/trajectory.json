@@ -275,6 +275,10 @@
     {
       "date": "2026-08-11",
       "valeur": 33.6
+    },
+    {
+      "date": "2026-08-12",
+      "valeur": 33.0
     }
   ],
   "price": [
@@ -998,7 +1002,14 @@
       "hai": 38.9,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-12": {
+      "date": "2026-08-12",
+      "texte": "La domination chinoise des exp\u00e9ditions de robots humano\u00efdes, l\u2019IPO record d\u2019Unitree et les usines 1X/NEO Factory acc\u00e9l\u00e8rent l\u2019industrialisation. Ces signaux exceptionnels propulsent l\u2019Indice d\u2019Acc\u00e9l\u00e9ration Humano\u00efde vers de nouveaux sommets, annon\u00e7ant une collaboration imminente entre op\u00e9rateurs qualifi\u00e9s et assistants robotiques.",
+      "hai": 33.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-11T21:00:41.528599"
+  "generated": "2026-08-12T07:02:51.074208"
 }
