@@ -279,6 +279,10 @@
     {
       "date": "2026-08-12",
       "valeur": 31.4
+    },
+    {
+      "date": "2026-08-13",
+      "valeur": 31.1
     }
   ],
   "price": [
@@ -1009,7 +1013,14 @@
       "hai": 33.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-13": {
+      "date": "2026-08-13",
+      "texte": "L'industrie acc\u00e9l\u00e8re : Apptronik d\u00e9bloque 520M\u20ac pour des d\u00e9ploiements commerciaux concrets, 1X et Celona lancent des robots op\u00e9rationnels, et des r\u00e9gulations \u00e9mergentes (San Mateo) marquent un tournant institutionnel. Les prototypes deviennent des outils industriels, portant l'HAI \u00e0 31,1. L'\u00e8re des humano\u00efdes est plus proche que jamais.",
+      "hai": 31.1,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-12T21:01:12.750199"
+  "generated": "2026-08-13T07:01:31.320662"
 }
