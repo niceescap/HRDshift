@@ -283,6 +283,10 @@
     {
       "date": "2026-08-13",
       "valeur": 32.2
+    },
+    {
+      "date": "2026-08-14",
+      "valeur": 28.4
     }
   ],
   "price": [
@@ -1024,7 +1028,14 @@
       "hai": 31.1,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-14": {
+      "date": "2026-08-14",
+      "texte": "L'acc\u00e9l\u00e9ration est r\u00e9elle! Entre l'IPO de Unitree qui valorise le secteur et l'ambition de Hyundai de briser la barri\u00e8re des 20 000 $, nous quittons la th\u00e9orie pour l'\u00e9conomie de march\u00e9. L'industrialisation s'organise : les cadres r\u00e9glementaires arrivent et la cha\u00eene logistique se restructure. L'\u00e8re du collaborateur robotique est en marche.",
+      "hai": 28.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-13T21:01:12.212643"
+  "generated": "2026-08-14T07:00:33.716239"
 }
