@@ -291,6 +291,10 @@
     {
       "date": "2026-08-15",
       "valeur": 36.5
+    },
+    {
+      "date": "2026-08-17",
+      "valeur": 30.0
     }
   ],
   "price": [
@@ -540,6 +544,10 @@
     },
     {
       "date": "2026-08-15",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-08-17",
       "valeur": 0.0
     }
   ],
@@ -1054,7 +1062,14 @@
       "hai": 36.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-17": {
+      "date": "2026-08-17",
+      "texte": "L\u2019IPO de Unitree et les premiers financements massifs montrent que les robots humano\u00efdes passent du stade de prototype \u00e0 une premi\u00e8re dynamique commerciale cr\u00e9dible, acc\u00e9l\u00e9rant leur entr\u00e9e sur le march\u00e9 industriel.",
+      "hai": 30.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-15T21:04:13.320420"
+  "generated": "2026-08-17T14:00:48.839131"
 }
