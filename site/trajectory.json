@@ -299,6 +299,10 @@
     {
       "date": "2026-08-18",
       "valeur": 26.6
+    },
+    {
+      "date": "2026-08-19",
+      "valeur": 26.1
     }
   ],
   "price": [
@@ -557,6 +561,10 @@
     {
       "date": "2026-08-18",
       "valeur": 0.0
+    },
+    {
+      "date": "2026-08-19",
+      "valeur": 29900.0
     }
   ],
   "edito_by_date": {
@@ -1084,7 +1092,14 @@
       "hai": 26.1,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-08-19": {
+      "date": "2026-08-19",
+      "texte": "L'industrie robotique humano\u00efde reste dans une phase de consolidation technologique et industrielle, avec des avanc\u00e9es notables mais encore limit\u00e9es \u00e0 des prototypes et des premiers d\u00e9ploiements cibl\u00e9s. L'IA et les capteurs innovants ouvrent la voie \u00e0 des applications concr\u00e8tes, mais l'adoption \u00e0 grande \u00e9chelle d\u00e9pendra de la maturit\u00e9 des cha\u00eenes de production et de la rentabilit\u00e9 des solutions. La d\u00e9mocratisation des composants cl\u00e9s, comme les robots abordables sur des plateformes comme AliExpress, sugg\u00e8re une dynamique \u00e0 long terme, mais le HAI actuel refl\u00e8te une attente prudente avant une acc\u00e9l\u00e9ration industrielle v\u00e9ritablement syst\u00e9mique.",
+      "hai": 26.1,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-18T21:00:35.002793"
+  "generated": "2026-08-19T14:00:37.419400"
 }
