@@ -303,6 +303,10 @@
     {
       "date": "2026-08-19",
       "valeur": 26.1
+    },
+    {
+      "date": "2026-08-20",
+      "valeur": 31.4
     }
   ],
   "price": [
@@ -565,6 +569,10 @@
     {
       "date": "2026-08-19",
       "valeur": 14950.0
+    },
+    {
+      "date": "2026-08-20",
+      "valeur": 0.0
     }
   ],
   "edito_by_date": {
@@ -1099,7 +1107,14 @@
       "hai": 26.1,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-08-20": {
+      "date": "2026-08-20",
+      "texte": "Le HAI grimpe \u00e0 ~31,4 (\u2191) gr\u00e2ce aux deux IPO record de Unitree (460\u202f% et 629\u202f%) qui marquent une entr\u00e9e massive sur le march\u00e9, signalant le passage du stade prototype \u00e0 pr\u00e9\u2011d\u00e9ploiement.",
+      "hai": 31.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-19T21:00:29.830376"
+  "generated": "2026-08-20T07:01:54.396835"
 }
