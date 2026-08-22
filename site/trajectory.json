@@ -311,6 +311,10 @@
     {
       "date": "2026-08-21",
       "valeur": 27.4
+    },
+    {
+      "date": "2026-08-22",
+      "valeur": 27.0
     }
   ],
   "price": [
@@ -580,6 +584,10 @@
     },
     {
       "date": "2026-08-21",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-08-22",
       "valeur": 0.0
     }
   ],
@@ -1129,7 +1137,14 @@
       "hai": 30.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-22": {
+      "date": "2026-08-22",
+      "texte": "Le HAI atteint 27,0, restant stable \u00e0 +0,8 point, t\u00e9moignant d\u2019une progression soutenue gr\u00e2ce aux forts signaux de prix, d\u2019achat et de d\u00e9ploiement commercial.",
+      "hai": 27.0,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-21T21:01:18.820656"
+  "generated": "2026-08-22T14:03:00.420155"
 }
