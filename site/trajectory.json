@@ -315,6 +315,10 @@
     {
       "date": "2026-08-22",
       "valeur": 27.0
+    },
+    {
+      "date": "2026-08-24",
+      "valeur": 30.0
     }
   ],
   "price": [
@@ -588,6 +592,10 @@
     },
     {
       "date": "2026-08-22",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-08-24",
       "valeur": 0.0
     }
   ],
@@ -1144,7 +1152,14 @@
       "hai": 27.0,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-08-24": {
+      "date": "2026-08-24",
+      "texte": "L\u2019IPO g\u00e9ante de Unitree et le prix \u00e9lev\u00e9 des humano\u00efdes chinois annoncent une acc\u00e9l\u00e9ration industrielle. Les acquisitions et les pr\u00e9commandes renforcent la cha\u00eene d\u2019approvisionnement, tandis que les d\u00e9monstrations et les partenariats industriels se multiplient. Le HAI passe \u00e0 30, confirmant une progression vers une adoption \u00e0 grande \u00e9chelle des robots humano\u00efdes au service des op\u00e9rateurs qualifi\u00e9s.",
+      "hai": 30.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-22T14:03:00.420155"
+  "generated": "2026-08-24T14:01:49.266365"
 }
