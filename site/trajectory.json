@@ -319,6 +319,10 @@
     {
       "date": "2026-08-24",
       "valeur": 34.0
+    },
+    {
+      "date": "2026-08-25",
+      "valeur": 34.5
     }
   ],
   "price": [
@@ -596,6 +600,10 @@
     },
     {
       "date": "2026-08-24",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-08-25",
       "valeur": 0.0
     }
   ],
@@ -1159,7 +1167,14 @@
       "hai": 30.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-25": {
+      "date": "2026-08-25",
+      "texte": "L\u2019industrialisation des humano\u00efdes franchit un cap : lev\u00e9es de fonds massives (XPeng 900\u202fM$), valorisation de 6,3\u202fB$ et production en s\u00e9rie annonc\u00e9e par 12 constructeurs dont Tesla et Xiaomi, tandis que les premi\u00e8res cotations de robots (WHRG) \u00e9mergent. Ces signaux concrets de prix ferme, de pr\u00e9commandes et de d\u00e9ploiements pilotes propulsent l\u2019indice HAI vers la zone des prototypes cr\u00e9dibles, annon\u00e7ant une acc\u00e9l\u00e9ration industrielle imminente.",
+      "hai": 34.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-24T21:01:28.247988"
+  "generated": "2026-08-25T14:02:16.896512"
 }
