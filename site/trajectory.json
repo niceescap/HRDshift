@@ -323,6 +323,10 @@
     {
       "date": "2026-08-25",
       "valeur": 31.2
+    },
+    {
+      "date": "2026-08-26",
+      "valeur": 27.7
     }
   ],
   "price": [
@@ -1174,7 +1178,14 @@
       "hai": 34.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-26": {
+      "date": "2026-08-26",
+      "texte": "Les signaux convergent : les pr\u00e9visions de lancement d'Optimus pour 2027, les partenariats de d\u00e9ploiement sur les chantiers solaires et les progr\u00e8s des puces Jetson renforcent la cr\u00e9dibilit\u00e9 des humano\u00efdes en milieu industriel. Malgr\u00e9 un besoin persistant d'humains dans la boucle, l'acc\u00e9l\u00e9ration est bien engag\u00e9e.",
+      "hai": 27.7,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-25T21:02:05.232951"
+  "generated": "2026-08-26T14:01:12.433876"
 }
