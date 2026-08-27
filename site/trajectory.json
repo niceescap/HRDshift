@@ -327,6 +327,10 @@
     {
       "date": "2026-08-26",
       "valeur": 27.2
+    },
+    {
+      "date": "2026-08-27",
+      "valeur": 26.1
     }
   ],
   "price": [
@@ -613,6 +617,10 @@
     {
       "date": "2026-08-26",
       "valeur": 0.0
+    },
+    {
+      "date": "2026-08-27",
+      "valeur": 29900.0
     }
   ],
   "edito_by_date": {
@@ -1189,7 +1197,14 @@
       "hai": 27.7,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-27": {
+      "date": "2026-08-27",
+      "texte": "Malgr\u00e9 quelques avanc\u00e9es dans l'autonomisation des camions et des pelles, aucun signal fort ne pointe vers une acc\u00e9l\u00e9ration concr\u00e8te des robots humano\u00efdes en usine ; l'indice reste donc stable autour de 26,1, t\u00e9moignant d'une phase de prototypes cr\u00e9dibles qui se consolide sans d\u00e9bordement.",
+      "hai": 26.1,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-26T21:03:57.566046"
+  "generated": "2026-08-27T07:01:10.549261"
 }
