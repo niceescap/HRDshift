@@ -331,6 +331,10 @@
     {
       "date": "2026-08-27",
       "valeur": 26.0
+    },
+    {
+      "date": "2026-08-28",
+      "valeur": 29.0
     }
   ],
   "price": [
@@ -621,6 +625,10 @@
     {
       "date": "2026-08-27",
       "valeur": 14950.0
+    },
+    {
+      "date": "2026-08-28",
+      "valeur": 0.0
     }
   ],
   "edito_by_date": {
@@ -1204,7 +1212,14 @@
       "hai": 26.1,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-08-28": {
+      "date": "2026-08-28",
+      "texte": "SoftBank vise 1X \u00e0 6 milliards $, tractations en cours \u2014 le premier signal de valorisation \"industry-ready\" d'un grand \u0444\u043e\u043d\u0434 sur un fabricant humano\u00efde. Avec 90 M$ NSF en robotique et Teradyne qui brevette ses cobots, la dynamique monte d'un cran. Le HAI reste en territoire \"prototypes cr\u00e9dibles\", mais la fen\u00eatre de bascule se rapproche.",
+      "hai": 29.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-27T21:01:37.856257"
+  "generated": "2026-08-28T07:00:53.957503"
 }
