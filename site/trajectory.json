@@ -335,6 +335,10 @@
     {
       "date": "2026-08-28",
       "valeur": 33.7
+    },
+    {
+      "date": "2026-08-29",
+      "valeur": 42.4
     }
   ],
   "price": [
@@ -628,6 +632,10 @@
     },
     {
       "date": "2026-08-28",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-08-29",
       "valeur": 0.0
     }
   ],
@@ -1219,7 +1227,14 @@
       "hai": 29.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-29": {
+      "date": "2026-08-29",
+      "texte": "L\u2019acc\u00e9l\u00e9ration des robots humano\u00efdes s\u2019affirme : SoftBank n\u00e9gocie un rachat massif de 1X, et Hugging Face lance un duck open-source \u00e0 399 $. Ces signes tangibles d\u2019investissement et de d\u00e9ploiement font grimper l\u2019Indice d\u2019Acc\u00e9l\u00e9ration Humano\u00efde \u00e0 42.4, confirmant une transition rapide vers l\u2019industrialisation.",
+      "hai": 42.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-28T21:01:59.970483"
+  "generated": "2026-08-29T07:07:20.002057"
 }
