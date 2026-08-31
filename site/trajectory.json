@@ -339,6 +339,10 @@
     {
       "date": "2026-08-29",
       "valeur": 42.4
+    },
+    {
+      "date": "2026-08-31",
+      "valeur": 30.0
     }
   ],
   "price": [
@@ -637,6 +641,10 @@
     {
       "date": "2026-08-29",
       "valeur": 0.0
+    },
+    {
+      "date": "2026-08-31",
+      "valeur": 20000.0
     }
   ],
   "edito_by_date": {
@@ -1234,7 +1242,14 @@
       "hai": 42.4,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-08-31": {
+      "date": "2026-08-31",
+      "texte": "L'arriv\u00e9e des robots humano\u00efdes dans l'industrie s'acc\u00e9l\u00e8re modestement. Le lancement commercial d'Optimus par Tesla et les premiers tests de commercialisation d'Unitree apr\u00e8s son introduction en bourse signalent un passage progressif de la recherche \u00e0 la pr\u00e9-industrialisation. Bien que ces signaux soient encourageants, ils restent insuffisants pour un d\u00e9collage massif, maintenant l'indice HAI autour de 30, en l\u00e9g\u00e8re hausse.",
+      "hai": 30.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-29T07:07:20.002057"
+  "generated": "2026-08-31T14:00:53.397551"
 }
