@@ -343,6 +343,10 @@
     {
       "date": "2026-08-31",
       "valeur": 30.0
+    },
+    {
+      "date": "2026-09-01",
+      "valeur": 27.5
     }
   ],
   "price": [
@@ -1249,7 +1253,14 @@
       "hai": 30.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-01": {
+      "date": "2026-09-01",
+      "texte": "Les signaux commerciaux explosent : pr\u00e9commandes massives, fusions industrielles et lancements de produits \u00e0 prix accessibles. Les robots humano\u00efdes passent du stade exp\u00e9rimental \u00e0 la r\u00e9alit\u00e9 industrielle. Un saut de 1,5 point vers 27.5 refl\u00e8te cette acc\u00e9l\u00e9ration tangible.",
+      "hai": 27.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-08-31T14:00:53.397551"
+  "generated": "2026-09-01T07:00:47.479457"
 }
