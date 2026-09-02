@@ -347,6 +347,10 @@
     {
       "date": "2026-09-01",
       "valeur": 29.2
+    },
+    {
+      "date": "2026-09-02",
+      "valeur": 29.2
     }
   ],
   "price": [
@@ -1260,7 +1264,14 @@
       "hai": 27.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-02": {
+      "date": "2026-09-02",
+      "texte": "Le HAI grimpe \u00e0 29.2 : la\u96f6\u552e est l\u00e0. Deux signaux forts cette semaine \u2014 le Mornine M1 \u00e0 41 000 $ en vente sur JD.com et les pr\u00e9commandes du NEO d'1X \u2014 prouvent que le passage du prototype au produit commercial n'est plus un horizon, c'est une r\u00e9alit\u00e9 naissante. Goldman Sachs table sur 6,5 millions d'unit\u00e9s d'ici 2035, BMW d\u00e9ploie ses Figure 03 en Caroline du Sud, et m\u00eame si Tesla repousse Optimus \u00e0 2027, l'engagement industriel reste maintenu. La Chine teste la viabilit\u00e9 commerciale de ses humano\u00efdes au-del\u00e0 des cascades m\u00e9diatiques. Nous ne sommes plus dans la d\u00e9monstration de faisabilit\u00e9 \u2014 nous sommes dans lapre-commercialisation. Le HAI va continuer \u00e0 monter.",
+      "hai": 29.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-01T21:00:55.160168"
+  "generated": "2026-09-02T14:01:04.157429"
 }
