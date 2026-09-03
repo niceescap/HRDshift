@@ -351,6 +351,10 @@
     {
       "date": "2026-09-02",
       "valeur": 30.9
+    },
+    {
+      "date": "2026-09-03",
+      "valeur": 36.7
     }
   ],
   "price": [
@@ -1271,7 +1275,14 @@
       "hai": 29.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-03": {
+      "date": "2026-09-03",
+      "texte": "L\u2019acc\u00e9l\u00e9ration de la production de robots humano\u00efdes se confirme : pr\u00e9commandes massives, partenariats industriels cl\u00e9s et d\u00e9ploiements en usine signalent un passage \u00e0 l\u2019\u00e9chelle industrielle. Le march\u00e9 se rapproche d\u2019un point de basculement, promettant des outils au service des op\u00e9rateurs hautement qualifi\u00e9s.",
+      "hai": 36.7,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-02T21:00:37.486396"
+  "generated": "2026-09-03T07:01:21.203400"
 }
