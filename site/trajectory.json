@@ -359,6 +359,10 @@
     {
       "date": "2026-09-04",
       "valeur": 26.8
+    },
+    {
+      "date": "2026-09-05",
+      "valeur": 27.0
     }
   ],
   "price": [
@@ -1301,7 +1305,14 @@
       "hai": 26.2,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-09-05": {
+      "date": "2026-09-05",
+      "texte": "Les signaux s'accumulent : Lyte l\u00e8ve $165M pour doter les robots de meilleures capacit\u00e9s de perception, Sodexo d\u00e9ploie des robots de livraison via Robot.com, et Pudu Robotics envahit l'Europe. La Chine confirme sa capacit\u00e9 \u00e0 produire des humano\u00efdes \u00e0 grande \u00e9chelle. M\u00eame si l'on reste en territory \u00ab prototypes cr\u00e9dibles \u00bb, ces capitaux, partenariats et expansions concr\u00e8tes font bouger le HAI de +0.7 pt. L'\u00e9cosyst\u00e8me se structure. L'acc\u00e9l\u00e9ration n'est plus une question de \u00ab si \u00bb mais de \u00ab quand \u00bb.",
+      "hai": 27.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-04T21:07:55.216765"
+  "generated": "2026-09-05T07:00:41.340053"
 }
