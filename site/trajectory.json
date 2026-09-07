@@ -367,6 +367,10 @@
     {
       "date": "2026-09-06",
       "valeur": 28.5
+    },
+    {
+      "date": "2026-09-07",
+      "valeur": 33.8
     }
   ],
   "price": [
@@ -1323,7 +1327,14 @@
       "hai": 28.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-07": {
+      "date": "2026-09-07",
+      "texte": "Les robots humanoides passent le cap commercial : Agility Robotics affiche 1.8M$ de revenus, Wandercraft conquiert 12 clients industriels. L'\u00e8re de l'assistance robotique aux op\u00e9rateurs hautement qualifi\u00e9s commence, avec une acc\u00e9l\u00e9ration concr\u00e8te et optimiste.",
+      "hai": 33.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-06T14:00:33.010107"
+  "generated": "2026-09-07T14:01:55.280619"
 }
