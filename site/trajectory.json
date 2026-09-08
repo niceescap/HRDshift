@@ -371,6 +371,10 @@
     {
       "date": "2026-09-07",
       "valeur": 33.6
+    },
+    {
+      "date": "2026-09-08",
+      "valeur": 29.5
     }
   ],
   "price": [
@@ -1334,7 +1338,14 @@
       "hai": 33.8,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-08": {
+      "date": "2026-09-08",
+      "texte": "Xpeng ouvre une ligne de production d\u00e9di\u00e9e \u00e0 son robot humano\u00efde Iron avec objectif de masse en fin d'ann\u00e9e \u2014 voil\u00e0 qui passe du prototype \u00e0 l'usine. Coupl\u00e9 au partenariat Figure-NVIDIA (100 000 GPUs), le signal industriel se renforce : les op\u00e9rateurs manuels hautement qualifi\u00e9s voient arriver des partenaires m\u00e9caniques de plus en plus cr\u00e9dibles. Le HAI passe de 26,3 \u00e0 29,5 \u2014 toujours en zone de prototypes cr\u00e9dibles, mais la rampe de lancement est visible.",
+      "hai": 29.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-07T21:00:29.732585"
+  "generated": "2026-09-08T14:00:47.444366"
 }
