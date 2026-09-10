@@ -379,6 +379,10 @@
     {
       "date": "2026-09-09",
       "valeur": 26.0
+    },
+    {
+      "date": "2026-09-10",
+      "valeur": 28.8
     }
   ],
   "price": [
@@ -689,6 +693,10 @@
     {
       "date": "2026-09-04",
       "valeur": 29900.0
+    },
+    {
+      "date": "2026-09-10",
+      "valeur": 0.0
     }
   ],
   "edito_by_date": {
@@ -1356,7 +1364,14 @@
       "hai": 24.4,
       "tendance": "\u2193",
       "date_edito": ""
+    },
+    "2026-09-10": {
+      "date": "2026-09-10",
+      "texte": "L\u2019indice gagne en assurance : les ventes r\u00e9v\u00e9l\u00e9es d\u2019Agility Robotics forment le signal commercial le plus tangible, tandis que le passage \u00e0 l\u2019\u00e9chelle \u00e9voqu\u00e9 par AGIBOT et le laboratoire Physical AI de Vention renforcent la trajectoire industrielle. Aucun d\u00e9ploiement massif encore, mais la marche vers l\u2019atelier s\u2019acc\u00e9l\u00e8re.",
+      "hai": 28.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-09T21:00:44.706096"
+  "generated": "2026-09-10T14:00:51.736388"
 }
