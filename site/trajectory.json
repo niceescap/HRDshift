@@ -383,6 +383,10 @@
     {
       "date": "2026-09-10",
       "valeur": 28.3
+    },
+    {
+      "date": "2026-09-11",
+      "valeur": 25.8
     }
   ],
   "price": [
@@ -696,6 +700,10 @@
     },
     {
       "date": "2026-09-10",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-09-11",
       "valeur": 0.0
     }
   ],
@@ -1371,7 +1379,14 @@
       "hai": 28.8,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-11": {
+      "date": "2026-09-11",
+      "texte": "Le HAI recule l\u00e9g\u00e8rement : rivalit\u00e9 Unitree\u2013Agibot, prix en baisse et essais militaires attestent d\u2019un \u00e9cosyst\u00e8me vivant, mais la chute boursi\u00e8re, les pertes et les brevets freinent la cr\u00e9dibilit\u00e9 industrielle. Sans commande ferme, production confirm\u00e9e ou d\u00e9ploiement terrain, les humano\u00efdes restent dans la zone des prototypes prometteurs \u2014 la course s\u2019acc\u00e9l\u00e8re, mais pas encore au rythme industriel esp\u00e9r\u00e9.",
+      "hai": 25.8,
+      "tendance": "\u2193",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-10T21:09:08.204117"
+  "generated": "2026-09-11T14:00:39.440129"
 }
