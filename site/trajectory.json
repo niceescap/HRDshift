@@ -387,6 +387,10 @@
     {
       "date": "2026-09-11",
       "valeur": 25.8
+    },
+    {
+      "date": "2026-09-13",
+      "valeur": 28.4
     }
   ],
   "price": [
@@ -704,6 +708,10 @@
     },
     {
       "date": "2026-09-11",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-09-13",
       "valeur": 0.0
     }
   ],
@@ -1386,7 +1394,14 @@
       "hai": 25.8,
       "tendance": "\u2193",
       "date_edito": ""
+    },
+    "2026-09-13": {
+      "date": "2026-09-13",
+      "texte": "Les robots humanoides acc\u00e9l\u00e8rent leur entr\u00e9e dans l'industrie : XPeng sort de la cha\u00eene de production, Agility Robotics affiche des ventes concr\u00e8tes. Malgr\u00e9 un l\u00e9ger refroidissement temporaire, ces signaux positifsannoncent une r\u00e9volution pour les op\u00e9rateurs qualifi\u00e9s, qui verront bient\u00f4t ces outils devenir leurs alli\u00e9s indispensable.",
+      "hai": 28.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-11T21:00:30.953300"
+  "generated": "2026-09-13T14:02:03.325085"
 }
