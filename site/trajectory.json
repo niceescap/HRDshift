@@ -395,6 +395,10 @@
     {
       "date": "2026-09-14",
       "valeur": 26.2
+    },
+    {
+      "date": "2026-09-15",
+      "valeur": 35.0
     }
   ],
   "price": [
@@ -720,6 +724,10 @@
     },
     {
       "date": "2026-09-14",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-09-15",
       "valeur": 0.0
     }
   ],
@@ -1416,7 +1424,14 @@
       "hai": 26.5,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-09-15": {
+      "date": "2026-09-15",
+      "texte": "Trois signaux de d\u00e9ploiement commercial concret \u2014 Boston Dynamics passe enfin en vente, Apptronik l\u00e8ve 520M pour la production de masse, et Mercado Libre d\u00e9ploie des Agility en terrain r\u00e9el \u2014 marquent un tournant irr\u00e9versible. Les prix chutent vers 1 400$, les pr\u00e9commandes s'envolent, les op\u00e9rateurs qualifi\u00e9s deviennent les premiers b\u00e9n\u00e9ficiaires. Le prototype devient outil. L'\u00e8re des humano\u00efdes en op\u00e9ration commence.",
+      "hai": 35.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-14T21:00:35.308442"
+  "generated": "2026-09-15T07:01:05.066943"
 }
