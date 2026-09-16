@@ -399,6 +399,10 @@
     {
       "date": "2026-09-15",
       "valeur": 32.2
+    },
+    {
+      "date": "2026-09-16",
+      "valeur": 44.0
     }
   ],
   "price": [
@@ -729,6 +733,10 @@
     {
       "date": "2026-09-15",
       "valeur": 0.0
+    },
+    {
+      "date": "2026-09-16",
+      "valeur": 20000.0
     }
   ],
   "edito_by_date": {
@@ -1431,7 +1439,14 @@
       "hai": 35.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-16": {
+      "date": "2026-09-16",
+      "texte": "L'industrialisation des robots humanoides franchit une \u00e9tape cruciale ! Avec des contrats comme Toyota et des productions massives, les outils robotiques deviennent les alli\u00e9s indispensables des op\u00e9rateurs manuels hautement qualifi\u00e9s. L'avenir est plus productif, plus s\u00fbr, plus humain.",
+      "hai": 44.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-15T21:01:05.986376"
+  "generated": "2026-09-16T07:02:13.773786"
 }
