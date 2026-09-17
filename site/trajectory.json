@@ -403,6 +403,10 @@
     {
       "date": "2026-09-16",
       "valeur": 34.6
+    },
+    {
+      "date": "2026-09-17",
+      "valeur": 30.7
     }
   ],
   "price": [
@@ -737,6 +741,10 @@
     {
       "date": "2026-09-16",
       "valeur": 10000.0
+    },
+    {
+      "date": "2026-09-17",
+      "valeur": 0.0
     }
   ],
   "edito_by_date": {
@@ -1446,7 +1454,14 @@
       "hai": 44.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-17": {
+      "date": "2026-09-17",
+      "texte": "La production annonc\u00e9e d\u2019Optimus et un humano\u00efde vendu sous les 6 000 $ rendent la fili\u00e8re plus tangible. Sans d\u00e9ploiement industriel massif, les prototypes cr\u00e9dibles consolident toutefois leur marche vers les premiers pilotes.",
+      "hai": 30.7,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-16T21:01:08.862613"
+  "generated": "2026-09-17T07:01:50.750944"
 }
