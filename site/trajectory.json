@@ -415,6 +415,10 @@
     {
       "date": "2026-09-19",
       "valeur": 49.9
+    },
+    {
+      "date": "2026-09-20",
+      "valeur": 29.2
     }
   ],
   "price": [
@@ -1491,7 +1495,14 @@
       "hai": 26.6,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-09-20": {
+      "date": "2026-09-20",
+      "texte": "Les signaux s'accumulent : igus expose des humano\u00efdes sur marketplace, Sony franchit une barri\u00e8re robotique, et l'\u00e9cosyst\u00e8me automation (impression 3D, drones, IA industrielle) acc\u00e9l\u00e8re en parall\u00e8le. Pas encore de bascule syst\u00e9mique, mais la tendance est claire : les humano\u00efdes sortent du labo et entrent dans l'ar\u00e8ne.",
+      "hai": 29.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-19T21:01:48.214036"
+  "generated": "2026-09-20T07:00:47.375973"
 }
