@@ -419,6 +419,10 @@
     {
       "date": "2026-09-20",
       "valeur": 31.6
+    },
+    {
+      "date": "2026-09-21",
+      "valeur": 28.2
     }
   ],
   "price": [
@@ -764,6 +768,10 @@
     },
     {
       "date": "2026-09-19",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-09-21",
       "valeur": 0.0
     }
   ],
@@ -1502,7 +1510,14 @@
       "hai": 29.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-21": {
+      "date": "2026-09-21",
+      "texte": "Le HAI franchit doucement les 28 points : avec le Mornine M1 affich\u00e9 \u00e0 41 000 dollars sur JD.com, l\u2019humano\u00efde n\u2019est plus seulement un prototype de salon. L\u2019annonce d\u2019un relais de huit heures en usine et les nouveaux mod\u00e8les de dext\u00e9rit\u00e9 confirment une industrialisation qui passe enfin de la d\u00e9monstration au service op\u00e9rationnel. Les fonds lev\u00e9s et le groupe MIPI acc\u00e9l\u00e8rent l\u2019\u00e9cosyst\u00e8me, sans encore annoncer un basculement massif : la voie est l\u00e0, d\u00e9sormais ouverte aux op\u00e9rateurs qui vont s\u2019approprier ces co\u00e9quipiers robotis\u00e9s.",
+      "hai": 28.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-20T21:10:27.548738"
+  "generated": "2026-09-21T07:00:49.853895"
 }
