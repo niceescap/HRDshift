@@ -427,6 +427,10 @@
     {
       "date": "2026-09-22",
       "valeur": 29.5
+    },
+    {
+      "date": "2026-09-23",
+      "valeur": 31.8
     }
   ],
   "price": [
@@ -1528,7 +1532,14 @@
       "hai": 26.7,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-09-23": {
+      "date": "2026-09-23",
+      "texte": "L'Unitree Mecha, premier humano\u00efde v\u00e9ritablement pr\u00eat pour la production, et le d\u00e9ploiement d'Atlas chez Kia marquent un basculement concret : les robots quittent le laboratoire pour entrer en usine. La Chine freine encore les cas commerciaux, mais les signaux industriels s'accumulent \u2014 lancements, partenariats, d\u00e9ploiements terrain. L'\u00e8re des op\u00e9rateurs manuels hautement qualifi\u00e9s assist\u00e9s par humano\u00efdes n'est plus une hypoth\u00e8se : c'est une ligne de montage en marche.",
+      "hai": 31.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-22T21:00:58.998329"
+  "generated": "2026-09-23T07:00:35.297065"
 }
