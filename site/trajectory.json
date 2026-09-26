@@ -439,6 +439,10 @@
     {
       "date": "2026-09-25",
       "valeur": 26.9
+    },
+    {
+      "date": "2026-09-26",
+      "valeur": 27.4
     }
   ],
   "price": [
@@ -801,6 +805,10 @@
     {
       "date": "2026-09-25",
       "valeur": 6600.0
+    },
+    {
+      "date": "2026-09-26",
+      "valeur": 0.0
     }
   ],
   "edito_by_date": {
@@ -1573,7 +1581,14 @@
       "hai": 26.7,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-09-26": {
+      "date": "2026-09-26",
+      "texte": "Les humano\u00efdes progressent : Bosch s'associe \u00e0 une start-up, un nouveau mod\u00e8le apprend par vid\u00e9o, et Kawasaki ouvre un centre d'IA physique. Ces partenariats industriels et d\u00e9ploiements acc\u00e9l\u00e8rent l'adoption des robots humano\u00efdes dans le manufacturing.",
+      "hai": 27.35,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-25T21:01:31.768862"
+  "generated": "2026-09-26T07:02:23.655842"
 }
