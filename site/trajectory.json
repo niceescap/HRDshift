@@ -447,6 +447,10 @@
     {
       "date": "2026-09-27",
       "valeur": 31.8
+    },
+    {
+      "date": "2026-09-28",
+      "valeur": 28.8
     }
   ],
   "price": [
@@ -816,6 +820,10 @@
     },
     {
       "date": "2026-09-27",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-09-28",
       "valeur": 0.0
     }
   ],
@@ -1603,7 +1611,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-09-28": {
+      "date": "2026-09-28",
+      "texte": "Les signaux de partenariats industriels et de d\u00e9ploiements commerciaux, comme l'accord IoT Tribe-ESB, sont des \u00e9chos concrets d'une acc\u00e9l\u00e9ration silencieuse des robots humano\u00efdes dans l'industrie. Ces avanc\u00e9es, bien que diverses, tracent un chemin optimiste vers une adoption op\u00e9rationnelle \u00e0 grande \u00e9chelle, o\u00f9 les op\u00e9rateurs hautement qualifi\u00e9s verront leurs outils \u00e9voluer vers des alli\u00e9s intelligents.",
+      "hai": 28.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-27T21:00:32.987945"
+  "generated": "2026-09-28T07:13:30.506845"
 }
