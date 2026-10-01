@@ -459,6 +459,10 @@
     {
       "date": "2026-09-30",
       "valeur": 26.9
+    },
+    {
+      "date": "2026-10-01",
+      "valeur": 34.5
     }
   ],
   "price": [
@@ -1648,7 +1652,14 @@
       "hai": 26.8,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-10-01": {
+      "date": "2026-10-01",
+      "texte": "L'industrialisation bascule dans le concret. XPeng annonce une production de masse fin 2026 et des livraisons clients 2027 : une date ferme, un constructeur auto majeur, le signal le plus fort depuis le d\u00e9but de l'\u00e8re humano\u00efde. Apptronik l\u00e8ve 520 M$ pour cadencer Apollo, LimX aligne le prix sur la r\u00e9alit\u00e9 terrain, NIST pose les jalons de la norme. Les pi\u00e8ces du puzzle s'embo\u00eetent : capital, calendrier, standardisation, co\u00fbt. L'atelier ne attend plus la tech, la tech arrive \u00e0 l'atelier.",
+      "hai": 34.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-09-30T21:00:35.869082"
+  "generated": "2026-10-01T07:01:25.564008"
 }
