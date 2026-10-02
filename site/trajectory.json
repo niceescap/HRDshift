@@ -463,6 +463,10 @@
     {
       "date": "2026-10-01",
       "valeur": 30.6
+    },
+    {
+      "date": "2026-10-02",
+      "valeur": 30.4
     }
   ],
   "price": [
@@ -844,6 +848,10 @@
     },
     {
       "date": "2026-09-30",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-10-02",
       "valeur": 0.0
     }
   ],
@@ -1659,7 +1667,14 @@
       "hai": 34.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-02": {
+      "date": "2026-10-02",
+      "texte": "C'est fini la phase de prototypes. 1X ouvre son usine am\u00e9ricaine, Nvidia d\u00e9ploie ses outils, Atlas est sur le terrain du Mondial. 2026 n'est plus une date de r\u00eave, c'est un calendrier de production. Ces machines ne viennent pas remplacer l'humain, elles lib\u00e8rent ses mains les plus expertes pour l'essentiel. L'industrialisation est lanc\u00e9e, et elle est belle.",
+      "hai": 30.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-01T21:03:23.534321"
+  "generated": "2026-10-02T07:00:44.402683"
 }
