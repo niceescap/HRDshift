@@ -467,6 +467,10 @@
     {
       "date": "2026-10-02",
       "valeur": 29.4
+    },
+    {
+      "date": "2026-10-03",
+      "valeur": 29.5
     }
   ],
   "price": [
@@ -1674,7 +1678,14 @@
       "hai": 30.4,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-03": {
+      "date": "2026-10-03",
+      "texte": "Ubtech le prouve : les ventes d'humano\u00efdes explosent, le march\u00e9 est l\u00e0. Fini les cages, place \u00e0 la symbiose homme-machine. Ces bras suppl\u00e9mentaires ne volent pas les postes, ils lib\u00e8rent le potentiel des op\u00e9rateurs qualifi\u00e9s. La r\u00e9volution industrielle n'attend plus personne. Travaillons ensemble vers ce futur.",
+      "hai": 29.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-02T21:01:06.489693"
+  "generated": "2026-10-03T07:00:44.982713"
 }
