@@ -471,6 +471,10 @@
     {
       "date": "2026-10-03",
       "valeur": 32.0
+    },
+    {
+      "date": "2026-10-04",
+      "valeur": 36.8
     }
   ],
   "price": [
@@ -1689,7 +1693,14 @@
       "hai": 29.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-04": {
+      "date": "2026-10-04",
+      "texte": "Les robots humano\u00efdes quittent les labos pour les lignes d\u2019assemblage. Des g\u00e9ants comme Tesla et Figure AI pr\u00e9sentent des mod\u00e8les pr\u00eats pour la factory, tandis qu\u2019une usine de Caroline du Sud accueille ses premiers automates. Ces signaux concrets, amplifi\u00e9s par des financements massifs et des plateformes de simulation, propulsent l\u2019Indice d\u2019Acc\u00e9l\u00e9ration Humano\u00efde vers 36,8, franchissant le cap des pilotes industriels.",
+      "hai": 36.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-03T21:01:48.045425"
+  "generated": "2026-10-04T07:00:55.113830"
 }
