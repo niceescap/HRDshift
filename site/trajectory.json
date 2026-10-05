@@ -475,6 +475,10 @@
     {
       "date": "2026-10-04",
       "valeur": 38.4
+    },
+    {
+      "date": "2026-10-05",
+      "valeur": 27.6
     }
   ],
   "price": [
@@ -1704,7 +1708,14 @@
       "hai": 36.8,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-05": {
+      "date": "2026-10-05",
+      "texte": "Les lev\u00e9es de fonds fusent et 1X affine l'intelligence g\u00e9n\u00e9rale. Mais le vrai signal ? La production qui d\u00e9collle. Fini le gadget de labo : l'humano\u00efde devient un outil de production. Demain, il lib\u00e9rera nos artisans et op\u00e9rateurs qualifi\u00e9s des p\u00e9nibilit\u00e9s. Le travail manuel va enfin \u00eatre assist\u00e9, pas remplac\u00e9.",
+      "hai": 27.6,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-04T21:00:35.160726"
+  "generated": "2026-10-05T07:00:45.374745"
 }
