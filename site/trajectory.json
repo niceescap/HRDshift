@@ -479,6 +479,10 @@
     {
       "date": "2026-10-05",
       "valeur": 29.6
+    },
+    {
+      "date": "2026-10-06",
+      "valeur": 31.2
     }
   ],
   "price": [
@@ -872,6 +876,10 @@
     },
     {
       "date": "2026-10-04",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-10-06",
       "valeur": 0.0
     }
   ],
@@ -1715,7 +1723,14 @@
       "hai": 27.6,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-06": {
+      "date": "2026-10-06",
+      "texte": "L'Index d'Acc\u00e9l\u00e9ration des Humano\u00efdes atteint 31,2/100. BYD int\u00e8gre ses technologies automobiles aux humano\u00efdes et AGIBOT prouve leurs capacit\u00e9s r\u00e9elles sur le terrain. L'industrialisation s'enclenche.",
+      "hai": 31.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-05T21:03:44.340289"
+  "generated": "2026-10-06T07:00:44.775427"
 }
