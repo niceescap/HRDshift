@@ -487,6 +487,10 @@
     {
       "date": "2026-10-07",
       "valeur": 29.0
+    },
+    {
+      "date": "2026-10-08",
+      "valeur": 31.2
     }
   ],
   "price": [
@@ -1745,7 +1749,14 @@
       "hai": 26.7,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-10-08": {
+      "date": "2026-10-08",
+      "texte": "L'industrialisation des humano\u00efdes acc\u00e9l\u00e8re : cinq signaux concrets (lancement Digita, d\u00e9ploiement YY, cible chinoise, partenariats europ\u00e9ens et renseignement sur Meta) font monter le HAI de 26,7 \u00e0 31,2. La transition passe du pilote \u00e0 l'adoption massive, port\u00e9e par des commandes confirm\u00e9es et des objectifs nationaux ambitieux.",
+      "hai": 31.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-07T21:02:32.016146"
+  "generated": "2026-10-08T07:00:48.699104"
 }
