@@ -491,6 +491,10 @@
     {
       "date": "2026-10-08",
       "valeur": 28.7
+    },
+    {
+      "date": "2026-10-09",
+      "valeur": 31.6
     }
   ],
   "price": [
@@ -896,6 +900,10 @@
     },
     {
       "date": "2026-10-08",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-10-09",
       "valeur": 0.0
     }
   ],
@@ -1760,7 +1768,14 @@
       "hai": 31.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-09": {
+      "date": "2026-10-09",
+      "texte": "Les partenariats industriels (Massachusetts, DSV) et les avanc\u00e9es technologiques (Agile Robots, XRZero-G0) acc\u00e9l\u00e8rent le passage des prototypes aux premiers d\u00e9ploiements concrets. Les lev\u00e9es de fonds (Trustap) renforcent l'\u00e9cosyst\u00e8me, marquant un rapprochement r\u00e9el entre innovation et production. Le HAI grimpe \u00e0 31.6, franchissant le seuil des prototypes cr\u00e9dibles vers des pilotes industriels imminents.",
+      "hai": 31.6,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-08T21:04:46.890431"
+  "generated": "2026-10-09T07:01:45.776350"
 }
