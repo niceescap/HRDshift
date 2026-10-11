@@ -499,6 +499,10 @@
     {
       "date": "2026-10-10",
       "valeur": 30.8
+    },
+    {
+      "date": "2026-10-11",
+      "valeur": 30.6
     }
   ],
   "price": [
@@ -912,6 +916,10 @@
     },
     {
       "date": "2026-10-10",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-10-11",
       "valeur": 0.0
     }
   ],
@@ -1790,7 +1798,14 @@
       "hai": 32.8,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-11": {
+      "date": "2026-10-11",
+      "texte": "Les prix des robots humano\u00efdes chutent de 72% en Chine, signalant une production \u00e0 l'\u00e9chelle et rendant ces assistants bient\u00f4t abordables pour les op\u00e9rateurs qualifi\u00e9s ; l'acc\u00e9l\u00e9ration s'amplifie.",
+      "hai": 30.6,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-10T21:00:59.267978"
+  "generated": "2026-10-11T07:00:44.594203"
 }
