@@ -503,6 +503,10 @@
     {
       "date": "2026-10-11",
       "valeur": 35.1
+    },
+    {
+      "date": "2026-10-12",
+      "valeur": 33.0
     }
   ],
   "price": [
@@ -1805,7 +1809,14 @@
       "hai": 30.6,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-12": {
+      "date": "2026-10-12",
+      "texte": "La barri\u00e8re du \"vaporware\" c\u00e8de : prix ferme \u00e0 19 990 $ pour le FF Master, liste Forbes des humano\u00efdes \"achetables maintenant\" et lancement Genesis AI. Trois signaux commerciaux forts convergent. Le MTC UK structure l'\u00e9cosyst\u00e8me. L'industrialisation bascule du prototype au catalogue. Op\u00e9rateurs d'\u00e9lite, vos bin\u00f4mes m\u00e9talliques sortent du labo.",
+      "hai": 33.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-11T21:01:39.642656"
+  "generated": "2026-10-12T07:01:30.154446"
 }
