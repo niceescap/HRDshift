@@ -507,6 +507,10 @@
     {
       "date": "2026-10-12",
       "valeur": 30.8
+    },
+    {
+      "date": "2026-10-13",
+      "valeur": 28.0
     }
   ],
   "price": [
@@ -1816,7 +1820,14 @@
       "hai": 33.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-13": {
+      "date": "2026-10-13",
+      "texte": "Les robots humanoides font un bond en avant : prix qui s'effondrent, production lanc\u00e9e, lancements innovants. L'\u00e8re de l'assistance robotique industrielle commence maintenant !",
+      "hai": 28.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-12T21:05:00.357739"
+  "generated": "2026-10-13T07:01:51.681841"
 }
