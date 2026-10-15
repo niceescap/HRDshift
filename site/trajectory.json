@@ -515,6 +515,10 @@
     {
       "date": "2026-10-14",
       "valeur": 28.8
+    },
+    {
+      "date": "2026-10-15",
+      "valeur": 30.0
     }
   ],
   "price": [
@@ -1838,7 +1842,14 @@
       "hai": 27.8,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-15": {
+      "date": "2026-10-15",
+      "texte": "Les avanc\u00e9es en s\u00e9curit\u00e9 robotique et les acquisitions strat\u00e9giques (Bear\u202fRobotics\u202f+\u202fKinisi, plateformes de simulation Eclipse, syst\u00e8mes NVIDIA Halos et safety blueprint) rapprochent l\u2019industrie des humano\u00efdes de pilotes concrets. Cette vague d\u2019outils pr\u00eats \u00e0 l\u2019emploi propulse l\u2019Indice d\u2019Acc\u00e9l\u00e9ration Humano\u00efde vers de nouveaux sommets.",
+      "hai": 30.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-14T21:01:51.625125"
+  "generated": "2026-10-15T07:01:02.375830"
 }
