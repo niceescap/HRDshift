@@ -519,6 +519,10 @@
     {
       "date": "2026-10-15",
       "valeur": 31.8
+    },
+    {
+      "date": "2026-10-16",
+      "valeur": 35.4
     }
   ],
   "price": [
@@ -1849,7 +1853,14 @@
       "hai": 30.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-16": {
+      "date": "2026-10-16",
+      "texte": "L\u2019acc\u00e9l\u00e9ration des robots humano\u00efdes se confirme : Ubtech enregistre plus de 3 800 pr\u00e9commandes et un partenariat Siemens, ExRobotics lance un robot d\u2019inspection certifi\u00e9 UL, tandis que Morgan Stanley double ses pr\u00e9visions de livraison en Chine. Ces signaux concrets de demande industrielle et de d\u00e9ploiement font grimper l\u2019Indice d\u2019Acc\u00e9l\u00e9ration Humano\u00efde \u00e0 35,4, marquant une progression nette vers une adoption \u00e0 grande \u00e9chelle.",
+      "hai": 35.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-15T21:00:47.467943"
+  "generated": "2026-10-16T07:01:18.363879"
 }
