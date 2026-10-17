@@ -523,6 +523,10 @@
     {
       "date": "2026-10-16",
       "valeur": 54.7
+    },
+    {
+      "date": "2026-10-17",
+      "valeur": 37.0
     }
   ],
   "price": [
@@ -1864,7 +1868,14 @@
       "hai": 35.4,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-17": {
+      "date": "2026-10-17",
+      "texte": "Les premiers signaux concrets d'industrialisation des robots humano\u00efdes \u00e9mergent : le Unitree R1 \u00e0 4 900 $ et les pr\u00e9commandes de 300 M$ pour un acteur publicien marquent un tournant. Les pr\u00e9visions optimistes de Morgan Stanley sur les livraisons chinoises renforcent l'impact. L'HAI grimpe \u00e0 37, franchissant le seuil des prototypes cr\u00e9dibles vers les premiers d\u00e9ploiements industriels.",
+      "hai": 37.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-16T21:12:29.185396"
+  "generated": "2026-10-17T07:00:57.136820"
 }
