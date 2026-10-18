@@ -527,6 +527,10 @@
     {
       "date": "2026-10-17",
       "valeur": 32.8
+    },
+    {
+      "date": "2026-10-18",
+      "valeur": 32.1
     }
   ],
   "price": [
@@ -948,6 +952,10 @@
     },
     {
       "date": "2026-10-16",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-10-18",
       "valeur": 0.0
     }
   ],
@@ -1875,7 +1883,14 @@
       "hai": 37.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-18": {
+      "date": "2026-10-18",
+      "texte": "Les robots humanoides industrialisent \u00e0 grande vitesse : pr\u00e9visions de livraison doubl\u00e9es, d\u00e9ploiements concrets chez BMW et Tesla. Cette acc\u00e9l\u00e9ration commerciale et production est une bonne nouvelle pour les op\u00e9rateurs experts, qui gagnent en puissance et en pr\u00e9cision avec ces nouveaux alli\u00e9s.",
+      "hai": 32.1,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-17T21:01:51.107843"
+  "generated": "2026-10-18T07:02:03.698901"
 }
