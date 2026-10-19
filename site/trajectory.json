@@ -531,6 +531,10 @@
     {
       "date": "2026-10-18",
       "valeur": 31.5
+    },
+    {
+      "date": "2026-10-19",
+      "valeur": 30.0
     }
   ],
   "price": [
@@ -1890,7 +1894,14 @@
       "hai": 32.1,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-19": {
+      "date": "2026-10-19",
+      "texte": "L\u2019industrie des humano\u00efdes acc\u00e9l\u00e8re : BMW d\u00e9ploie des robots Figure AI en logistique, AGIBOT franchit le cap des 15\u202f000 unit\u00e9s, tandis que les avanc\u00e9es en micro\u2011\u00e9lectronique et les partenariats commerciaux annoncent une adoption industrielle \u00e0 grande \u00e9chelle.",
+      "hai": 30.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-18T21:00:48.005791"
+  "generated": "2026-10-19T07:01:05.479198"
 }
