@@ -539,6 +539,10 @@
     {
       "date": "2026-10-20",
       "valeur": 31.5
+    },
+    {
+      "date": "2026-10-21",
+      "valeur": 31.2
     }
   ],
   "price": [
@@ -972,6 +976,10 @@
     },
     {
       "date": "2026-10-20",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-10-21",
       "valeur": 0.0
     }
   ],
@@ -1920,7 +1928,14 @@
       "hai": 27.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-21": {
+      "date": "2026-10-21",
+      "texte": "L'industrialisation des humano\u00efdes passe la vitesse sup\u00e9rieure. Apptronik inaugure son Robot Park \u00e0 Austin, UBTECH d\u00e9passe les 13 000 pr\u00e9commandes et la Chine divise par deux le co\u00fbt des mains robotiques. Ces signaux confirment l'arriv\u00e9e prochaine d'outils con\u00e7us pour les op\u00e9rateurs manuels hautement qualifi\u00e9s, non pour les remplacer. L'\u00e8re de l'op\u00e9rateur augment\u00e9 est en marche.",
+      "hai": 31.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-21T07:07:28.897159"
+  "generated": "2026-10-21T14:01:29.775752"
 }
