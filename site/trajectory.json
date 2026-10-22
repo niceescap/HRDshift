@@ -543,6 +543,10 @@
     {
       "date": "2026-10-21",
       "valeur": 30.0
+    },
+    {
+      "date": "2026-10-22",
+      "valeur": 30.2
     }
   ],
   "price": [
@@ -980,6 +984,10 @@
     },
     {
       "date": "2026-10-21",
+      "valeur": 0.0
+    },
+    {
+      "date": "2026-10-22",
       "valeur": 0.0
     }
   ],
@@ -1935,7 +1943,14 @@
       "hai": 31.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-22": {
+      "date": "2026-10-22",
+      "texte": "L\u2019acc\u00e9l\u00e9ration devient concr\u00e8te : plus de 10 000 ULTRA command\u00e9s, Figure de retour chez BMW, Apollo 2 et ses infrastructures de donn\u00e9es. La robotique humano\u00efde sort du laboratoire, mais le passage \u00e0 l\u2019\u00e9chelle reste \u00e0\u4e3e\u8bc1 industriellement.",
+      "hai": 30.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-21T21:00:36.242260"
+  "generated": "2026-10-22T07:00:56.418241"
 }
