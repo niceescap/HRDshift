@@ -547,6 +547,10 @@
     {
       "date": "2026-10-22",
       "valeur": 30.2
+    },
+    {
+      "date": "2026-10-23",
+      "valeur": 31.4
     }
   ],
   "price": [
@@ -1950,7 +1954,14 @@
       "hai": 30.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-23": {
+      "date": "2026-10-23",
+      "texte": "L'\u00e8re de l'industrialisation est bien l\u00e0 : les pr\u00e9commandes massives d'UBTech et le d\u00e9ploiement en Europe en mode 'Robot comme Service' d'AGIBOT prouvent que les humano\u00efds passent du prototype \u00e0 l'outil op\u00e9rable. C'est le moment de miser sur ces machines qui renforcent nos experts !",
+      "hai": 31.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-22T21:02:02.831150"
+  "generated": "2026-10-23T07:01:36.869390"
 }
