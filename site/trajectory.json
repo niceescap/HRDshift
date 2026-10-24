@@ -551,6 +551,10 @@
     {
       "date": "2026-10-23",
       "valeur": 28.1
+    },
+    {
+      "date": "2026-10-24",
+      "valeur": 31.2
     }
   ],
   "price": [
@@ -997,6 +1001,10 @@
     {
       "date": "2026-10-23",
       "valeur": 0.0
+    },
+    {
+      "date": "2026-10-24",
+      "valeur": 2500.0
     }
   ],
   "edito_by_date": {
@@ -1965,7 +1973,14 @@
       "hai": 31.4,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-24": {
+      "date": "2026-10-24",
+      "texte": "Le HAI grimpe \u00e0 31.2 gr\u00e2ce \u00e0 des signaux concrets : AGIBOT lance son robot A3 en Europe avec un mod\u00e8le RaaS, Tesla confirme le lancement de la production d\u2019Optimus, et Boston Dynamics simplifie Atlas. Ces avanc\u00e9es marquent une transition des prototypes vers des d\u00e9ploiements industriels r\u00e9els, port\u00e9s par des partenariats et des mod\u00e8les \u00e9conomiques innovants. L\u2019industrialisation des robots humano\u00efdes entre dans sa phase de pr\u00e9-d\u00e9ploiement.",
+      "hai": 31.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-23T21:01:19.718035"
+  "generated": "2026-10-24T07:01:44.335168"
 }
