@@ -555,6 +555,10 @@
     {
       "date": "2026-10-24",
       "valeur": 36.1
+    },
+    {
+      "date": "2026-10-25",
+      "valeur": 55.0
     }
   ],
   "price": [
@@ -1980,7 +1984,14 @@
       "hai": 31.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-25": {
+      "date": "2026-10-25",
+      "texte": "L\u2019industrialisation des robots humano\u00efdes acc\u00e9l\u00e8re : commandes fermes, pr\u00e9commandes massives et d\u00e9ploiements op\u00e9rationnels se multiplient, propulsant l\u2019index HAI vers la phase de pr\u00e9\u2011d\u00e9ploiement et annon\u00e7ant une int\u00e9gration \u00e0 grande \u00e9chelle des cobots au service des op\u00e9rateurs hautement qualifi\u00e9s.",
+      "hai": 55.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-24T21:01:27.451697"
+  "generated": "2026-10-25T07:00:48.256060"
 }
