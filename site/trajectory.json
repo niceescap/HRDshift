@@ -558,7 +558,11 @@
     },
     {
       "date": "2026-10-25",
-      "valeur": 41.0
+      "valeur": 42.4
+    },
+    {
+      "date": "2026-10-26",
+      "valeur": 26.6
     }
   ],
   "price": [
@@ -1009,6 +1013,10 @@
     {
       "date": "2026-10-24",
       "valeur": 2500.0
+    },
+    {
+      "date": "2026-10-26",
+      "valeur": 0.0
     }
   ],
   "edito_by_date": {
@@ -1991,7 +1999,14 @@
       "hai": 55.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-10-26": {
+      "date": "2026-10-26",
+      "texte": "L'index HAI s'\u00e9tablit \u00e0 26,7, t\u00e9moignant d'une progression stable vers des cobotiques toujours plus int\u00e9gr\u00e9es. Entre plateformes de location intelligente, capteurs de s\u00e9curit\u00e9 certifi\u00e9s et partenariats industriels de envergure, les signaux se multiplient pour placer les robots humano\u00efdes au service des op\u00e9rateurs hautement qualifi\u00e9s, amplifiant leurs comp\u00e9tences plut\u00f4t que de les remplacer. Cette dynamique confirme que l'avenir de l'industrie r\u00e9side dans une synergie homme-machine renforc\u00e9e, o\u00f9 chaque avanc\u00e9e technologique devient un levier de productivit\u00e9 et de s\u00e9curit\u00e9.",
+      "hai": 26.7,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-25T14:00:57.222350"
+  "generated": "2026-10-26T14:00:45.151726"
 }
