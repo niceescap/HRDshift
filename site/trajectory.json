@@ -563,6 +563,10 @@
     {
       "date": "2026-10-26",
       "valeur": 26.6
+    },
+    {
+      "date": "2026-11-08",
+      "valeur": 42.0
     }
   ],
   "price": [
@@ -2006,7 +2010,14 @@
       "hai": 26.7,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-11-08": {
+      "date": "2026-11-08",
+      "texte": "Des signaux concrets acc\u00e9l\u00e8rent l\u2019industrialisation des humano\u00efdes. Une Chine lance des compagnons robot \u00e0 prix incroyablement bas ; 1X pr\u00e9commande le n\u00e9o\u2011humano\u00efde pour 20k$ ou 499$ ; ABB ajoute la navigation vSLAM aux montelles autonomes ; Robust.AI choisit une perception IA pour les entrep\u00f4ts. Ces mises \u00e0 jour offrent aux op\u00e9rateurs qualifi\u00e9s des outils puissants, prouvant que l\u2019\u00e8re industrielle du robot est ici.",
+      "hai": 42.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-10-26T14:00:45.151726"
+  "generated": "2026-11-08T14:01:28.032028"
 }
