@@ -567,6 +567,10 @@
     {
       "date": "2026-11-08",
       "valeur": 36.5
+    },
+    {
+      "date": "2026-11-09",
+      "valeur": 39.0
     }
   ],
   "price": [
@@ -2017,7 +2021,14 @@
       "hai": 42.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-09": {
+      "date": "2026-11-09",
+      "texte": "La r\u00e9volution humano\u00efde s'acc\u00e9l\u00e8re ! Les 13 300 pr\u00e9commandes d'Ubtech et la production massive d'Optimus Gen 3 portent le HAI \u00e0 39.0. Une mont\u00e9e en puissance sans pr\u00e9c\u00e9dent qui transforme le terrain. Le futur est robotique et prometteur.",
+      "hai": 39.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-08T21:00:45.331828"
+  "generated": "2026-11-09T07:03:30.419540"
 }
