@@ -571,6 +571,10 @@
     {
       "date": "2026-11-09",
       "valeur": 33.4
+    },
+    {
+      "date": "2026-11-10",
+      "valeur": 34.5
     }
   ],
   "price": [
@@ -2028,7 +2032,14 @@
       "hai": 39.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-10": {
+      "date": "2026-11-10",
+      "texte": "Les robots humano\u00efdes franchissent une \u00e9tape d\u00e9cisive : pr\u00e9commandes massives pour l'U1 d'UBTech, d\u00e9ploiements op\u00e9rationnels aux fronti\u00e8res sino\u2011vietnamiennes et dans les usines BMW, et perc\u00e9es commerciales annonc\u00e9es par Unitree et UBTech pour 2026. Ces signaux concrets d'adoption industrielle acc\u00e9l\u00e8rent le HAI, annon\u00e7ant un avenir o\u00f9 les op\u00e9rateurs qualifi\u00e9s collaboreront avec des robots humano\u00efdes fiables et productifs.",
+      "hai": 34.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-09T21:02:17.113120"
+  "generated": "2026-11-10T07:00:40.358191"
 }
