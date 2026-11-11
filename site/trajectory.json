@@ -575,6 +575,10 @@
     {
       "date": "2026-11-10",
       "valeur": 29.5
+    },
+    {
+      "date": "2026-11-11",
+      "valeur": 26.5
     }
   ],
   "price": [
@@ -2039,7 +2043,14 @@
       "hai": 34.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-11": {
+      "date": "2026-11-11",
+      "texte": "Le rythme reste celui des prototypes cr\u00e9dibles : certifications, brevets, lev\u00e9es et standards avancent, mais sans d\u00e9ploiement industriel massif. La cadence robotique progresse, sans bascule encore.",
+      "hai": 26.5,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-10T21:00:43.270038"
+  "generated": "2026-11-11T07:00:31.767068"
 }
