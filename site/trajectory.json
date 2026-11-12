@@ -579,6 +579,10 @@
     {
       "date": "2026-11-11",
       "valeur": 27.9
+    },
+    {
+      "date": "2026-11-12",
+      "valeur": 38.4
     }
   ],
   "price": [
@@ -2050,7 +2054,14 @@
       "hai": 26.5,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-11-12": {
+      "date": "2026-11-12",
+      "texte": "Les robots humano\u00efdes franchissent un cap historique. UBTECH lance le premier mod\u00e8le massivement produit, Tesla acc\u00e9l\u00e8re Optimus V3, BMW et Hyundai int\u00e8grent des figures humano\u00efdes en s\u00e9rie. La valorisation d'Ubtech et les lignes de production avanc\u00e9es boostent le HAI \u00e0 38,4 \u2013 une acc\u00e9l\u00e9ration industrielle sans pr\u00e9c\u00e9dent.",
+      "hai": 38.4,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-11T21:02:05.587987"
+  "generated": "2026-11-12T07:01:20.183729"
 }
