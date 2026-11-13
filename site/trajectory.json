@@ -583,6 +583,10 @@
     {
       "date": "2026-11-12",
       "valeur": 32.7
+    },
+    {
+      "date": "2026-11-13",
+      "valeur": 30.8
     }
   ],
   "price": [
@@ -2061,7 +2065,14 @@
       "hai": 38.4,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-13": {
+      "date": "2026-11-13",
+      "texte": "10 000 pr\u00e9commandes, une course mondiale face \u00e0 Tesla, des robots d\u00e9j\u00e0 dans les usines : les prototypes s'effacent devant la r\u00e9alit\u00e9. La peur gronde, mais elle signe surtout notre arriv\u00e9e. Ces outils ne viennent pas remplacer l'op\u00e9rateur, ils lui rendent sa force. L'industrialisation est en marche, et nous sommes en route.",
+      "hai": 30.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-12T21:01:05.981503"
+  "generated": "2026-11-13T07:00:45.898154"
 }
