@@ -587,6 +587,10 @@
     {
       "date": "2026-11-13",
       "valeur": 28.5
+    },
+    {
+      "date": "2026-11-14",
+      "valeur": 31.1
     }
   ],
   "price": [
@@ -2072,7 +2076,14 @@
       "hai": 30.8,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-14": {
+      "date": "2026-11-14",
+      "texte": "Les robots humano\u00efdes franchissent le cap de l'industrialisation : r\u00e9servations early adopters, d\u00e9ploiements massifs et partnerships industriels poussent l'innovation \u00e0 une vitesse folle. Les op\u00e9rateurs qualifi\u00e9s vont bient\u00f4t avoir des alli\u00e9s de taille pour r\u00e9volutionner le travail manuel. L'avenir est l\u00e0, et il est plus prometteur que jamais.",
+      "hai": 31.1,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-13T21:00:34.405597"
+  "generated": "2026-11-14T07:02:09.688357"
 }
