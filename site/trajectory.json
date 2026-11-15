@@ -591,6 +591,10 @@
     {
       "date": "2026-11-14",
       "valeur": 29.1
+    },
+    {
+      "date": "2026-11-15",
+      "valeur": 30.5
     }
   ],
   "price": [
@@ -2083,7 +2087,14 @@
       "hai": 31.1,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-15": {
+      "date": "2026-11-15",
+      "texte": "Le WAIC 2026 sonne le passage de la promesse au produit : KEENON, UBTech et Matrix Robotics d\u00e9ploient des humano\u00efdes commerciaux, pendant que l'\u00e9cosyst\u00e8me logiciel (Inteq, Panasonic, Palm Garden, mimic) m\u00fbrit en coulisses. La gr\u00e8ve qui paralyse une usine automobile n'est pas un frein, c'est la preuve que les robots sont d\u00e9j\u00e0 dans l'atelier. Le signal le plus fort \u2014 Optimus Gen 3 \u2014 reste sp\u00e9culatif sur ses prix et d\u00e9lais, ce qui temp\u00e8re l'\u00e9lan. Mais la convergence des lancements et des d\u00e9ploiements r\u00e9els nous rapproche des premiers pilotes industriels. L'acc\u00e9l\u00e9ration est l\u00e0, discr\u00e8te et bien r\u00e9elle.",
+      "hai": 30.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-14T21:00:34.717428"
+  "generated": "2026-11-15T07:00:32.349956"
 }
