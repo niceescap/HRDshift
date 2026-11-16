@@ -595,6 +595,10 @@
     {
       "date": "2026-11-15",
       "valeur": 28.5
+    },
+    {
+      "date": "2026-11-16",
+      "valeur": 26.6
     }
   ],
   "price": [
@@ -2094,7 +2098,14 @@
       "hai": 30.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-16": {
+      "date": "2026-11-16",
+      "texte": "Pas de signal dur cette semaine : pas de pr\u00e9commande humano\u00efde ni de d\u00e9ploiement massif. Mais Hyundai utilise le Mondial pour installer la robotique dans le r\u00e9cit grand public, l\u2019IA industrielle se dit \u00ab production-ready \u00bb et les mod\u00e8les du monde progressent. Les briques s\u2019assemblent : l\u2019humano\u00efde industriel reste en phase prototypes cr\u00e9dibles, avec une trajectoire toujours haussi\u00e8re.",
+      "hai": 26.6,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-15T21:00:46.451180"
+  "generated": "2026-11-16T07:00:34.775775"
 }
