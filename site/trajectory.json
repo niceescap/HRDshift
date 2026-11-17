@@ -599,6 +599,10 @@
     {
       "date": "2026-11-16",
       "valeur": 26.6
+    },
+    {
+      "date": "2026-11-17",
+      "valeur": 27.1
     }
   ],
   "price": [
@@ -2105,7 +2109,14 @@
       "hai": 26.6,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-11-17": {
+      "date": "2026-11-17",
+      "texte": "La course mondiale \u00e0 la commercialisation des robots humanoides s'acc\u00e9l\u00e8re, signe d'une adoption industrielle imminente qui promet de transformer le travail des op\u00e9rateurs.",
+      "hai": 27.1,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-16T21:01:23.733166"
+  "generated": "2026-11-17T07:01:45.826297"
 }
