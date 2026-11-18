@@ -603,6 +603,10 @@
     {
       "date": "2026-11-17",
       "valeur": 34.1
+    },
+    {
+      "date": "2026-11-18",
+      "valeur": 31.0
     }
   ],
   "price": [
@@ -2116,7 +2120,14 @@
       "hai": 27.1,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-18": {
+      "date": "2026-11-18",
+      "texte": "Les humano\u00efdes quittent les labos pour les entrep\u00f4ts : un 3PL de Brooklyn atteint d\u00e9j\u00e0 30 % de ses pr\u00e9parations de commandes avec des robots humano\u00efdes, hors Amazon. L'industrialisation est lanc\u00e9e. Ces outils ne remplacent pas l'op\u00e9rateur qualifi\u00e9, ils le renforcent. L'avenir est sur le sol de l'usine, d\u00e8s aujourd'hui.",
+      "hai": 31.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-17T21:01:35.061601"
+  "generated": "2026-11-18T07:00:40.126767"
 }
