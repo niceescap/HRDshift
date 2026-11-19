@@ -607,6 +607,10 @@
     {
       "date": "2026-11-18",
       "valeur": 34.5
+    },
+    {
+      "date": "2026-11-19",
+      "valeur": 27.6
     }
   ],
   "price": [
@@ -2127,7 +2131,14 @@
       "hai": 31.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-19": {
+      "date": "2026-11-19",
+      "texte": "La trajectoire s\u2019acc\u00e9l\u00e8re : Samsung engage une production pilote de modules cam\u00e9ra pour humano\u00efdes, pendant qu\u2019Atlas installe la cat\u00e9gorie dans l\u2019imaginaire collectif. Les briques industrielles et logicielles se connectent au service des op\u00e9rateurs qualifi\u00e9s ; le HAI gagne un point, avec une dynamique r\u00e9solument optimiste.",
+      "hai": 27.6,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-18T21:03:42.946485"
+  "generated": "2026-11-19T07:00:38.799793"
 }
