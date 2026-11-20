@@ -611,6 +611,10 @@
     {
       "date": "2026-11-19",
       "valeur": 29.2
+    },
+    {
+      "date": "2026-11-20",
+      "valeur": 26.3
     }
   ],
   "price": [
@@ -2138,7 +2142,14 @@
       "hai": 27.6,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-20": {
+      "date": "2026-11-20",
+      "texte": "L'index HAI stable \u00e0 26.3/100 marque une acc\u00e9l\u00e9ration \u00e9quilibr\u00e9e vers l'adoption industrielle des humano\u00efdes. Les partenariats de physique IA et les d\u00e9monstrations de mains robotiques alimentent la dynamique, tandis que les signaux technologiques isol\u00e9s n'alt\u00e8rent pas la trajectoire globale vers des pilotes cr\u00e9dibles pour les op\u00e9rateurs qualifi\u00e9s.",
+      "hai": 26.3,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-19T21:03:06.464940"
+  "generated": "2026-11-20T07:02:16.694124"
 }
