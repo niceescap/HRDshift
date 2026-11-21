@@ -615,6 +615,10 @@
     {
       "date": "2026-11-20",
       "valeur": 29.1
+    },
+    {
+      "date": "2026-11-21",
+      "valeur": 27.2
     }
   ],
   "price": [
@@ -2149,7 +2153,14 @@
       "hai": 26.3,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-11-21": {
+      "date": "2026-11-21",
+      "texte": "Le HAI grimpe l\u00e9g\u00e8rement \u00e0 27,2, port\u00e9 par le lancement confirm\u00e9 de Tesla Optimus (2027) et le contrat de supply de Qualcomm\u2011BMW, tout en maintenant une progression stable gr\u00e2ce \u00e0 des d\u00e9ploiements terrain et \u00e0 l\u2019IA appliqu\u00e9e aux robots.",
+      "hai": 27.2,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-20T21:01:03.781539"
+  "generated": "2026-11-21T07:01:07.956534"
 }
