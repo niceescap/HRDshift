@@ -619,6 +619,10 @@
     {
       "date": "2026-11-21",
       "valeur": 27.0
+    },
+    {
+      "date": "2026-11-22",
+      "valeur": 26.1
     }
   ],
   "price": [
@@ -2160,7 +2164,14 @@
       "hai": 27.2,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-11-22": {
+      "date": "2026-11-22",
+      "texte": "HAI stable \u00e0 26,1 : les prototypes cr\u00e9dibles acc\u00e9l\u00e8rent. Gemini, Apptronik, FedEx et l\u2019Physical AI avancent. Le saut industriel est encore loin, mais la course est lanc\u00e9e.",
+      "hai": 26.1,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-21T21:01:08.032466"
+  "generated": "2026-11-22T07:01:07.301151"
 }
