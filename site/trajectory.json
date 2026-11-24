@@ -627,6 +627,10 @@
     {
       "date": "2026-11-23",
       "valeur": 26.5
+    },
+    {
+      "date": "2026-11-24",
+      "valeur": 26.0
     }
   ],
   "price": [
@@ -2182,7 +2186,14 @@
       "hai": 26.0,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-11-24": {
+      "date": "2026-11-24",
+      "texte": "Les valuations colossales (Amazon, EU) et le robotaxi Zoox prouvent qu'on peut industrialiser les humano\u00efdes rapidement ; la marine am\u00e9ricaine adopte aussi des vaisseaux autonomes. La barri\u00e8re co\u00fbt reste un obstacle, mais l'indice HAI grimpe de 25,8 \u00e0 26,0, marquant une mont\u00e9e stable vers le pilote industriel.",
+      "hai": 26.0,
+      "tendance": "\u2192",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-23T21:01:11.588393"
+  "generated": "2026-11-24T07:01:23.797063"
 }
