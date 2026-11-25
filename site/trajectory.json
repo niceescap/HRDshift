@@ -631,6 +631,10 @@
     {
       "date": "2026-11-24",
       "valeur": 27.6
+    },
+    {
+      "date": "2026-11-25",
+      "valeur": 28.2
     }
   ],
   "price": [
@@ -2193,7 +2197,14 @@
       "hai": 26.0,
       "tendance": "\u2192",
       "date_edito": ""
+    },
+    "2026-11-25": {
+      "date": "2026-11-25",
+      "texte": "L'indice grimpe : UWORLD officialise prix et date pour son U1, premier signal commercial fort sur un humano\u00efde grand public. Apptronik confirme l'app\u00e9tit investisseur. La bascule prototype\u2192produit s'acc\u00e9l\u00e8re. Les op\u00e9rateurs qualifi\u00e9s verront bient\u00f4t ces coll\u00e8gues d'acier arriver en poste. L'\u00e8re du 'PowerPoint' est finie, place aux fiches techniques livrables.",
+      "hai": 28.2,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-24T21:01:06.801769"
+  "generated": "2026-11-25T07:01:11.252386"
 }
