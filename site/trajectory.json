@@ -635,6 +635,10 @@
     {
       "date": "2026-11-25",
       "valeur": 30.3
+    },
+    {
+      "date": "2026-11-26",
+      "valeur": 33.0
     }
   ],
   "price": [
@@ -2204,7 +2208,14 @@
       "hai": 28.2,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-26": {
+      "date": "2026-11-26",
+      "texte": "L'introduction en Bourse d'Unitree \u00e0 9 milliards de dollars \u2014 valid\u00e9e par six sources ind\u00e9pendantes \u00e0 score 75 \u2014 marque un tournant historique : le march\u00e9 capitalise enfin l'industrialisation des humano\u00efdes. NEO entre en pr\u00e9commande, Apollo 2 d\u00e9voile son usine \u00e0 donn\u00e9es, 1X lance sa production californienne. Les signaux commerciaux fermes (IPO, pr\u00e9commandes, production) remplacent les promesses. La courbe s'infl\u00e9chit vers le d\u00e9ploiement r\u00e9el. Les op\u00e9rateurs qualifi\u00e9s verront leurs outils arriver plus vite que pr\u00e9vu.",
+      "hai": 33.0,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-25T21:01:08.689616"
+  "generated": "2026-11-26T07:01:11.854623"
 }
