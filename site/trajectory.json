@@ -639,6 +639,10 @@
     {
       "date": "2026-11-26",
       "valeur": 28.9
+    },
+    {
+      "date": "2026-11-27",
+      "valeur": 27.5
     }
   ],
   "price": [
@@ -2215,7 +2219,14 @@
       "hai": 33.0,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-27": {
+      "date": "2026-11-27",
+      "texte": "Commandes industrielles concr\u00e8tes et exploration commerciale amorcent l\u2019humano\u00efde. HAI recalcule \u00e0 27,5 : l\u00e9g\u00e8re acc\u00e9l\u00e9ration. Les prototypes c\u00e8dent la place aux premiers usages structurants.",
+      "hai": 27.5,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-26T21:00:58.740104"
+  "generated": "2026-11-27T07:01:24.871329"
 }
