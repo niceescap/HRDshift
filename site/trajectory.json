@@ -643,6 +643,10 @@
     {
       "date": "2026-11-27",
       "valeur": 33.6
+    },
+    {
+      "date": "2026-11-28",
+      "valeur": 27.8
     }
   ],
   "price": [
@@ -2226,7 +2230,14 @@
       "hai": 27.5,
       "tendance": "\u2191",
       "date_edito": ""
+    },
+    "2026-11-28": {
+      "date": "2026-11-28",
+      "texte": "Le cap s'acc\u00e9l\u00e8re : Unitree entre en Bourse, 1X ouvre les pr\u00e9commandes de son robot m\u00e9nager et SSE teste l'humano\u00efde en acier. Les exp\u00e9ditions chinoises triplent ; Tesla Optimus Gen 3 vise ao\u00fbt 2026. Le HAI passe \u00e0 27,8/100 : prototypes cr\u00e9dibles, premiers signaux \u00e9conomiques. L'industrialisation n'est plus une promesse, elle prend date.",
+      "hai": 27.8,
+      "tendance": "\u2191",
+      "date_edito": ""
     }
   },
-  "generated": "2026-11-27T21:01:07.237293"
+  "generated": "2026-11-28T07:00:45.342077"
 }
